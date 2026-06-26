@@ -184,3 +184,26 @@ ondulado a la altura de la mandíbula, chaqueta turquesa, camiseta crema,
 pantalón o falda coral, zapatillas y pulsera azul de concha. La progresión visual
 debe conservar el paso de sobreestimulación y ruido interno a pausa, respiración,
 equilibrio corporal, pausa compartida de aula y camino sereno.
+
+## Sexto cuento renovado: Miedo
+
+Carpeta:
+`public/images/stories/miedo/`
+
+Recursos:
+
+- `personajes-referencia.jpg`
+- `pagina-1-niebla-del-camino.jpg`
+- `pagina-2-linterna-pequena.jpg`
+- `pagina-3-cuerpo-avisa.jpg`
+- `pagina-4-pedir-ayuda.jpg`
+- `pagina-5-plan-seguro.jpg`
+- `pagina-6-camino-iluminado.jpg`
+
+Leo queda definido como personaje estable de la Isla Miedo: piel morena clara,
+pelo negro corto y rizado, sudadera azul marino con franja turquesa, pantalón
+corto mostaza, zapatillas blancas, mochila verde salvia y linterna amarilla. La
+guía conserva pelo negro recogido, chaqueta ciruela, pantalón oliva y mochila. La
+progresión visual debe mostrar una cautela cotidiana: niebla suave, una luz para
+el siguiente paso, reconocimiento de señales, petición de compañía, un paso
+seguro y una salida serena; nunca terror ni amenaza.

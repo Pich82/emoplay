@@ -941,3 +941,17 @@ No simplificar ni sustituir la app por una versión básica. Mantener siempre la
 - Verificación realizada: compilación correcta, los siete recursos de Calma responden con estado `200`, y el lector real muestra las seis imágenes de Calma a `900 × 900 px`.
 - Se probó el flujo desde la interfaz: Ternura, Admiración y Alegría desbloquean Calma; el cuento de Calma se completa, suma puntos y mantiene el acceso al minijuego.
 - Evaluación de Spec Kit: mejora el control de alcance y reduce olvidos en cambios medianos, aunque añade documentación extra para tareas pequeñas.
+
+## Ajuste del 26 de junio de 2026: ilustraciones IA para Miedo y primer repositorio Git
+
+- Se creó una copia de seguridad previa y se inicializó un repositorio Git local para EMOPLAY.
+- El primer hito de Git conserva el estado completo anterior a esta renovación visual.
+- Miedo se convierte en el sexto cuento renovado con la línea visual oficial.
+- Se aplicó Spec Kit en `specs/002-miedo-illustrations/` para fijar alcance, tono educativo, ficha de Leo, escenas y validaciones.
+- Se creó una ficha visual estable para Leo: pelo negro rizado, sudadera azul marino con franja turquesa, pantalón mostaza, zapatillas blancas, mochila verde salvia y linterna amarilla.
+- Las seis escenas de `La linterna de la cueva suave` muestran una progresión segura: niebla suave, luz para el siguiente paso, señales del cuerpo, acompañamiento, plan prudente y salida serena.
+- Las imágenes se optimizaron a `900 × 900 px` y se guardaron en `public/images/stories/miedo/`.
+- Los iconos provisionales se conservan únicamente como respaldo técnico.
+- La lámina de revisión quedó guardada en `visual-checks/miedo-contact-sheet.jpg`.
+- Verificación realizada: compilación correcta, siete recursos de Miedo con respuesta `200` y recorrido real de las seis páginas en el lector.
+- La prueba completa confirmó la recompensa de 25 puntos, la insignia Linterna Valiente y el desbloqueo posterior de Enfado.

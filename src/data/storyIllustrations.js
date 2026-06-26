@@ -156,31 +156,37 @@ export const storyIllustrations = {
       theme: 'mist-path',
       mainIcon: '\u{1F32B}\uFE0F',
       supportingIcons: ['\u{1F9D2}', '\u{1F463}', '\u{1F441}\uFE0F'],
+      imageSrc: '/images/stories/miedo/pagina-1-niebla-del-camino.jpg',
     },
     2: {
       theme: 'lantern-found',
       mainIcon: '\u{1F526}',
       supportingIcons: ['\u{1FAA8}', '\u2728', '\u{1F463}'],
+      imageSrc: '/images/stories/miedo/pagina-2-linterna-pequena.jpg',
     },
     3: {
       theme: 'body-alert',
       mainIcon: '\u{1FAC0}',
       supportingIcons: ['\u{1F9D2}', '\u{1F4AD}', '\u{1F9E0}'],
+      imageSrc: '/images/stories/miedo/pagina-3-cuerpo-avisa.jpg',
     },
     4: {
       theme: 'ask-help',
       mainIcon: '\u{1F91D}',
       supportingIcons: ['\u{1F9D2}', '\u{1F9D1}\u200D\u{1F3EB}', '\u{1F6E1}\uFE0F'],
+      imageSrc: '/images/stories/miedo/pagina-4-pedir-ayuda.jpg',
     },
     5: {
       theme: 'safe-steps',
       mainIcon: '\u{1F9ED}',
       supportingIcons: ['\u{23F8}\uFE0F', '\u{1F441}\uFE0F', '\u{1F4AC}'],
+      imageSrc: '/images/stories/miedo/pagina-5-plan-seguro.jpg',
     },
     6: {
       theme: 'lantern-path',
       mainIcon: '\u{1F3C6}',
       supportingIcons: ['\u{1F526}', '\u2728', '\u{1F6E4}\uFE0F'],
+      imageSrc: '/images/stories/miedo/pagina-6-camino-iluminado.jpg',
     },
   },
   enfado: {
