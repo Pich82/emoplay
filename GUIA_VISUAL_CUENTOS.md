@@ -207,3 +207,26 @@ guía conserva pelo negro recogido, chaqueta ciruela, pantalón oliva y mochila.
 progresión visual debe mostrar una cautela cotidiana: niebla suave, una luz para
 el siguiente paso, reconocimiento de señales, petición de compañía, un paso
 seguro y una salida serena; nunca terror ni amenaza.
+
+## Septimo cuento renovado: Enfado
+
+Carpeta:
+`public/images/stories/enfado/`
+
+Recursos:
+
+- `personajes-referencia.jpg`
+- `pagina-1-torre-caida.jpg`
+- `pagina-2-senal-roja.jpg`
+- `pagina-3-nombrar-enfado.jpg`
+- `pagina-4-limite-respetuoso.jpg`
+- `pagina-5-plan-seguro.jpg`
+- `pagina-6-volcan-sereno.jpg`
+
+Marco queda definido como personaje estable de la Isla Enfado: piel morena
+clara, pelo castano oscuro corto y ondulado, sudadera rojo ladrillo con franja
+crema, pantalon verde azulado, zapatillas rojas y pulsera azul. La companera
+conserva pelo negro rizado en dos recogidos, chaqueta menta, pantalon lavanda y
+zapatillas amarillas. La progresion visual debe mostrar el paso de energia
+intensa a limite seguro, respiracion, reparacion y camino sereno; nunca agresion,
+intimidacion, objetos lanzados ni enfado tratado como castigo.

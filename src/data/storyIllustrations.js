@@ -194,31 +194,37 @@ export const storyIllustrations = {
       theme: 'volcano-body',
       mainIcon: '\u{1F30B}',
       supportingIcons: ['\u{1F9D2}', '\u{1F9E9}', '\u{1F4A2}'],
+      imageSrc: '/images/stories/enfado/pagina-1-torre-caida.jpg',
     },
     2: {
       theme: 'red-signal',
       mainIcon: '\u{1F6A6}',
       supportingIcons: ['\u{1F91A}', '\u{23F8}\uFE0F', '\u{1F30B}'],
+      imageSrc: '/images/stories/enfado/pagina-2-senal-roja.jpg',
     },
     3: {
       theme: 'name-feeling',
       mainIcon: '\u{1F4AC}',
       supportingIcons: ['\u{1F9D2}', '\u{1FAC0}', '\u{1F4A8}'],
+      imageSrc: '/images/stories/enfado/pagina-3-nombrar-enfado.jpg',
     },
     4: {
       theme: 'safe-limit',
       mainIcon: '\u{1F91A}',
       supportingIcons: ['\u{1F6E1}\uFE0F', '\u{1F91D}', '\u{1F4AC}'],
+      imageSrc: '/images/stories/enfado/pagina-4-limite-respetuoso.jpg',
     },
     5: {
       theme: 'safe-plan',
       mainIcon: '\u{1F9ED}',
       supportingIcons: ['\u{23F8}\uFE0F', '\u{1F4A8}', '\u{1F4A1}'],
+      imageSrc: '/images/stories/enfado/pagina-5-plan-seguro.jpg',
     },
     6: {
       theme: 'volcano-path',
       mainIcon: '\u{1F3C6}',
       supportingIcons: ['\u{1F30B}', '\u2728', '\u{1F6E4}\uFE0F'],
+      imageSrc: '/images/stories/enfado/pagina-6-volcan-sereno.jpg',
     },
   },
   tristeza: {

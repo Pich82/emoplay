@@ -955,3 +955,20 @@ No simplificar ni sustituir la app por una versión básica. Mantener siempre la
 - La lámina de revisión quedó guardada en `visual-checks/miedo-contact-sheet.jpg`.
 - Verificación realizada: compilación correcta, siete recursos de Miedo con respuesta `200` y recorrido real de las seis páginas en el lector.
 - La prueba completa confirmó la recompensa de 25 puntos, la insignia Linterna Valiente y el desbloqueo posterior de Enfado.
+
+## Ajuste del 6 de julio de 2026: ilustraciones IA para Enfado
+
+- Se creo una copia de seguridad previa antes de modificar la app:
+  `_backups/emoplay-before-enfado-illustrations-20260706-010811.zip`.
+- Enfado se convierte en el septimo cuento renovado con la linea visual oficial.
+- Se aplico Spec Kit en `specs/003-enfado-illustrations/` para fijar alcance, tono educativo, ficha de Marco, escenas y validaciones.
+- Se definio el tono visual de Enfado como energia, limite, respiracion y reparacion, sin agresividad ni escenas intimidantes.
+- Se creo una ficha visual estable para Marco: piel morena clara, pelo castano oscuro corto y ondulado, sudadera rojo ladrillo con franja crema, pantalon verde azulado, zapatillas rojas y pulsera azul.
+- Se creo una companera visual estable: pelo negro rizado en dos recogidos, chaqueta menta, pantalon lavanda y zapatillas amarillas.
+- Las seis escenas de `El volcan que aprendio a hablar` muestran una progresion segura: torre caida, senal roja para parar, nombrar el enfado, pedir un minuto, volver a construir con un plan y camino final sereno.
+- Las imagenes se optimizaron a `900 x 900 px` y se guardaron en `public/images/stories/enfado/`.
+- Los iconos provisionales se conservan unicamente como respaldo tecnico.
+- La lamina de revision quedo guardada en `visual-checks/enfado-contact-sheet.jpg`.
+- Verificacion realizada: compilacion correcta, siete recursos de Enfado con respuesta `200` y recorrido real de las seis paginas en el lector.
+- La prueba completa confirmo la recompensa de 25 puntos, la insignia Volcan que Habla y el desbloqueo posterior de Tristeza.
+- Estado del repositorio remoto: todavia no hay `origin` configurado y GitHub CLI no esta instalado en el equipo, asi que la publicacion remota queda como siguiente accion segura. Opciones: instalar GitHub CLI y autenticar, o crear un repositorio vacio en GitHub y facilitar la URL para anadirla como remoto.
