@@ -989,3 +989,19 @@ No simplificar ni sustituir la app por una versión básica. Mantener siempre la
 - La lamina de revision quedo guardada en `visual-checks/tristeza-contact-sheet.jpg`.
 - Verificacion realizada: compilacion correcta, siete recursos de Tristeza con respuesta `200` y recorrido real de las seis paginas en el lector.
 - La prueba completa confirmo la recompensa de 25 puntos, la insignia Lluvia que Escucha y el desbloqueo posterior de Frustracion.
+
+## Ajuste del 15 de julio de 2026: ilustraciones IA para Frustracion
+
+- Se creo una copia de seguridad previa antes de modificar la isla:
+  `_backups/emoplay-before-frustracion-illustrations-20260715-132100.zip`.
+- Frustracion se convierte en el noveno cuento renovado con la linea visual oficial.
+- Se aplico Spec Kit en `specs/005-frustracion-illustrations/` para fijar alcance, tono educativo, ficha de Dani, escenas y validaciones.
+- Se definio el tono visual de Frustracion como dificultad, pausa, estrategia, pista respetuosa y vuelta al intento, sin fracaso definitivo ni bloqueo angustioso.
+- Se creo una ficha visual estable para Dani: piel morena clara, pelo negro corto y liso, gafas redondas azul oscuro, sudadera verde azulada, camiseta naranja, pantalon gris y zapatillas azules.
+- Se creo una persona de apoyo visual estable: pelo castano corto, camisa crema y peto azul.
+- Las seis escenas de `El puzle que no encajaba` muestran una progresion segura: pieza dificil, mesa iluminada cuando algo cuesta, pausa con agua y respiracion, nueva estrategia, pieza encajada y camino naranja final.
+- Las imagenes se optimizaron a `900 x 900 px` y se guardaron en `public/images/stories/frustracion/`.
+- Los iconos provisionales se conservan unicamente como respaldo tecnico.
+- La lamina de revision quedo guardada en `visual-checks/frustracion-contact-sheet.jpg`.
+- Verificacion realizada: compilacion correcta, siete recursos de Frustracion con respuesta `200` y recorrido real de las seis paginas en el lector.
+- La prueba completa confirmo la recompensa de 25 puntos, la insignia Puzle Paciente y el desbloqueo posterior de Verguenza.

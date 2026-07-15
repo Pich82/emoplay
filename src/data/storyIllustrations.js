@@ -270,31 +270,37 @@ export const storyIllustrations = {
       theme: 'hard-piece',
       mainIcon: '\u{1F9E9}',
       supportingIcons: ['\u{1F9D2}', '\u{23F3}', '\u{1F4A2}'],
+      imageSrc: '/images/stories/frustracion/pagina-1-pieza-dificil.jpg',
     },
     2: {
       theme: 'something-hard',
       mainIcon: '\u{1F4A2}',
       supportingIcons: ['\u{1F9E0}', '\u{1F6A7}', '\u{1F9E9}'],
+      imageSrc: '/images/stories/frustracion/pagina-2-algo-cuesta.jpg',
     },
     3: {
       theme: 'attempt-pause',
       mainIcon: '\u{23F8}\uFE0F',
       supportingIcons: ['\u{1F4A7}', '\u{1F4A8}', '\u{1F642}'],
+      imageSrc: '/images/stories/frustracion/pagina-3-pausa-intento.jpg',
     },
     4: {
       theme: 'new-strategy',
       mainIcon: '\u{1F4A1}',
       supportingIcons: ['\u{1F501}', '\u{1F50D}', '\u{1F91D}'],
+      imageSrc: '/images/stories/frustracion/pagina-4-otra-estrategia.jpg',
     },
     5: {
       theme: 'learn-error',
       mainIcon: '\u{1F501}',
       supportingIcons: ['\u{1F9E9}', '\u{1F31F}', '\u{1F4AA}'],
+      imageSrc: '/images/stories/frustracion/pagina-5-aprender-error.jpg',
     },
     6: {
       theme: 'puzzle-path',
       mainIcon: '\u{1F3C6}',
       supportingIcons: ['\u{1F9E9}', '\u2728', '\u{1F6E4}\uFE0F'],
+      imageSrc: '/images/stories/frustracion/pagina-6-camino-naranja.jpg',
     },
   },
   verguenza: {

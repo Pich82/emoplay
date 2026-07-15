@@ -254,3 +254,26 @@ salvia, pantalon azul oscuro y bufanda crema. La progresion visual debe mostrar
 tristeza acompanada: lluvia suave, lagrimas permitidas, peticion de compania,
 recuerdo con carino, vuelta gradual al juego y sendero azul sereno; nunca
 abandono, desesperacion ni dramatismo excesivo.
+
+## Noveno cuento renovado: Frustracion
+
+Carpeta:
+`public/images/stories/frustracion/`
+
+Recursos:
+
+- `personajes-referencia.jpg`
+- `pagina-1-pieza-dificil.jpg`
+- `pagina-2-algo-cuesta.jpg`
+- `pagina-3-pausa-intento.jpg`
+- `pagina-4-otra-estrategia.jpg`
+- `pagina-5-aprender-error.jpg`
+- `pagina-6-camino-naranja.jpg`
+
+Dani queda definido como personaje estable de la Isla Frustracion: piel morena
+clara, pelo negro corto y liso, gafas redondas azul oscuro, sudadera verde
+azulada, camiseta naranja, pantalon gris y zapatillas azules. La persona de
+apoyo conserva pelo castano corto, camisa crema y peto azul. La progresion visual
+debe mostrar dificultad amable, pausa, agua, respiracion, nueva estrategia,
+peticion de pista y celebracion del esfuerzo; nunca humillacion, fracaso
+definitivo, autocritica dura ni bloqueo angustioso.
