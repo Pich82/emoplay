@@ -1005,3 +1005,19 @@ No simplificar ni sustituir la app por una versión básica. Mantener siempre la
 - La lamina de revision quedo guardada en `visual-checks/frustracion-contact-sheet.jpg`.
 - Verificacion realizada: compilacion correcta, siete recursos de Frustracion con respuesta `200` y recorrido real de las seis paginas en el lector.
 - La prueba completa confirmo la recompensa de 25 puntos, la insignia Puzle Paciente y el desbloqueo posterior de Verguenza.
+
+## Ajuste del 15 de julio de 2026: ilustraciones IA para Verguenza
+
+- Se creo una copia de seguridad previa antes de modificar la isla:
+  `_backups/emoplay-before-verguenza-illustrations-20260715-152925.zip`.
+- Verguenza se convierte en el decimo cuento renovado con la linea visual oficial.
+- Se aplico Spec Kit en `specs/006-verguenza-illustrations/` para fijar alcance, tono educativo, ficha de Vera, escenas y validaciones.
+- Se definio el tono visual de Verguenza como participacion segura, rubor amable, paso pequeno, apoyo cercano y voz interna respetuosa, sin burla ni exposicion intimidante.
+- Se creo una ficha visual estable para Vera: piel morena clara, pelo castano oscuro ondulado en melena corta, diadema naranja fina, jersey amarillo suave, falda azul verdosa, calcetines crema y zapatos marrones.
+- Se creo una companera visual estable: piel clara, pelo negro liso en dos coletas bajas, peto verde, camiseta blanca y zapatillas rojas.
+- Las seis escenas de `El escenario de la voz pequena` muestran una progresion segura: escenario con luz suave, senales corporales de verguenza, forma mas pequena de participar, voz respetuosa tras una equivocacion, aplauso tranquilo y luz amable final.
+- Las imagenes se optimizaron a `900 x 900 px` y se guardaron en `public/images/stories/verguenza/`.
+- Los iconos provisionales se conservan unicamente como respaldo tecnico.
+- La lamina de revision quedo guardada en `visual-checks/verguenza-contact-sheet.jpg`.
+- Verificacion realizada: compilacion correcta, siete recursos de Verguenza con respuesta `200` y recorrido real de las seis paginas en el lector.
+- La prueba completa confirmo la recompensa de 25 puntos, la insignia Voz Amable y el desbloqueo posterior de Empatia.

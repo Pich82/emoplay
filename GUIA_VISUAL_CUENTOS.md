@@ -277,3 +277,27 @@ apoyo conserva pelo castano corto, camisa crema y peto azul. La progresion visua
 debe mostrar dificultad amable, pausa, agua, respiracion, nueva estrategia,
 peticion de pista y celebracion del esfuerzo; nunca humillacion, fracaso
 definitivo, autocritica dura ni bloqueo angustioso.
+
+## Decimo cuento renovado: Verguenza
+
+Carpeta:
+`public/images/stories/verguenza/`
+
+Recursos:
+
+- `personajes-referencia.jpg`
+- `pagina-1-luz-grande.jpg`
+- `pagina-2-cuerpo-protege.jpg`
+- `pagina-3-forma-pequena.jpg`
+- `pagina-4-voz-respeto.jpg`
+- `pagina-5-aplauso-tranquilo.jpg`
+- `pagina-6-luz-amable.jpg`
+
+Vera queda definida como personaje estable de la Isla Verguenza: piel morena
+clara, pelo castano oscuro ondulado en melena corta, diadema naranja fina,
+jersey amarillo suave, falda azul verdosa, calcetines crema y zapatos marrones.
+La companera de apoyo conserva piel clara, pelo negro liso en dos coletas bajas,
+peto verde, camiseta blanca y zapatillas rojas. La progresion visual debe
+mostrar participacion segura: escenario pequeno, rubor amable, cortina
+protectora, paso mas pequeno, voz interna respetuosa, aplauso tranquilo y luz
+amable final; nunca burla, humillacion, foco agresivo ni grupo intimidante.

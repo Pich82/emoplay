@@ -308,31 +308,37 @@ export const storyIllustrations = {
       theme: 'soft-stage',
       mainIcon: '\u{1F3AD}',
       supportingIcons: ['\u{1F9D2}', '\u{1F4D6}', '\u{1F4A1}'],
+      imageSrc: '/images/stories/verguenza/pagina-1-luz-grande.jpg',
     },
     2: {
       theme: 'body-shy',
       mainIcon: '\u{1F633}',
       supportingIcons: ['\u{1FAC0}', '\u{1F441}\uFE0F', '\u{1F90D}'],
+      imageSrc: '/images/stories/verguenza/pagina-2-cuerpo-protege.jpg',
     },
     3: {
       theme: 'small-step',
       mainIcon: '\u{1F4DD}',
       supportingIcons: ['\u{1F91D}', '\u{1FA91}', '\u{1F463}'],
+      imageSrc: '/images/stories/verguenza/pagina-3-forma-pequena.jpg',
     },
     4: {
       theme: 'kind-voice',
       mainIcon: '\u{1F49B}',
       supportingIcons: ['\u{1F4AC}', '\u{1F642}', '\u{1F331}'],
+      imageSrc: '/images/stories/verguenza/pagina-4-voz-respeto.jpg',
     },
     5: {
       theme: 'quiet-applause',
       mainIcon: '\u{1F44F}',
       supportingIcons: ['\u{1F3AD}', '\u{1F31F}', '\u{1F91D}'],
+      imageSrc: '/images/stories/verguenza/pagina-5-aplauso-tranquilo.jpg',
     },
     6: {
       theme: 'stage-path',
       mainIcon: '\u{1F3C6}',
       supportingIcons: ['\u{1F3AD}', '\u2728', '\u{1F6E4}\uFE0F'],
+      imageSrc: '/images/stories/verguenza/pagina-6-luz-amable.jpg',
     },
   },
   empatia: {
