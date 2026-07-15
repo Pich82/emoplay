@@ -971,4 +971,21 @@ No simplificar ni sustituir la app por una versión básica. Mantener siempre la
 - La lamina de revision quedo guardada en `visual-checks/enfado-contact-sheet.jpg`.
 - Verificacion realizada: compilacion correcta, siete recursos de Enfado con respuesta `200` y recorrido real de las seis paginas en el lector.
 - La prueba completa confirmo la recompensa de 25 puntos, la insignia Volcan que Habla y el desbloqueo posterior de Tristeza.
-- Estado del repositorio remoto: todavia no hay `origin` configurado y GitHub CLI no esta instalado en el equipo, asi que la publicacion remota queda como siguiente accion segura. Opciones: instalar GitHub CLI y autenticar, o crear un repositorio vacio en GitHub y facilitar la URL para anadirla como remoto.
+- Estado del repositorio remoto: GitHub ya quedo conectado como `origin` en `https://github.com/Pich82/emoplay.git`. La rama `master` quedo subida y sincronizada con `origin/master`, por lo que el proyecto ya no depende solo del ordenador ni de copias `.zip`.
+
+## Ajuste del 15 de julio de 2026: ilustraciones IA para Tristeza
+
+- Se actualizo el registro de progreso para reflejar que GitHub ya esta conectado como remoto `origin`.
+- Se creo una copia de seguridad previa antes de modificar la isla:
+  `_backups/emoplay-before-tristeza-illustrations-20260715-114248.zip`.
+- Tristeza se convierte en el octavo cuento renovado con la linea visual oficial.
+- Se aplico Spec Kit en `specs/004-tristeza-illustrations/` para fijar alcance, tono educativo, ficha de Alba, escenas y validaciones.
+- Se definio el tono visual de Tristeza como consuelo, escucha, compania, recuerdo amable y vuelta gradual, sin abandono ni dramatismo excesivo.
+- Se creo una ficha visual estable para Alba: piel clara oliva, pelo castano oscuro largo y ondulado, dos horquillas azules, impermeable amarillo suave, vestido o falda azul petroleo, botas rojas, mochila azul y libreta azul.
+- Se creo una profesora visual estable: pelo castano recogido, cardigan verde salvia, pantalon azul oscuro y bufanda crema.
+- Las seis escenas de `La lluvia que sabia escuchar` muestran una progresion segura: patio con lluvia suave, lagrimas permitidas, pedir compania, escribir un recuerdo, volver poco a poco al juego y sendero azul final.
+- Las imagenes se optimizaron a `900 x 900 px` y se guardaron en `public/images/stories/tristeza/`.
+- Los iconos provisionales se conservan unicamente como respaldo tecnico.
+- La lamina de revision quedo guardada en `visual-checks/tristeza-contact-sheet.jpg`.
+- Verificacion realizada: compilacion correcta, siete recursos de Tristeza con respuesta `200` y recorrido real de las seis paginas en el lector.
+- La prueba completa confirmo la recompensa de 25 puntos, la insignia Lluvia que Escucha y el desbloqueo posterior de Frustracion.

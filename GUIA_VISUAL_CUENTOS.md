@@ -230,3 +230,27 @@ conserva pelo negro rizado en dos recogidos, chaqueta menta, pantalon lavanda y
 zapatillas amarillas. La progresion visual debe mostrar el paso de energia
 intensa a limite seguro, respiracion, reparacion y camino sereno; nunca agresion,
 intimidacion, objetos lanzados ni enfado tratado como castigo.
+
+## Octavo cuento renovado: Tristeza
+
+Carpeta:
+`public/images/stories/tristeza/`
+
+Recursos:
+
+- `personajes-referencia.jpg`
+- `pagina-1-lluvia-suave.jpg`
+- `pagina-2-gotas-permitidas.jpg`
+- `pagina-3-pedir-compania.jpg`
+- `pagina-4-recuerdo-carino.jpg`
+- `pagina-5-volver-poco-a-poco.jpg`
+- `pagina-6-sendero-azul.jpg`
+
+Alba queda definida como personaje estable de la Isla Tristeza: piel clara
+oliva, pelo castano oscuro largo y ondulado, dos horquillas azules, impermeable
+amarillo suave, vestido o falda azul petroleo, botas de lluvia rojas, mochila
+azul y libreta azul. La profesora conserva pelo castano recogido, cardigan verde
+salvia, pantalon azul oscuro y bufanda crema. La progresion visual debe mostrar
+tristeza acompanada: lluvia suave, lagrimas permitidas, peticion de compania,
+recuerdo con carino, vuelta gradual al juego y sendero azul sereno; nunca
+abandono, desesperacion ni dramatismo excesivo.

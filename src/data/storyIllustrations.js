@@ -232,31 +232,37 @@ export const storyIllustrations = {
       theme: 'soft-rain',
       mainIcon: '\u{1F327}\uFE0F',
       supportingIcons: ['\u{1F9D2}', '\u{1F3EB}', '\u{1F499}'],
+      imageSrc: '/images/stories/tristeza/pagina-1-lluvia-suave.jpg',
     },
     2: {
       theme: 'tears-ok',
       mainIcon: '\u{1F4A7}',
       supportingIcons: ['\u{2601}\uFE0F', '\u{1F9D2}', '\u{1F90D}'],
+      imageSrc: '/images/stories/tristeza/pagina-2-gotas-permitidas.jpg',
     },
     3: {
       theme: 'ask-company',
       mainIcon: '\u{1F91D}',
       supportingIcons: ['\u{1F9D1}\u200D\u{1F3EB}', '\u{1FA91}', '\u{1F4AC}'],
+      imageSrc: '/images/stories/tristeza/pagina-3-pedir-compania.jpg',
     },
     4: {
       theme: 'care-memory',
       mainIcon: '\u{1F4D8}',
       supportingIcons: ['\u{2709}\uFE0F', '\u{1F499}', '\u{1F331}'],
+      imageSrc: '/images/stories/tristeza/pagina-4-recuerdo-carino.jpg',
     },
     5: {
       theme: 'return-slowly',
       mainIcon: '\u{1F331}',
       supportingIcons: ['\u{1F91D}', '\u{1F3D0}', '\u{1F642}'],
+      imageSrc: '/images/stories/tristeza/pagina-5-volver-poco-a-poco.jpg',
     },
     6: {
       theme: 'rain-path',
       mainIcon: '\u{1F3C6}',
       supportingIcons: ['\u{1F327}\uFE0F', '\u2728', '\u{1F6E4}\uFE0F'],
+      imageSrc: '/images/stories/tristeza/pagina-6-sendero-azul.jpg',
     },
   },
   frustracion: {
