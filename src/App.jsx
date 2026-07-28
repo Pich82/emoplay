@@ -3,6 +3,13 @@ import AppShell from './components/AppShell.jsx';
 import { defaultAvatarConfig, normalizeAvatarConfig } from './data/avatar.js';
 import { futureSections } from './data/navigation.js';
 import { initialPlayerState, normalizePlayerState } from './data/player.js';
+import {
+  buildProgressBackup,
+  downloadProgressBackup,
+  parseProgressBackupText,
+  saveLocalProgressBackup,
+  writeProgressBackupToStorage,
+} from './data/progressTransfer.js';
 import { canUnlockReward, getRewardById } from './data/rewards.js';
 import useLocalStorage from './hooks/useLocalStorage.js';
 import AchievementsScreen from './screens/AchievementsScreen.jsx';
@@ -54,6 +61,8 @@ function App() {
   const [currentScreen, setCurrentScreen] = useState(player.hasStarted ? screens.home : screens.welcome);
   const [selectedIslandId, setSelectedIslandId] = useState('ternura');
   const [isTeacherPanelUnlocked, setTeacherPanelUnlocked] = useState(false);
+  const [pendingProgressImport, setPendingProgressImport] = useState(null);
+  const [progressTransferStatus, setProgressTransferStatus] = useState(null);
 
   const selectedIsland = useMemo(() => getEmotionById(selectedIslandId), [selectedIslandId]);
 
@@ -87,6 +96,79 @@ function App() {
         className,
       };
     });
+  };
+
+  const exportProgress = () => {
+    const backup = buildProgressBackup(player, avatarConfig);
+
+    downloadProgressBackup(backup);
+    setProgressTransferStatus({
+      type: 'success',
+      text: 'Copia de progreso descargada en formato JSON.',
+    });
+  };
+
+  const reviewProgressImport = ({ fileName, text }) => {
+    if (typeof text !== 'string') {
+      setPendingProgressImport(null);
+      setProgressTransferStatus({
+        type: 'error',
+        text: 'No se pudo leer la copia seleccionada.',
+      });
+      return;
+    }
+
+    const result = parseProgressBackupText(text);
+
+    if (!result.ok) {
+      setPendingProgressImport(null);
+      setProgressTransferStatus({
+        type: 'error',
+        text: result.error,
+      });
+      return;
+    }
+
+    setPendingProgressImport({
+      fileName,
+      backup: result.backup,
+      summary: result.summary,
+    });
+    setProgressTransferStatus({
+      type: 'info',
+      text: 'Copia leida correctamente. Revisa el resumen antes de restaurarla.',
+    });
+  };
+
+  const cancelProgressImport = () => {
+    setPendingProgressImport(null);
+    setProgressTransferStatus({
+      type: 'info',
+      text: 'Importacion cancelada. No se ha cambiado el progreso actual.',
+    });
+  };
+
+  const confirmProgressImport = () => {
+    if (!pendingProgressImport?.backup) {
+      setProgressTransferStatus({
+        type: 'error',
+        text: 'No hay una copia valida preparada para importar.',
+      });
+      return;
+    }
+
+    const currentBackup = buildProgressBackup(player, avatarConfig);
+    const localBackupKey = saveLocalProgressBackup(currentBackup);
+    const restored = writeProgressBackupToStorage(pendingProgressImport.backup);
+
+    setPlayer(restored.player);
+    setAvatarConfig(restored.avatarConfig);
+    setPendingProgressImport(null);
+    setProgressTransferStatus({
+      type: 'success',
+      text: `Progreso importado. Se guardo una copia local previa en ${localBackupKey}.`,
+    });
+    setCurrentScreen(screens.profile);
   };
 
   const claimReward = (rewardId) => {
@@ -323,6 +405,12 @@ function App() {
           onSaveProfile={updateProfile}
           onGoAvatar={() => setCurrentScreen(screens.avatar)}
           onGoMap={() => setCurrentScreen(screens.map)}
+          onExportProgress={exportProgress}
+          onReviewProgressImport={reviewProgressImport}
+          pendingProgressImport={pendingProgressImport}
+          progressTransferStatus={progressTransferStatus}
+          onCancelProgressImport={cancelProgressImport}
+          onConfirmProgressImport={confirmProgressImport}
         />
       );
     }

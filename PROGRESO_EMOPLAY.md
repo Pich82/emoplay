@@ -1021,3 +1021,16 @@ No simplificar ni sustituir la app por una versión básica. Mantener siempre la
 - La lamina de revision quedo guardada en `visual-checks/verguenza-contact-sheet.jpg`.
 - Verificacion realizada: compilacion correcta, siete recursos de Verguenza con respuesta `200` y recorrido real de las seis paginas en el lector.
 - La prueba completa confirmo la recompensa de 25 puntos, la insignia Voz Amable y el desbloqueo posterior de Empatia.
+
+## Ajuste del 28 de julio de 2026: exportar e importar progreso sin servidor
+
+- Se creo una copia de seguridad previa antes de modificar la app:
+  `_backups/emoplay-before-progress-transfer-20260728-132510.zip`.
+- Se aplico Spec Kit en `specs/007-progress-transfer/` para definir el alcance de mover progreso entre dispositivos sin servidor.
+- Se anadio el modulo `src/data/progressTransfer.js` para crear copias JSON, validar importaciones, normalizar datos y sincronizar claves modernas y legacy.
+- La copia incluye jugador, avatar, Diario Emo, informes locales de retos y claves legacy de cuentos, retos, minijuegos, puntos e islas completadas.
+- `Mi perfil` ahora permite exportar progreso e importar una copia JSON con resumen previo antes de sustituir los datos actuales.
+- Antes de confirmar una importacion, EMOPLAY guarda una copia local previa en `emoplay:progressImportBackup:last`.
+- Se anadio la comprobacion `npm run test:progress-transfer` para validar exportacion, rechazo de archivos incompatibles, restauracion y limpieza de claves legacy antiguas.
+- Verificacion realizada: `npm run test:progress-transfer` correcto y `npm run build` correcto.
+- No se modifico contenido de islas, cuentos, retos ni recursos visuales.

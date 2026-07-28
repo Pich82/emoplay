@@ -1,16 +1,30 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import AvatarPreview from '../components/AvatarPreview.jsx';
 import { getAchievementCards } from '../data/achievements.js';
 import { emotions } from '../data/emotions.js';
 import { getLevelProgress, getPlayerLevel } from '../utils/progress.js';
 
-function ProfileScreen({ player, avatarConfig, onSaveProfile, onGoAvatar, onGoMap }) {
+function ProfileScreen({
+  player,
+  avatarConfig,
+  onSaveProfile,
+  onGoAvatar,
+  onGoMap,
+  onExportProgress,
+  onReviewProgressImport,
+  pendingProgressImport,
+  progressTransferStatus,
+  onCancelProgressImport,
+  onConfirmProgressImport,
+}) {
   const [studentName, setStudentName] = useState(player.studentName || '');
   const [className, setClassName] = useState(player.className || '');
   const [message, setMessage] = useState('');
+  const fileInputRef = useRef(null);
   const level = getPlayerLevel(player.points);
   const levelProgress = getLevelProgress(player.points);
   const unlockedAchievements = getAchievementCards(player).filter((achievement) => achievement.unlocked);
+  const pendingSummary = pendingProgressImport?.summary;
 
   const saveProfile = (event) => {
     event.preventDefault();
@@ -28,6 +42,43 @@ function ProfileScreen({ player, avatarConfig, onSaveProfile, onGoAvatar, onGoMa
       className: cleanClassName,
     });
     setMessage('Perfil actualizado correctamente.');
+  };
+
+  const readProgressFile = (event) => {
+    const file = event.target.files?.[0];
+
+    if (!file) {
+      return;
+    }
+
+    if (file.size > 2_000_000) {
+      onReviewProgressImport({
+        fileName: file.name,
+        text: null,
+      });
+      event.target.value = '';
+      return;
+    }
+
+    const reader = new FileReader();
+
+    reader.onload = () => {
+      onReviewProgressImport({
+        fileName: file.name,
+        text: String(reader.result || ''),
+      });
+      event.target.value = '';
+    };
+
+    reader.onerror = () => {
+      onReviewProgressImport({
+        fileName: file.name,
+        text: null,
+      });
+      event.target.value = '';
+    };
+
+    reader.readAsText(file);
   };
 
   return (
@@ -120,6 +171,95 @@ function ProfileScreen({ player, avatarConfig, onSaveProfile, onGoAvatar, onGoMa
             </div>
           </div>
         </section>
+      </section>
+
+      <section className="profile-transfer-panel">
+        <div className="profile-transfer-panel__header">
+          <div>
+            <p className="eyebrow">Mover progreso</p>
+            <h2>Copias para otro dispositivo</h2>
+            <p>
+              Exporta una copia JSON o importa una copia creada en otro navegador.
+              Antes de importar, EMOPLAY guarda una copia local del progreso actual.
+            </p>
+          </div>
+          <div className="profile-transfer-panel__actions">
+            <button type="button" onClick={onExportProgress}>
+              Exportar progreso
+            </button>
+            <button
+              className="button-secondary"
+              type="button"
+              onClick={() => fileInputRef.current?.click()}
+            >
+              Importar copia JSON
+            </button>
+            <input
+              ref={fileInputRef}
+              type="file"
+              accept="application/json,.json"
+              className="profile-transfer-panel__file"
+              onChange={readProgressFile}
+            />
+          </div>
+        </div>
+
+        {progressTransferStatus && (
+          <div
+            className={[
+              'profile-transfer-message',
+              `profile-transfer-message--${progressTransferStatus.type}`,
+            ].join(' ')}
+          >
+            {progressTransferStatus.text}
+          </div>
+        )}
+
+        {pendingSummary && (
+          <div className="profile-import-review">
+            <div>
+              <p className="eyebrow">Copia seleccionada</p>
+              <h3>{pendingProgressImport.fileName}</h3>
+              <p>
+                Se restaurara este progreso y se sustituira el progreso actual de este navegador.
+              </p>
+            </div>
+            <dl>
+              <div>
+                <dt>Alumno</dt>
+                <dd>{pendingSummary.studentName}</dd>
+              </div>
+              <div>
+                <dt>Puntos</dt>
+                <dd>{pendingSummary.points}</dd>
+              </div>
+              <div>
+                <dt>Islas abiertas</dt>
+                <dd>{pendingSummary.unlockedIslands}</dd>
+              </div>
+              <div>
+                <dt>Cuentos</dt>
+                <dd>{pendingSummary.completedStories}</dd>
+              </div>
+              <div>
+                <dt>Retos</dt>
+                <dd>{pendingSummary.completedChallenges}</dd>
+              </div>
+              <div>
+                <dt>Diario</dt>
+                <dd>{pendingSummary.diaryEntries}</dd>
+              </div>
+            </dl>
+            <div className="profile-import-review__actions">
+              <button type="button" onClick={onConfirmProgressImport}>
+                Importar y sustituir progreso
+              </button>
+              <button className="button-secondary" type="button" onClick={onCancelProgressImport}>
+                Cancelar
+              </button>
+            </div>
+          </div>
+        )}
       </section>
     </div>
   );
