@@ -316,6 +316,33 @@ export const achievementCatalog = [
     description: 'Desbloqueaste la Isla Confianza como siguiente fase del mapa emocional.',
     color: '#45b7d1',
   },
+  {
+    id: 'cuento_confianza',
+    emotionId: 'confianza',
+    type: 'cuento',
+    icon: '\u{1F6E1}\uFE0F',
+    title: 'Faro Azul',
+    description: 'Completaste el cuento de Confianza y practicaste pasos seguros.',
+    color: '#45b7d1',
+  },
+  {
+    id: 'reto_confianza',
+    emotionId: 'confianza',
+    type: 'reto',
+    icon: '\u{1F91D}',
+    title: 'Pasos Seguros',
+    description: 'Completaste los retos de Confianza y practicaste apoyo y límites.',
+    color: '#45b7d1',
+  },
+  {
+    id: 'desbloqueo_sorpresa',
+    emotionId: 'sorpresa',
+    type: 'mapa',
+    icon: '\u{1F632}',
+    title: 'Ruta de lo Inesperado',
+    description: 'Desbloqueaste la Isla Sorpresa como próxima fase del mapa emocional.',
+    color: '#00c2ff',
+  },
 ];
 
 export function getUnlockedAchievementIds(player) {

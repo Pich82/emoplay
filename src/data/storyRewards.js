@@ -197,6 +197,24 @@ export const storyRewards = {
         'El escudo de los pasos valientes queda marcado en el mapa para la siguiente fase.',
     },
   },
+  confianza: {
+    title: '¡Confianza completada!',
+    subtitle: 'Has practicado pedir apoyo, cumplir acuerdos pequeños y respetar tus límites.',
+    replaySubtitle: 'Ya tienes la insignia de Confianza. Puedes volver a leer el cuento.',
+    points: 25,
+    nextAction: 'Jugar retos de Confianza',
+    badge: {
+      icon: '\u{1F6E1}\uFE0F',
+      title: 'Insignia Faro Azul',
+      description: 'Construyes confianza con pasos seguros, apoyo y respeto.',
+    },
+    unlock: {
+      icon: '\u{1F632}',
+      title: 'Sorpresa desbloqueada',
+      description:
+        'La puerta inesperada aparece en el mapa como la próxima fase de la aventura.',
+    },
+  },
 };
 
 export function getStoryRewardByEmotionId(emotionId) {

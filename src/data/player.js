@@ -43,6 +43,7 @@ function readLegacyStories() {
     'verguenza',
     'empatia',
     'gratitud',
+    'confianza',
   ];
 
   return stories.filter((storyId) => window.localStorage.getItem(`cuento_${storyId}_completado`) === 'true');
@@ -62,6 +63,7 @@ function readLegacyChallengeIds() {
     'verguenza',
     'empatia',
     'gratitud',
+    'confianza',
   ];
 
   return challengeIds.filter(

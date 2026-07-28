@@ -1034,3 +1034,13 @@ No simplificar ni sustituir la app por una versión básica. Mantener siempre la
 - Se anadio la comprobacion `npm run test:progress-transfer` para validar exportacion, rechazo de archivos incompatibles, restauracion y limpieza de claves legacy antiguas.
 - Verificacion realizada: `npm run test:progress-transfer` correcto y `npm run build` correcto.
 - No se modifico contenido de islas, cuentos, retos ni recursos visuales.
+
+## Avance del 28 de julio de 2026: Confianza y decisión sobre la isla final
+
+- Se completó localmente la Isla Confianza con cuento de seis páginas, ilustraciones, retos, reflexión final, logros y recompensas.
+- Confianza trabaja apoyo seguro, acuerdos claros, pasos pequeños y límites respetuosos.
+- La siguiente isla del recorrido será Sorpresa, elegida como una fase sencilla y concreta para continuar.
+- Amor se reserva como la isla final especial de EMOPLAY y no se desarrollará como una isla ordinaria.
+- El concepto guardado para Amor es `El Faro de los Vínculos Seguros`: integrará los aprendizajes de todas las islas, vínculos seguros, amor propio, límites, reparación y cuidado.
+- La experiencia final podrá reunir símbolos de todas las islas, decisiones interactivas, una caja de herramientas emocionales, un mensaje al yo futuro y un refugio con las insignias conseguidas.
+- La decisión completa queda registrada en `specs/010-amor-final-island/concept.md`.

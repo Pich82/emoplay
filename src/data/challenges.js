@@ -1088,6 +1088,103 @@ export const challengeSets = {
       },
     ],
   },
+  confianza: {
+    emotionId: 'confianza',
+    title: 'Retos de Confianza',
+    subtitle: 'Practica pedir apoyo, cumplir acuerdos y respetar tus límites.',
+    mission: 'Misión Faro Azul',
+    color: '#45b7d1',
+    challenges: [
+      {
+        id: 'confianza-vf-1',
+        type: 'trueFalse',
+        icon: '\u{1F91D}',
+        question: '¿Pedir ayuda a una persona segura puede ayudarte a avanzar paso a paso?',
+        answer: true,
+        points: 10,
+        penalty: 5,
+        explanation:
+          'Pedir apoyo no es hacer menos. Puede darte calma, información y compañía para probar un paso posible.',
+      },
+      {
+        id: 'confianza-vf-2',
+        type: 'trueFalse',
+        icon: '\u{1F4AC}',
+        question: '¿Confiar significa aceptar cualquier cosa aunque te haga sentir incómodo?',
+        answer: false,
+        points: 10,
+        penalty: 5,
+        explanation:
+          'La confianza también escucha los límites. Puedes parar, decir no con respeto y hablar con una persona adulta segura.',
+      },
+      {
+        id: 'confianza-vf-3',
+        type: 'trueFalse',
+        icon: '\u{1F4CC}',
+        question: '¿Cumplir acuerdos pequeños ayuda a que las personas sepan qué esperar?',
+        answer: true,
+        points: 10,
+        penalty: 5,
+        explanation:
+          'Los acuerdos claros y posibles hacen que la convivencia sea más predecible y segura.',
+      },
+      {
+        id: 'confianza-vf-4',
+        type: 'trueFalse',
+        icon: '\u{1F6E1}\uFE0F',
+        question: '¿Tienes que guardar un secreto que te preocupa para demostrar confianza?',
+        answer: false,
+        points: 10,
+        penalty: 5,
+        explanation:
+          'Si algo te preocupa, te asusta o te hace sentir mal, es importante contarlo a una persona adulta de confianza.',
+      },
+      {
+        id: 'confianza-vf-5',
+        type: 'trueFalse',
+        icon: '\u{1F6B6}',
+        question: '¿La confianza puede construirse con pasos pequeños y tiempo?',
+        answer: true,
+        points: 10,
+        penalty: 5,
+        explanation:
+          'No hace falta confiar de golpe. Observar, hablar y probar acuerdos pequeños puede ayudar.',
+      },
+      {
+        id: 'confianza-reflexion-1',
+        type: 'reflection',
+        icon: '\u{1F4AD}',
+        question:
+          'Piensa en una persona adulta con la que puedas hablar cuando necesitas ayuda. ¿Qué hace que te resulte segura?',
+        placeholder:
+          'Puede ser alguien que escucha, explica con calma, respeta tus palabras o busca ayuda contigo.',
+        points: 15,
+        minLength: 18,
+      },
+      {
+        id: 'confianza-reflexion-2',
+        type: 'reflection',
+        icon: '\u{1F4AC}',
+        question:
+          'Escribe una frase clara que podrías usar para pedir apoyo o una pausa.',
+        placeholder:
+          'Por ejemplo: necesito ayuda con..., ¿puedes quedarte cerca?, necesito una pausa para pensar.',
+        points: 15,
+        minLength: 18,
+      },
+      {
+        id: 'confianza-reflexion-3',
+        type: 'reflection',
+        icon: '\u{1F6E1}\uFE0F',
+        question:
+          'Describe un acuerdo pequeño que ayudaría a que una actividad de clase se sintiera más segura para el grupo.',
+        placeholder:
+          'Puede ser respetar turnos, explicar las reglas, poder pedir una pausa o escuchar antes de responder.',
+        points: 15,
+        minLength: 18,
+      },
+    ],
+  },
 };
 
 export const getChallengeSetByEmotionId = (emotionId) => challengeSets[emotionId];

@@ -11,16 +11,16 @@ export const islandUnlockOrder = [
   'empatia',
   'gratitud',
   'confianza',
+  'sorpresa',
 ];
 
 export const islandMapOrder = [
   ...islandUnlockOrder,
-  'sorpresa',
   'afectividad',
-  'amor',
+  'asco',
   'culpa',
   'celos',
-  'asco',
+  'amor',
 ];
 
 export function getIslandMapOrder(emotionList = []) {

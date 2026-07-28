@@ -417,6 +417,44 @@ export const storyIllustrations = {
       imageSrc: '/images/stories/gratitud/pagina-6-camino-semillas.jpg',
     },
   },
+  confianza: {
+    1: {
+      theme: 'confidence-lighthouse',
+      mainIcon: '\u{1F6E1}\uFE0F',
+      supportingIcons: ['\u{1F3D6}\uFE0F', '\u{1F6B6}', '\u{1F30A}'],
+      imageSrc: '/images/stories/confianza/pagina-1-faro-azul.jpg',
+    },
+    2: {
+      theme: 'confidence-plan',
+      mainIcon: '\u{1F4CB}',
+      supportingIcons: ['\u{1F91D}', '\u{1F6A6}', '\u{2728}'],
+      imageSrc: '/images/stories/confianza/pagina-2-plan-compartido.jpg',
+    },
+    3: {
+      theme: 'confidence-support',
+      mainIcon: '\u{1F91D}',
+      supportingIcons: ['\u{1F9D1}\u200D\u{1F3EB}', '\u{1F6E1}\uFE0F', '\u{1F4AC}'],
+      imageSrc: '/images/stories/confianza/pagina-3-pedir-apoyo.jpg',
+    },
+    4: {
+      theme: 'confidence-agreements',
+      mainIcon: '\u{1F6B6}',
+      supportingIcons: ['\u{1F91D}', '\u{1F4CC}', '\u{1F31F}'],
+      imageSrc: '/images/stories/confianza/pagina-4-acuerdos-pequenos.jpg',
+    },
+    5: {
+      theme: 'confidence-limits',
+      mainIcon: '\u{1F499}',
+      supportingIcons: ['\u{1F6E1}\uFE0F', '\u{1F4AC}', '\u{1F642}'],
+      imageSrc: '/images/stories/confianza/pagina-5-escucharme.jpg',
+    },
+    6: {
+      theme: 'confidence-path',
+      mainIcon: '\u{1F3C6}',
+      supportingIcons: ['\u{1F3D6}\uFE0F', '\u{1F6E1}\uFE0F', '\u{1F6E4}\uFE0F'],
+      imageSrc: '/images/stories/confianza/pagina-6-camino-seguro.jpg',
+    },
+  },
 };
 
 export const getStoryIllustration = (emotionId, pageId) =>

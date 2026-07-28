@@ -626,6 +626,63 @@ export const storySets = {
       },
     ],
   },
+  confianza: {
+    emotionId: 'confianza',
+    title: 'El faro de los pasos seguros',
+    emotionName: 'Confianza',
+    color: '#45b7d1',
+    pages: [
+      {
+        id: 1,
+        title: 'El faro azul',
+        illustration: '\u{1F6E1}\uFE0F',
+        text:
+          'Nico llegó a la Isla Confianza con su mochila azul. Junto al faro vio un sendero de piedras y un cartel con dibujos. No tenía que correr: podía mirar el camino y decidir su primer paso.',
+        scene: 'Nico observa el faro azul y un sendero tranquilo junto al mar.',
+      },
+      {
+        id: 2,
+        title: 'Un plan compartido',
+        illustration: '\u{1F4CB}',
+        text:
+          'La maestra le mostró un plan sencillo: cruzar una parte del puente, parar si lo necesitaba y contar cómo se sentía. Cuando los acuerdos son claros, es más fácil saber qué esperar.',
+        scene: 'Nico escucha un plan con símbolos sencillos cerca de un pequeño puente.',
+      },
+      {
+        id: 3,
+        title: 'Pedir apoyo',
+        illustration: '\u{1F91D}',
+        text:
+          'Al llegar al puente, Nico notó dudas en la barriga. Levantó la mano y dijo: "¿Puedes quedarte cerca mientras pruebo?". Pedir apoyo fue una forma valiente de cuidarse.',
+        scene: 'Nico pide apoyo a una persona adulta de confianza antes de dar un paso.',
+      },
+      {
+        id: 4,
+        title: 'Acuerdos pequeños',
+        illustration: '\u{1F6B6}',
+        text:
+          'Después, Nico y su amigo fueron colocando marcas en el camino por turnos. Cada uno cumplió lo que había dicho. La confianza crecía en los gestos pequeños, no en promesas gigantes.',
+        scene: 'Nico y un amigo colaboran por turnos para marcar un camino seguro.',
+      },
+      {
+        id: 5,
+        title: 'Escucharme también',
+        illustration: '\u{1F499}',
+        text:
+          'Nico recordó algo importante: confiar no es decir sí a todo. También puede escuchar lo que necesita, poner un límite respetuoso y buscar a alguien seguro cuando algo no le parece bien.',
+        scene: 'Nico piensa con calma mientras las personas cercanas respetan su espacio.',
+      },
+      {
+        id: 6,
+        title: 'Cuento completado',
+        illustration: '\u{1F3C6}',
+        text:
+          'Ahora conoces mejor la confianza. Puedes construirla paso a paso: con acuerdos claros, apoyo cuando lo necesitas y respeto por tus propios límites.',
+        scene: 'El faro azul ilumina un camino seguro que continúa hacia la siguiente isla.',
+        final: true,
+      },
+    ],
+  },
 };
 
 export const getStoryByEmotionId = (emotionId) => storySets[emotionId];

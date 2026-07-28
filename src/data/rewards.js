@@ -240,6 +240,20 @@ export const rewardCatalog = [
     canEquip: false,
   },
   {
+    id: 'acuerdo_faro_azul',
+    title: 'Acuerdo del Faro Azul',
+    description:
+      'Propón una ronda breve en la que cada persona pueda decir qué apoyo necesita para sentirse segura en una actividad.',
+    icon: '\u{1F6E1}\uFE0F',
+    category: 'Convivencia',
+    rewardType: 'benefit',
+    color: '#45b7d1',
+    requirement: { type: 'achievement', achievementId: 'cuento_confianza' },
+    requirementLabel: 'Completa el cuento de Confianza',
+    practicalNote: 'Dinámica voluntaria y guiada por el docente.',
+    canEquip: false,
+  },
+  {
     id: 'corona_explorador',
     title: 'Corona de Explorador Emocional',
     description:
@@ -446,6 +460,22 @@ export const rewardCatalog = [
     canEquip: true,
     avatarSlot: 'frame',
     avatarValue: 'marco_libreta_gratitud',
+  },
+  {
+    id: 'marco_faro_azul',
+    title: 'Marco Faro Azul',
+    description:
+      'Marco azul para el avatar al completar los retos de Confianza.',
+    icon: '\u{1F6E1}\uFE0F',
+    category: 'Distintivo avatar',
+    rewardType: 'avatar',
+    color: '#45b7d1',
+    requirement: { type: 'achievement', achievementId: 'reto_confianza' },
+    requirementLabel: 'Completa los retos de Confianza',
+    practicalNote: 'Marco visual integrado en la foto del avatar.',
+    canEquip: true,
+    avatarSlot: 'frame',
+    avatarValue: 'marco_faro_azul',
   },
   {
     id: 'medalla_respiracion_serena',

@@ -21,6 +21,8 @@ export const storyFinalReflections = {
     'Si ves a alguien solo o preocupado, ¿cómo podrías acercarte, escuchar y hacerle sentir que no está solo?',
   gratitud:
     'Piensa en una ayuda pequeña que hayas recibido hoy o esta semana. ¿Cómo podrías dar las gracias con detalle o devolver cuidado de alguna forma posible?',
+  confianza:
+    'Piensa en una situación en la que necesites apoyo. ¿Qué persona segura podrías buscar y qué podrías pedirle con una frase clara?',
 };
 
 export const getStoryFinalReflection = (emotionId) => storyFinalReflections[emotionId] || '';
