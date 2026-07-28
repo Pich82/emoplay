@@ -2,8 +2,9 @@ import { getChallengesByEmotionId } from './challenges.js';
 import { getEmotionById } from './emotions.js';
 import { islandUnlockOrder } from './islandProgression.js';
 import { getMiniGameByEmotionId } from './miniGames.js';
+import { getStoryByEmotionId } from './stories.js';
 
-const nextFutureIslandId = 'gratitud';
+const nextFutureIslandId = 'confianza';
 
 function includesValue(values = [], value) {
   return Array.isArray(values) && values.includes(value);
@@ -28,8 +29,9 @@ export function getAdventureNextStep(player) {
     const miniGameCompleted = includesValue(completedMiniGameIds, islandId);
     const challenges = getChallengesByEmotionId(islandId);
     const miniGame = getMiniGameByEmotionId(islandId);
+    const story = getStoryByEmotionId(islandId);
 
-    if (isUnlocked && !storyCompleted) {
+    if (isUnlocked && story && !storyCompleted) {
       return {
         type: 'story',
         tone: 'story',

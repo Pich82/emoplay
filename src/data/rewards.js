@@ -226,6 +226,20 @@ export const rewardCatalog = [
     canEquip: false,
   },
   {
+    id: 'circulo_gratitud_aula',
+    title: 'Círculo breve de gratitud',
+    description:
+      'Propón un momento corto para que el grupo nombre ayudas, gestos amables o aprendizajes del día.',
+    icon: '\u{1F64F}',
+    category: 'Convivencia',
+    rewardType: 'benefit',
+    color: '#2ecc71',
+    requirement: { type: 'achievement', achievementId: 'cuento_gratitud' },
+    requirementLabel: 'Completa el cuento de Gratitud',
+    practicalNote: 'Dinámica breve, voluntaria y guiada por el docente.',
+    canEquip: false,
+  },
+  {
     id: 'corona_explorador',
     title: 'Corona de Explorador Emocional',
     description:
@@ -416,6 +430,22 @@ export const rewardCatalog = [
     canEquip: true,
     avatarSlot: 'frame',
     avatarValue: 'marco_puente_empatia',
+  },
+  {
+    id: 'marco_libreta_gratitud',
+    title: 'Marco Libreta Verde',
+    description:
+      'Marco verde para el avatar al completar los retos de Gratitud.',
+    icon: '\u{1F4D7}',
+    category: 'Distintivo avatar',
+    rewardType: 'avatar',
+    color: '#2ecc71',
+    requirement: { type: 'achievement', achievementId: 'reto_gratitud' },
+    requirementLabel: 'Completa los retos de Gratitud',
+    practicalNote: 'Marco visual integrado en la foto del avatar.',
+    canEquip: true,
+    avatarSlot: 'frame',
+    avatarValue: 'marco_libreta_gratitud',
   },
   {
     id: 'medalla_respiracion_serena',

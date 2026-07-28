@@ -172,6 +172,30 @@ export const storyRewards = {
       title: 'Insignia Puente Amable',
       description: 'Reconoces señales en otras personas y practicas respuestas cuidadosas.',
     },
+    unlock: {
+      icon: '\u{1F64F}',
+      title: 'Gratitud desbloqueada',
+      description:
+        'El huerto de las pequeñas gracias aparece en el mapa para practicar reconocimiento y cuidado.',
+    },
+  },
+  gratitud: {
+    title: '¡Gratitud completada!',
+    subtitle: 'Has aprendido a notar ayudas pequeñas y agradecer con palabras concretas.',
+    replaySubtitle: 'Ya tienes la insignia de Gratitud. Puedes volver a leer el cuento.',
+    points: 25,
+    nextAction: 'Jugar retos de Gratitud',
+    badge: {
+      icon: '\u{1F4D7}',
+      title: 'Insignia Libreta Verde',
+      description: 'Reconoces gestos de ayuda y practicas dar las gracias con detalle.',
+    },
+    unlock: {
+      icon: '\u{1F6E1}\uFE0F',
+      title: 'Confianza desbloqueada',
+      description:
+        'El escudo de los pasos valientes queda marcado en el mapa para la siguiente fase.',
+    },
   },
 };
 

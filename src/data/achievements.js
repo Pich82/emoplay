@@ -280,6 +280,42 @@ export const achievementCatalog = [
     description: 'Completaste los retos de Empatía y practicaste convivencia respetuosa.',
     color: '#9b59b6',
   },
+  {
+    id: 'desbloqueo_gratitud',
+    emotionId: 'gratitud',
+    type: 'mapa',
+    icon: '\u{1F64F}',
+    title: 'Ruta de las Gracias',
+    description: 'Desbloqueaste la Isla Gratitud desde el mapa emocional.',
+    color: '#2ecc71',
+  },
+  {
+    id: 'cuento_gratitud',
+    emotionId: 'gratitud',
+    type: 'cuento',
+    icon: '\u{1F4D7}',
+    title: 'Libreta Verde',
+    description: 'Completaste el cuento de Gratitud y aprendiste a agradecer con detalle.',
+    color: '#2ecc71',
+  },
+  {
+    id: 'reto_gratitud',
+    emotionId: 'gratitud',
+    type: 'reto',
+    icon: '\u{1F331}',
+    title: 'Semillas de Gracias',
+    description: 'Completaste los retos de Gratitud y practicaste reconocer ayudas y devolver cuidado.',
+    color: '#2ecc71',
+  },
+  {
+    id: 'desbloqueo_confianza',
+    emotionId: 'confianza',
+    type: 'mapa',
+    icon: '\u{1F6E1}\uFE0F',
+    title: 'Ruta de la Confianza',
+    description: 'Desbloqueaste la Isla Confianza como siguiente fase del mapa emocional.',
+    color: '#45b7d1',
+  },
 ];
 
 export function getUnlockedAchievementIds(player) {

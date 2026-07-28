@@ -379,6 +379,44 @@ export const storyIllustrations = {
       imageSrc: '/images/stories/empatia/pagina-6-jugar-juntas.jpg',
     },
   },
+  gratitud: {
+    1: {
+      theme: 'gratitude-rush',
+      mainIcon: '\u{1F4D4}',
+      supportingIcons: ['\u{1F6AA}', '\u{270F}\uFE0F', '\u{1F642}'],
+      imageSrc: '/images/stories/gratitud/pagina-1-manana-con-prisa.jpg',
+    },
+    2: {
+      theme: 'gratitude-notebook',
+      mainIcon: '\u{1F4D7}',
+      supportingIcons: ['\u{1F331}', '\u2728', '\u{1F33B}'],
+      imageSrc: '/images/stories/gratitud/pagina-2-libreta-verde.jpg',
+    },
+    3: {
+      theme: 'gratitude-notice',
+      mainIcon: '\u{1F441}\uFE0F',
+      supportingIcons: ['\u{1F4C4}', '\u{1F3EB}', '\u{1FAB4}'],
+      imageSrc: '/images/stories/gratitud/pagina-3-mirar-atencion.jpg',
+    },
+    4: {
+      theme: 'gratitude-words',
+      mainIcon: '\u{1F4AC}',
+      supportingIcons: ['\u{1F49A}', '\u{1F4D7}', '\u2728'],
+      imageSrc: '/images/stories/gratitud/pagina-4-gracias-detalle.jpg',
+    },
+    5: {
+      theme: 'gratitude-care',
+      mainIcon: '\u{1F331}',
+      supportingIcons: ['\u{1F4DD}', '\u{1F91D}', '\u{1F33F}'],
+      imageSrc: '/images/stories/gratitud/pagina-5-devolver-cuidado.jpg',
+    },
+    6: {
+      theme: 'gratitude-path',
+      mainIcon: '\u{1F3C6}',
+      supportingIcons: ['\u{1F4D7}', '\u{1F331}', '\u{1F6E4}\uFE0F'],
+      imageSrc: '/images/stories/gratitud/pagina-6-camino-semillas.jpg',
+    },
+  },
 };
 
 export const getStoryIllustration = (emotionId, pageId) =>

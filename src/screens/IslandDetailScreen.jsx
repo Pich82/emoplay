@@ -1,5 +1,6 @@
 import { getChallengesByEmotionId } from '../data/challenges.js';
 import { getMiniGameByEmotionId } from '../data/miniGames.js';
+import { getStoryByEmotionId } from '../data/stories.js';
 
 function IslandDetailScreen({
   island,
@@ -25,12 +26,15 @@ function IslandDetailScreen({
 
   const challenges = getChallengesByEmotionId(island.id);
   const hasChallenges = challenges.length > 0;
+  const hasStory = Boolean(getStoryByEmotionId(island.id));
   const miniGame = getMiniGameByEmotionId(island.id);
   const hasMiniGame = Boolean(miniGame);
   const canPlayMiniGame = isUnlocked && storyCompleted && hasMiniGame;
   const canPlayChallenge =
     isUnlocked && storyCompleted && hasChallenges && (!hasMiniGame || miniGameCompleted);
-  const storyStatus = !isUnlocked
+  const storyStatus = !hasStory
+    ? 'En preparación'
+    : !isUnlocked
     ? 'Isla bloqueada'
     : storyCompleted
       ? 'Cuento completado'
@@ -59,7 +63,9 @@ function IslandDetailScreen({
           <p>{island.intro}</p>
           <div className={isUnlocked ? 'status-note status-note--open' : 'status-note'}>
             {isUnlocked
-              ? hasMiniGame
+              ? !hasStory
+                ? 'El contenido completo de esta isla se añadirá en una fase posterior.'
+                : hasMiniGame
                 ? `Ruta de la isla: cuento, ${miniGame.routeLabel.toLowerCase()} y después retos.`
                 : 'Ruta de la isla: primero lee el cuento y después juega los retos.'
               : island.unlockHint}
@@ -96,11 +102,13 @@ function IslandDetailScreen({
             <h2>Cuento</h2>
             <h3>{island.storyTitle}</h3>
             <p>{island.story}</p>
-            <button type="button" disabled={!isUnlocked} onClick={() => onStartStory(island.id)}>
-              {storyCompleted ? 'Releer cuento' : 'Leer cuento'}
+            <button type="button" disabled={!isUnlocked || !hasStory} onClick={() => onStartStory(island.id)}>
+              {!hasStory ? 'Cuento próximamente' : storyCompleted ? 'Releer cuento' : 'Leer cuento'}
             </button>
             <small>
-              {storyCompleted
+              {!hasStory
+                ? 'El cuento de esta isla se añadirá más adelante sin perder tu progreso.'
+                : storyCompleted
                 ? 'Ya has terminado el cuento. Los puntos del cuento están guardados.'
                 : 'Lee hasta la última página para desbloquear los retos de esta isla.'}
             </small>

@@ -19,6 +19,8 @@ export const storyFinalReflections = {
     'Recuerda una situación en la que sentiste vergüenza. ¿Qué paso pequeño y amable podrías pedir para participar con más seguridad?',
   empatia:
     'Si ves a alguien solo o preocupado, ¿cómo podrías acercarte, escuchar y hacerle sentir que no está solo?',
+  gratitud:
+    'Piensa en una ayuda pequeña que hayas recibido hoy o esta semana. ¿Cómo podrías dar las gracias con detalle o devolver cuidado de alguna forma posible?',
 };
 
 export const getStoryFinalReflection = (emotionId) => storyFinalReflections[emotionId] || '';

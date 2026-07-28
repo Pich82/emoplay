@@ -569,6 +569,63 @@ export const storySets = {
       },
     ],
   },
+  gratitud: {
+    emotionId: 'gratitud',
+    title: 'La libreta de las pequeñas gracias',
+    emotionName: 'Gratitud',
+    color: '#2ecc71',
+    pages: [
+      {
+        id: 1,
+        title: 'Una mañana con prisa',
+        illustration: '\u{1F4D4}',
+        text:
+          'En la Isla Gratitud, Lía iba tan deprisa que casi no notaba las pequeñas ayudas del día: una puerta abierta, un lápiz prestado y una sonrisa al llegar.',
+        scene: 'Lía camina por un sendero verde sin fijarse en los gestos amables.',
+      },
+      {
+        id: 2,
+        title: 'La libreta verde',
+        illustration: '\u{1F4D7}',
+        text:
+          'Junto a un huerto encontró una libreta verde. En la primera página decía: mira despacio, porque algunas cosas buenas son pequeñas y silenciosas.',
+        scene: 'Una libreta verde aparece entre hojas y semillas luminosas.',
+      },
+      {
+        id: 3,
+        title: 'Mirar con atención',
+        illustration: '\u{1F441}\uFE0F',
+        text:
+          'Lía volvió a mirar. Vio que Tomás había recogido sus papeles, que la maestra preparó un rincón tranquilo y que alguien regó las plantas para todos.',
+        scene: 'Lía observa ayudas sencillas que antes le habían pasado desapercibidas.',
+      },
+      {
+        id: 4,
+        title: 'Gracias con detalle',
+        illustration: '\u{1F4AC}',
+        text:
+          'La libreta brilló cuando Lía dijo: "Gracias por recoger mis papeles; me ayudó a no agobiarme". Aprendió que agradecer con detalle hace visible el cuidado.',
+        scene: 'Lía da las gracias con palabras concretas y una luz suave crece alrededor.',
+      },
+      {
+        id: 5,
+        title: 'Devolver cuidado',
+        illustration: '\u{1F331}',
+        text:
+          'Después Lía escribió una nota para el grupo y ayudó a ordenar el huerto. La gratitud no era pagar una deuda, sino dejar que el cuidado siguiera circulando.',
+        scene: 'Lía coloca una nota amable y ayuda a cuidar el huerto de la isla.',
+      },
+      {
+        id: 6,
+        title: 'Cuento completado',
+        illustration: '\u{1F3C6}',
+        text:
+          'Ahora conoces mejor la gratitud. Puedes practicarla notando ayudas, nombrando lo que recibes y respondiendo con gestos amables cuando puedas.',
+        scene: 'La libreta se llena de semillas verdes y abre un camino hacia la siguiente isla.',
+        final: true,
+      },
+    ],
+  },
 };
 
 export const getStoryByEmotionId = (emotionId) => storySets[emotionId];

@@ -991,6 +991,103 @@ export const challengeSets = {
       },
     ],
   },
+  gratitud: {
+    emotionId: 'gratitud',
+    title: 'Retos de Gratitud',
+    subtitle: 'Practica notar, nombrar y devolver cuidado con agradecimiento.',
+    mission: 'Misión Libreta Verde',
+    color: '#2ecc71',
+    challenges: [
+      {
+        id: 'gratitud-vf-1',
+        type: 'trueFalse',
+        icon: '\u{1F64F}',
+        question: '¿La gratitud puede aparecer al reconocer una ayuda pequeña?',
+        answer: true,
+        points: 10,
+        penalty: 5,
+        explanation:
+          'La gratitud muchas veces empieza al notar gestos sencillos que nos cuidan o facilitan el día.',
+      },
+      {
+        id: 'gratitud-vf-2',
+        type: 'trueFalse',
+        icon: '\u{1F4AC}',
+        question: '¿Decir gracias con detalle ayuda a que la otra persona se sienta valorada?',
+        answer: true,
+        points: 10,
+        penalty: 5,
+        explanation:
+          'Un gracias concreto muestra qué gesto hemos visto y por qué nos ha ayudado.',
+      },
+      {
+        id: 'gratitud-vf-3',
+        type: 'trueFalse',
+        icon: '\u{1F31F}',
+        question: '¿Sentir gratitud significa que todo tiene que estar perfecto?',
+        answer: false,
+        points: 10,
+        penalty: 5,
+        explanation:
+          'Podemos agradecer algo bueno aunque el día tenga partes difíciles. No hace falta fingir alegría.',
+      },
+      {
+        id: 'gratitud-vf-4',
+        type: 'trueFalse',
+        icon: '\u{1F91D}',
+        question: '¿La gratitud puede expresarse también con acciones amables?',
+        answer: true,
+        points: 10,
+        penalty: 5,
+        explanation:
+          'Además de palabras, podemos agradecer ayudando, cuidando materiales o teniendo un gesto amable.',
+      },
+      {
+        id: 'gratitud-vf-5',
+        type: 'trueFalse',
+        icon: '\u{1F4DD}',
+        question: '¿Agradecer es lo mismo que quedar obligado a devolver exactamente lo recibido?',
+        answer: false,
+        points: 10,
+        penalty: 5,
+        explanation:
+          'La gratitud no es una deuda. Es reconocer el cuidado y responder de una forma posible y libre.',
+      },
+      {
+        id: 'gratitud-reflexion-1',
+        type: 'reflection',
+        icon: '\u{1F4AD}',
+        question:
+          'Recuerda una ayuda pequeña que hayas recibido hoy o esta semana. ¿Qué pasó y cómo te ayudó?',
+        placeholder:
+          'Por ejemplo: alguien me prestó algo, me explicó una tarea, me esperó o me escuchó...',
+        points: 15,
+        minLength: 18,
+      },
+      {
+        id: 'gratitud-reflexion-2',
+        type: 'reflection',
+        icon: '\u{1F4AC}',
+        question:
+          'Escribe una frase de gracias con detalle para una persona de tu entorno.',
+        placeholder:
+          'Por ejemplo: gracias por..., me ayudó porque..., me hizo sentir...',
+        points: 15,
+        minLength: 18,
+      },
+      {
+        id: 'gratitud-reflexion-3',
+        type: 'reflection',
+        icon: '\u{1F331}',
+        question:
+          'Piensa en una forma posible de devolver cuidado al grupo o a alguien que te ayudó.',
+        placeholder:
+          'Puede ser ordenar, escuchar, compartir material, escribir una nota o ayudar en una tarea.',
+        points: 15,
+        minLength: 18,
+      },
+    ],
+  },
 };
 
 export const getChallengeSetByEmotionId = (emotionId) => challengeSets[emotionId];
