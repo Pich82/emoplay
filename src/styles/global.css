@@ -299,6 +299,12 @@ p {
   background: #ffffff;
   box-shadow: 0 10px 20px rgba(44, 90, 134, 0.15);
   font-weight: 800;
+  text-align: left;
+}
+
+.player-pill:hover {
+  transform: none;
+  box-shadow: 0 10px 20px rgba(44, 90, 134, 0.15);
 }
 
 .player-pill > span {
@@ -8341,6 +8347,11 @@ p {
   .top-bar__main,
   .teacher-top-access {
     width: 100%;
+  }
+
+  .top-bar__main,
+  .player-pill {
+    flex: 0 0 auto;
   }
 
   .top-bar__main {

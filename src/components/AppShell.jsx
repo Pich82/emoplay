@@ -1,7 +1,15 @@
 import AvatarPreview from './AvatarPreview.jsx';
 import HomeButton from './HomeButton.jsx';
 
-function AppShell({ children, player, avatarConfig, onGoHome, onOpenTeacherPanel }) {
+function AppShell({
+  children,
+  player,
+  avatarConfig,
+  onGoHome,
+  onOpenProfile,
+  onOpenTeacherPanel,
+  showHomeButton = true,
+}) {
   return (
     <div className="app">
       <header className="top-bar">
@@ -28,16 +36,21 @@ function AppShell({ children, player, avatarConfig, onGoHome, onOpenTeacherPanel
           </button>
         </div>
 
-        <div className="player-pill" aria-label="Datos del alumno">
+        <button
+          className="player-pill"
+          type="button"
+          onClick={onOpenProfile}
+          aria-label="Abrir Mi perfil"
+        >
           <AvatarPreview avatar={player.avatar} diceBearConfig={avatarConfig} size="small" />
           <span>{player.studentName || 'Explorador'}</span>
           <strong>{player.points} puntos</strong>
-        </div>
+        </button>
       </header>
 
       <main className="screen">{children}</main>
 
-      <HomeButton onClick={onGoHome} />
+      {showHomeButton && <HomeButton onClick={onGoHome} />}
     </div>
   );
 }

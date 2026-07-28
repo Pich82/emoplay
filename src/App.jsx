@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import AppShell from './components/AppShell.jsx';
 import { defaultAvatarConfig, normalizeAvatarConfig } from './data/avatar.js';
 import { futureSections } from './data/navigation.js';
@@ -65,6 +65,10 @@ function App() {
   const [progressTransferStatus, setProgressTransferStatus] = useState(null);
 
   const selectedIsland = useMemo(() => getEmotionById(selectedIslandId), [selectedIslandId]);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+  }, [currentScreen, selectedIslandId]);
 
   const goHome = () => setCurrentScreen(screens.home);
 
@@ -550,7 +554,9 @@ function App() {
       player={player}
       avatarConfig={avatarConfig}
       onGoHome={goHome}
+      onOpenProfile={() => setCurrentScreen(screens.profile)}
       onOpenTeacherPanel={() => setCurrentScreen(screens.class)}
+      showHomeButton={currentScreen !== screens.home}
     >
       {renderScreen()}
     </AppShell>
