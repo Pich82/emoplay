@@ -4,7 +4,7 @@ import { islandUnlockOrder } from './islandProgression.js';
 import { getMiniGameByEmotionId } from './miniGames.js';
 import { getStoryByEmotionId } from './stories.js';
 
-const nextFutureIslandId = 'sorpresa';
+const nextFutureIslandId = 'asco';
 
 function includesValue(values = [], value) {
   return Array.isArray(values) && values.includes(value);
@@ -86,7 +86,7 @@ export function getAdventureNextStep(player) {
     eyebrow: 'Ruta inicial completada',
     title: 'Has completado las islas jugables actuales',
     description: futureEmotion
-      ? `La siguiente ampliacion recomendada es ${futureEmotion.name}, para comprender cambios inesperados con curiosidad y seguridad.`
+      ? `La siguiente ampliacion recomendada es ${futureEmotion.name}, para reconocer señales de rechazo y cuidar límites personales.`
       : 'La aventura esta preparada para nuevas islas emocionales.',
     actionLabel: 'Ver mapa',
     helper: 'Puedes revisar recompensas, diario e informes mientras se prepara la siguiente isla.',

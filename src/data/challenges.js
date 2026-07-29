@@ -1185,6 +1185,200 @@ export const challengeSets = {
       },
     ],
   },
+  sorpresa: {
+    emotionId: 'sorpresa',
+    title: 'Retos de Sorpresa',
+    subtitle: 'Practica observar, preguntar y adaptarte a cambios inesperados.',
+    mission: 'Misión Puerta Curiosa',
+    color: '#00c2ff',
+    challenges: [
+      {
+        id: 'sorpresa-vf-1',
+        type: 'trueFalse',
+        icon: '\u{1F632}',
+        question: '¿La sorpresa puede hacer que el cuerpo reaccione muy rápido?',
+        answer: true,
+        points: 10,
+        penalty: 5,
+        explanation:
+          'Los ojos, el corazón, la respiración o los hombros pueden reaccionar antes de que sepamos qué ha ocurrido.',
+      },
+      {
+        id: 'sorpresa-vf-2',
+        type: 'trueFalse',
+        icon: '\u{1F3AD}',
+        question: '¿Todas las personas tienen que sentir lo mismo ante una sorpresa?',
+        answer: false,
+        points: 10,
+        penalty: 5,
+        explanation:
+          'Una persona puede sentir curiosidad y otra necesitar tiempo. Las dos reacciones pueden ser válidas.',
+      },
+      {
+        id: 'sorpresa-vf-3',
+        type: 'trueFalse',
+        icon: '\u{1F4AC}',
+        question: '¿Preguntar qué ha cambiado puede ayudarte a sentir más seguridad?',
+        answer: true,
+        points: 10,
+        penalty: 5,
+        explanation:
+          'Tener información permite comprender mejor la novedad y elegir el siguiente paso.',
+      },
+      {
+        id: 'sorpresa-vf-4',
+        type: 'trueFalse',
+        icon: '\u{1F6B6}',
+        question: '¿Tienes que participar enseguida para demostrar que eres valiente?',
+        answer: false,
+        points: 10,
+        penalty: 5,
+        explanation:
+          'Puedes observar, pedir una explicación, acercarte poco a poco o buscar apoyo antes de participar.',
+      },
+      {
+        id: 'sorpresa-vf-5',
+        type: 'trueFalse',
+        icon: '\u{1F6E1}\uFE0F',
+        question: '¿Una sorpresa deja de ser adecuada si rompe un límite o hace sentir insegura a alguien?',
+        answer: true,
+        points: 10,
+        penalty: 5,
+        explanation:
+          'Las sorpresas deben respetar límites. Si algo preocupa o incomoda, se puede parar y contarlo a una persona adulta segura.',
+      },
+      {
+        id: 'sorpresa-reflexion-1',
+        type: 'reflection',
+        icon: '\u{1F4AD}',
+        question:
+          'Recuerda una ocasión en la que un plan cambió de repente. ¿Qué notaste en tu cuerpo?',
+        placeholder:
+          'Puedes pensar en tus ojos, respiración, barriga, corazón, hombros o ganas de moverte.',
+        points: 15,
+        minLength: 18,
+      },
+      {
+        id: 'sorpresa-reflexion-2',
+        type: 'reflection',
+        icon: '\u{1F4AC}',
+        question:
+          'Escribe una pregunta que te ayudaría a entender mejor un cambio inesperado.',
+        placeholder:
+          'Por ejemplo: ¿qué ha cambiado?, ¿qué va a pasar ahora?, ¿puedo mirar primero?',
+        points: 15,
+        minLength: 18,
+      },
+      {
+        id: 'sorpresa-reflexion-3',
+        type: 'reflection',
+        icon: '\u{1F6B6}',
+        question:
+          'Imagina una actividad nueva. ¿Qué paso pequeño o apoyo te ayudaría a probarla a tu ritmo?',
+        placeholder:
+          'Podrías observar primero, ir con alguien, escuchar las reglas o pedir una pausa.',
+        points: 15,
+        minLength: 18,
+      },
+    ],
+  },
+  afectividad: {
+    emotionId: 'afectividad',
+    title: 'Retos de Afectividad',
+    subtitle: 'Practica cuidar, preguntar y respetar los gestos que cada persona elige.',
+    mission: 'Misión Cintas de Cuidado',
+    color: '#ec6ead',
+    challenges: [
+      {
+        id: 'afectividad-vf-1',
+        type: 'trueFalse',
+        icon: '\u{1F4AC}',
+        question: '¿Preguntar qué necesita alguien puede ser una forma de cuidar?',
+        answer: true,
+        points: 10,
+        penalty: 5,
+        explanation:
+          'Preguntar evita suponer y permite que la otra persona diga qué le ayuda en ese momento.',
+      },
+      {
+        id: 'afectividad-vf-2',
+        type: 'trueFalse',
+        icon: '\u{1F91D}',
+        question: '¿Un abrazo es siempre la mejor forma de mostrar cariño?',
+        answer: false,
+        points: 10,
+        penalty: 5,
+        explanation:
+          'A algunas personas les gusta un abrazo y otras prefieren un saludo, una nota, compañía o espacio. Es importante elegirlo.',
+      },
+      {
+        id: 'afectividad-vf-3',
+        type: 'trueFalse',
+        icon: '\u{1F590}\uFE0F',
+        question: '¿Puedes decir que no a un gesto y proponer otro que te haga sentir cómodo?',
+        answer: true,
+        points: 10,
+        penalty: 5,
+        explanation:
+          'Poner un límite respetuoso también cuida la relación. Puedes proponer una alternativa como saludar con la mano o chocar las palmas.',
+      },
+      {
+        id: 'afectividad-vf-4',
+        type: 'trueFalse',
+        icon: '\u{1F442}',
+        question: '¿Escuchar sin interrumpir puede ser un gesto afectivo?',
+        answer: true,
+        points: 10,
+        penalty: 5,
+        explanation:
+          'A veces acompañar y escuchar con atención es justo lo que una persona necesita.',
+      },
+      {
+        id: 'afectividad-vf-5',
+        type: 'trueFalse',
+        icon: '\u{1F49D}',
+        question: '¿Si alguien no quiere contacto físico significa que no le importa la amistad?',
+        answer: false,
+        points: 10,
+        penalty: 5,
+        explanation:
+          'Cada persona expresa y recibe cariño de forma distinta. Respetar su elección ayuda a que el vínculo sea seguro.',
+      },
+      {
+        id: 'afectividad-reflexion-1',
+        type: 'reflection',
+        icon: '\u{1F4AD}',
+        question:
+          'Piensa en un gesto de cuidado que te haga sentir bien. ¿Qué tiene de especial para ti?',
+        placeholder:
+          'Puede ser que te escuchen, que te ayuden, una palabra amable, compañía tranquila o un saludo elegido.',
+        points: 15,
+        minLength: 18,
+      },
+      {
+        id: 'afectividad-reflexion-2',
+        type: 'reflection',
+        icon: '\u{1F4AC}',
+        question:
+          'Escribe una frase respetuosa para preguntar a alguien cómo prefiere que le acompañes.',
+        placeholder:
+          'Por ejemplo: ¿quieres que me quede contigo, que te escuche o prefieres un poco de espacio?',
+        points: 15,
+        minLength: 18,
+      },
+      {
+        id: 'afectividad-reflexion-3',
+        type: 'reflection',
+        icon: '\u{1F590}\uFE0F',
+        question:
+          'Describe una forma amable de decir que hoy prefieres otro saludo o más espacio.',
+        placeholder:
+          'Por ejemplo: gracias, hoy prefiero un saludo con la mano; me gustaría estar tranquilo un momento.',
+        points: 15,
+        minLength: 18,
+      },
+    ],
+  },
 };
 
 export const getChallengeSetByEmotionId = (emotionId) => challengeSets[emotionId];

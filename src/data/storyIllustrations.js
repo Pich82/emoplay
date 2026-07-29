@@ -455,6 +455,82 @@ export const storyIllustrations = {
       imageSrc: '/images/stories/confianza/pagina-6-camino-seguro.jpg',
     },
   },
+  sorpresa: {
+    1: {
+      theme: 'surprise-door',
+      mainIcon: '\u{1F6AA}',
+      supportingIcons: ['\u{1F3A8}', '\u{1F33C}', '\u{2728}'],
+      imageSrc: '/images/stories/sorpresa/pagina-1-puerta-inesperada.jpg',
+    },
+    2: {
+      theme: 'surprise-body',
+      mainIcon: '\u{1F632}',
+      supportingIcons: ['\u{1FAC0}', '\u{1F440}', '\u{1F4A8}'],
+      imageSrc: '/images/stories/sorpresa/pagina-2-cuerpo-se-sorprende.jpg',
+    },
+    3: {
+      theme: 'surprise-ask',
+      mainIcon: '\u{1F4AC}',
+      supportingIcons: ['\u{1F9D1}\u200D\u{1F3EB}', '\u{23F8}\uFE0F', '\u{1F6AA}'],
+      imageSrc: '/images/stories/sorpresa/pagina-3-parar-preguntar.jpg',
+    },
+    4: {
+      theme: 'surprise-reactions',
+      mainIcon: '\u{1F440}',
+      supportingIcons: ['\u{1F632}', '\u{1F914}', '\u{2B50}'],
+      imageSrc: '/images/stories/sorpresa/pagina-4-reacciones-distintas.jpg',
+    },
+    5: {
+      theme: 'surprise-pace',
+      mainIcon: '\u{1F6B6}',
+      supportingIcons: ['\u{23F3}', '\u{1F91D}', '\u{1F6AA}'],
+      imageSrc: '/images/stories/sorpresa/pagina-5-elegir-ritmo.jpg',
+    },
+    6: {
+      theme: 'surprise-path',
+      mainIcon: '\u{1F3C6}',
+      supportingIcons: ['\u{1F6AA}', '\u{2728}', '\u{1F6E4}\uFE0F'],
+      imageSrc: '/images/stories/sorpresa/pagina-6-camino-nuevo.jpg',
+    },
+  },
+  afectividad: {
+    1: {
+      theme: 'affection-ribbon-box',
+      mainIcon: '\u{1F49D}',
+      supportingIcons: ['\u{1F9FA}', '\u{1F3F5}\uFE0F', '\u{1F33A}'],
+      imageSrc: '/images/stories/afectividad/pagina-1-caja-de-cintas.jpg',
+    },
+    2: {
+      theme: 'affection-care-gestures',
+      mainIcon: '\u{1F4AC}',
+      supportingIcons: ['\u{1F44B}', '\u{1F4DD}', '\u{1F91D}'],
+      imageSrc: '/images/stories/afectividad/pagina-2-gestos-de-cuidado.jpg',
+    },
+    3: {
+      theme: 'affection-ask-first',
+      mainIcon: '\u{1F91D}',
+      supportingIcons: ['\u{1F4AC}', '\u{1F442}', '\u{1F4A1}'],
+      imageSrc: '/images/stories/afectividad/pagina-3-preguntar-antes.jpg',
+    },
+    4: {
+      theme: 'affection-different-gestures',
+      mainIcon: '\u{1F3A8}',
+      supportingIcons: ['\u{1F4DD}', '\u{1F44B}', '\u{1F9D1}\u200D\u{1F91D}\u200D\u{1F9D1}'],
+      imageSrc: '/images/stories/afectividad/pagina-4-cada-quien-su-gesto.jpg',
+    },
+    5: {
+      theme: 'affection-respect-no',
+      mainIcon: '\u{1F590}\uFE0F',
+      supportingIcons: ['\u{1F91A}', '\u{1F642}', '\u{1F49D}'],
+      imageSrc: '/images/stories/afectividad/pagina-5-respetar-el-no.jpg',
+    },
+    6: {
+      theme: 'affection-ribbon-path',
+      mainIcon: '\u{1F3C6}',
+      supportingIcons: ['\u{1F3F5}\uFE0F', '\u{1F49D}', '\u{1F6E4}\uFE0F'],
+      imageSrc: '/images/stories/afectividad/pagina-6-camino-de-cintas.jpg',
+    },
+  },
 };
 
 export const getStoryIllustration = (emotionId, pageId) =>

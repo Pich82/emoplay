@@ -23,6 +23,10 @@ export const storyFinalReflections = {
     'Piensa en una ayuda pequeña que hayas recibido hoy o esta semana. ¿Cómo podrías dar las gracias con detalle o devolver cuidado de alguna forma posible?',
   confianza:
     'Piensa en una situación en la que necesites apoyo. ¿Qué persona segura podrías buscar y qué podrías pedirle con una frase clara?',
+  sorpresa:
+    'Recuerda un cambio inesperado. ¿Qué notaste en tu cuerpo y qué pregunta o pausa te habría ayudado a comprender mejor lo que ocurría?',
+  afectividad:
+    'Piensa en una forma de cariño o cuidado que te guste y otra que prefieras evitar. ¿Cómo podrías explicarlo con una frase amable?',
 };
 
 export const getStoryFinalReflection = (emotionId) => storyFinalReflections[emotionId] || '';

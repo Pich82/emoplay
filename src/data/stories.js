@@ -683,6 +683,120 @@ export const storySets = {
       },
     ],
   },
+  sorpresa: {
+    emotionId: 'sorpresa',
+    title: 'La puerta que apareció de repente',
+    emotionName: 'Sorpresa',
+    color: '#00c2ff',
+    pages: [
+      {
+        id: 1,
+        title: 'Una puerta inesperada',
+        illustration: '\u{1F6AA}',
+        text:
+          'Iris llegó al jardín pensando que pintarían molinillos como siempre. Pero, entre las flores, había aparecido una gran puerta turquesa que nadie había visto antes.',
+        scene: 'Iris descubre una puerta turquesa en medio del jardín de arte.',
+      },
+      {
+        id: 2,
+        title: 'El cuerpo se sorprende',
+        illustration: '\u{1F632}',
+        text:
+          'Sus ojos se abrieron, los hombros subieron y el corazón pareció correr. La sorpresa había llegado muy rápido para avisarle de que algo acababa de cambiar.',
+        scene: 'Iris nota las señales rápidas de la sorpresa sin estar en peligro.',
+      },
+      {
+        id: 3,
+        title: 'Parar y preguntar',
+        illustration: '\u{1F4AC}',
+        text:
+          'Iris respiró una vez y preguntó a la maestra: "¿Sabes qué hay detrás?". La maestra explicó que podían mirar primero, hacer preguntas y no entrar hasta sentirse preparados.',
+        scene: 'Iris pregunta qué ha cambiado antes de acercarse a la puerta.',
+      },
+      {
+        id: 4,
+        title: 'Reacciones diferentes',
+        illustration: '\u{1F440}',
+        text:
+          'Al abrirse la puerta apareció una sala llena de estrellas y trabajos de arte. Iris sintió curiosidad, pero Leo prefirió quedarse atrás. La misma sorpresa podía sentirse de formas distintas.',
+        scene: 'Iris y Leo reaccionan de manera diferente ante la sala inesperada.',
+      },
+      {
+        id: 5,
+        title: 'Elegir el propio ritmo',
+        illustration: '\u{1F6B6}',
+        text:
+          'Iris decidió observar un rato antes de entrar. Se quedó cerca de Leo sin tirar de él ni decirle que debía animarse. Cuando estuvieron preparados, dieron un paso pequeño.',
+        scene: 'Los niños se acercan a la novedad a su propio ritmo y con espacio.',
+      },
+      {
+        id: 6,
+        title: 'Cuento completado',
+        illustration: '\u{1F3C6}',
+        text:
+          'Ahora conoces mejor la sorpresa. Cuando algo cambia de repente, puedes notar tu cuerpo, parar, buscar información y elegir cómo acercarte con seguridad.',
+        scene: 'La puerta abre un camino turquesa hacia la siguiente isla.',
+        final: true,
+      },
+    ],
+  },
+  afectividad: {
+    emotionId: 'afectividad',
+    title: 'La caja de los gestos elegidos',
+    emotionName: 'Afectividad',
+    color: '#ec6ead',
+    pages: [
+      {
+        id: 1,
+        title: 'La caja de cintas',
+        illustration: '\u{1F49D}',
+        text:
+          'Alma encontró una caja llena de cintas de colores. Cada una hablaba de una forma de cuidar: escuchar, acompañar, ayudar, hacer un dibujo o decir una palabra amable.',
+        scene: 'Alma descubre una caja de cintas junto al jardín de la isla.',
+      },
+      {
+        id: 2,
+        title: 'Gestos que cuidan',
+        illustration: '\u{1F4AC}',
+        text:
+          'Alma miró a su alrededor y vio muchos gestos pequeños: una mano que saluda, un sitio libre en un banco, materiales compartidos y una nota con un dibujo. El cariño puede tener muchas formas.',
+        scene: 'Alma reconoce diferentes gestos cotidianos de cuidado.',
+      },
+      {
+        id: 3,
+        title: 'Preguntar antes',
+        illustration: '\u{1F91D}',
+        text:
+          'Leo estaba callado después de un juego. Alma no supuso lo que necesitaba. Le preguntó: "¿Quieres que me siente contigo, que te escuche o prefieres un ratito de espacio?".',
+        scene: 'Alma ofrece compañía, escucha o espacio sin invadir a Leo.',
+      },
+      {
+        id: 4,
+        title: 'Cada quien su gesto',
+        illustration: '\u{1F3A8}',
+        text:
+          'En la caja, cada persona eligió una cinta distinta. A una le gustaba un saludo con la mano, a otra una nota, a otra sentarse cerca. No había una sola manera correcta de mostrar afecto.',
+        scene: 'Un grupo elige diferentes gestos de cuidado con comodidad.',
+      },
+      {
+        id: 5,
+        title: 'Respetar el no',
+        illustration: '\u{1F590}\uFE0F',
+        text:
+          'Una compañera quiso abrazar a Alma. Alma dijo: "Hoy prefiero un choque de manos". La compañera sonrió, levantó la palma y las dos celebraron el saludo elegido.',
+        scene: 'Alma propone un saludo alternativo y ambas niñas respetan la elección.',
+      },
+      {
+        id: 6,
+        title: 'Cuento completado',
+        illustration: '\u{1F3C6}',
+        text:
+          'Ahora conoces mejor la afectividad. Cuidar también es preguntar, escuchar, aceptar un no y elegir gestos que hagan sentir bien a todas las personas.',
+        scene: 'Las cintas forman un camino de cuidado hacia la siguiente isla.',
+        final: true,
+      },
+    ],
+  },
 };
 
 export const getStoryByEmotionId = (emotionId) => storySets[emotionId];

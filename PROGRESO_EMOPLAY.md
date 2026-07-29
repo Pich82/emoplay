@@ -1044,3 +1044,23 @@ No simplificar ni sustituir la app por una versión básica. Mantener siempre la
 - El concepto guardado para Amor es `El Faro de los Vínculos Seguros`: integrará los aprendizajes de todas las islas, vínculos seguros, amor propio, límites, reparación y cuidado.
 - La experiencia final podrá reunir símbolos de todas las islas, decisiones interactivas, una caja de herramientas emocionales, un mensaje al yo futuro y un refugio con las insignias conseguidas.
 - La decisión completa queda registrada en `specs/010-amor-final-island/concept.md`.
+
+## Avance del 28 de julio de 2026: Isla Sorpresa
+
+- Se creó la especificación ligera `specs/011-sorpresa-island/`.
+- Sorpresa continúa la ruta después de Confianza y prepara Afectividad como siguiente fase.
+- El cuento `La puerta que apareció de repente` trabaja señales corporales, pausa, información, reacciones diferentes y acercamiento a lo nuevo al propio ritmo.
+- Se creó una referencia visual para Iris y seis ilustraciones narrativas con una puerta turquesa como elemento común.
+- Se añadieron retos, reflexión final, insignias y recompensas propias de Sorpresa.
+- Verificación realizada: datos y rutas correctos, prueba de transferencia superada y compilación correcta.
+- Amor continúa reservada como la isla final especial del recorrido.
+
+## Avance del 29 de julio de 2026: Isla Afectividad
+
+- Se creó la especificación ligera `specs/012-afectividad-island/`.
+- Afectividad continúa la ruta después de Sorpresa y prepara Asco como siguiente fase.
+- El cuento `La caja de los gestos elegidos` enseña que cuidar puede ser escuchar, acompañar, ayudar o saludar, y que los gestos siempre se eligen con respeto.
+- Se creó una referencia visual para Alma y seis ilustraciones narrativas con la caja de cintas de colores como elemento común.
+- Se añadieron retos, reflexión final, insignias y recompensas propias de Afectividad.
+- Verificación realizada: datos y rutas correctos, prueba de transferencia superada y compilación correcta.
+- Amor continúa reservada como la isla final especial del recorrido.

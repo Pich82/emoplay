@@ -122,10 +122,11 @@ export const emotions = [
     accent: '#ffd2ea',
     icon: '\u{1F49D}',
     mapPosition: { top: '12%', left: '28%' },
-    storyTitle: 'El regalo del corazón compartido',
-    unlockHint: 'Zona social preparada para fases futuras.',
+    storyTitle: 'La caja de los gestos elegidos',
+    unlockHint: 'Se desbloquea al completar el cuento de Sorpresa.',
     intro: 'Descubre los lazos que nos unen y aprende a cuidar relaciones cercanas.',
-    story: 'La isla guarda una caja de cintas de colores que se abrirán cuando avance el mapa.',
+    story:
+      'Una caja de cintas de colores guarda formas distintas de cuidar: palabras, escucha, compañía y gestos que siempre se eligen con respeto.',
   },
   {
     id: 'empatia',
@@ -204,7 +205,8 @@ export const emotions = [
     storyTitle: 'La puerta que apareció de repente',
     unlockHint: 'Se desbloquea al completar el cuento de Confianza.',
     intro: 'Explora qué ocurre en el cuerpo cuando algo nuevo aparece sin avisar.',
-    story: 'Una puerta brillante se abre y se cierra entre nubes. Pronto tendrá su cuento.',
+    story:
+      'Una puerta turquesa aparece sin avisar. La isla enseña a notar la reacción del cuerpo, preguntar qué ha cambiado y acercarse a lo nuevo al propio ritmo.',
   },
   {
     id: 'confianza',
@@ -279,7 +281,7 @@ export const emotions = [
     icon: '\u{1F922}',
     mapPosition: { top: '20%', left: '13%' },
     storyTitle: 'La hoja que protegía el camino',
-    unlockHint: 'Zona compleja para reconocer rechazo y autocuidado.',
+    unlockHint: 'Se desbloquea al completar el cuento de Afectividad.',
     intro: 'Comprende el asco como una señal del cuerpo y aprende a expresarlo con respeto.',
     story: 'Una gran hoja verde guarda un sendero. Su historia hablará de límites y cuidado.',
   },

@@ -215,6 +215,42 @@ export const storyRewards = {
         'La puerta inesperada aparece en el mapa como la próxima fase de la aventura.',
     },
   },
+  sorpresa: {
+    title: '¡Sorpresa completada!',
+    subtitle: 'Has aprendido a notar cambios, buscar información y elegir tu propio ritmo.',
+    replaySubtitle: 'Ya tienes la insignia de Sorpresa. Puedes volver a leer el cuento.',
+    points: 25,
+    nextAction: 'Jugar retos de Sorpresa',
+    badge: {
+      icon: '\u{1F6AA}',
+      title: 'Insignia Puerta Curiosa',
+      description: 'Observas lo inesperado y respondes con pausa, preguntas y seguridad.',
+    },
+    unlock: {
+      icon: '\u{1F49D}',
+      title: 'Afectividad desbloqueada',
+      description:
+        'La caja de cintas de colores aparece en el mapa como la próxima fase futura.',
+    },
+  },
+  afectividad: {
+    title: '¡Afectividad completada!',
+    subtitle: 'Has practicado formas de cuidar que respetan la elección y el espacio de cada persona.',
+    replaySubtitle: 'Ya tienes la insignia de Afectividad. Puedes volver a leer el cuento.',
+    points: 25,
+    nextAction: 'Jugar retos de Afectividad',
+    badge: {
+      icon: '\u{1F49D}',
+      title: 'Insignia Cintas de Cuidado',
+      description: 'Expresas cariño y cuidado con respeto, escucha y elección.',
+    },
+    unlock: {
+      icon: '\u{1F343}',
+      title: 'Asco desbloqueado',
+      description:
+        'La gran hoja protectora aparece en el mapa como la próxima fase futura.',
+    },
+  },
 };
 
 export function getStoryRewardByEmotionId(emotionId) {
