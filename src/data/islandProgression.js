@@ -14,12 +14,12 @@ export const islandUnlockOrder = [
   'sorpresa',
   'afectividad',
   'asco',
+  'celos',
+  'culpa',
 ];
 
 export const islandMapOrder = [
   ...islandUnlockOrder,
-  'culpa',
-  'celos',
   'amor',
 ];
 

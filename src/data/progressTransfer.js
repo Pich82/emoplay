@@ -34,6 +34,8 @@ const knownStoryIds = [
   'frustracion',
   'verguenza',
   'empatia',
+  'asco',
+  'celos',
 ];
 const knownChallengeIds = knownStoryIds;
 const knownMiniGameIds = ['calma', 'empatia'];

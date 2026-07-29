@@ -797,6 +797,120 @@ export const storySets = {
       },
     ],
   },
+  asco: {
+    emotionId: 'asco',
+    title: 'La hoja que protegía el camino',
+    emotionName: 'Asco',
+    color: '#6ab04c',
+    pages: [
+      {
+        id: 1,
+        title: 'Un olor extraño',
+        illustration: '\u{1F343}',
+        text:
+          'Teo llegó al jardín de la Isla Asco con su lupa y su pequeña bolsa de explorador. Cerca del compost vio una cesta volcada con fruta demasiado madura y notó un olor extraño. Se quedó a unos pasos para observar sin tocar.',
+        scene: 'Teo descubre una cesta volcada cerca del compost y mantiene una distancia segura.',
+      },
+      {
+        id: 2,
+        title: 'El cuerpo avisa',
+        illustration: '\u{1F443}',
+        text:
+          'Su nariz se arrugó, la barriga se encogió un poco y aparecieron ganas de apartarse. Teo comprendió que el asco podía ser una señal protectora: le pedía parar y comprobar, no burlarse ni reaccionar contra nadie.',
+        scene: 'Teo nota las señales corporales del asco y da un paso tranquilo hacia atrás.',
+      },
+      {
+        id: 3,
+        title: 'Avisar y comprobar',
+        illustration: '\u{1F4AC}',
+        text:
+          'Sin probar ni recoger la fruta, Teo llamó a la maestra jardinera: "Hay un olor extraño junto al compost. ¿Puedes mirarlo?". Pedir ayuda a una persona adulta era la forma más segura de saber qué ocurría.',
+        scene: 'Teo avisa a la maestra jardinera y señala el lugar desde una distancia segura.',
+      },
+      {
+        id: 4,
+        title: 'Cuidar y limpiar',
+        illustration: '\u{1F9E4}',
+        text:
+          'La maestra se puso guantes, retiró la fruta estropeada y cerró bien el compost. Después, Teo y ella se lavaron las manos. A veces el asco avisa de suciedad o comida en mal estado; comprobarlo con ayuda permite actuar con cuidado.',
+        scene: 'La maestra limpia con guantes y Teo practica una rutina sencilla de higiene.',
+      },
+      {
+        id: 5,
+        title: 'No, gracias',
+        illustration: '\u{1F590}\uFE0F',
+        text:
+          'Más tarde, Nia le ofreció oler una ramita de romero limpia. A Teo no le gustó su aroma y respondió: "No, gracias; prefiero no olerla". Nia lo aceptó. Una preferencia personal no convierte una comida, un olor o una persona en algo malo.',
+        scene: 'Teo rechaza con respeto oler romero y Nia acepta su elección con tranquilidad.',
+      },
+      {
+        id: 6,
+        title: 'Cuento completado',
+        illustration: '\u{1F3C6}',
+        text:
+          'Ahora conoces mejor el asco. Puedes escuchar tu cuerpo, tomar distancia, comprobar si hay un riesgo, pedir ayuda y poner un límite con respeto. Protegerte no requiere despreciar a nadie.',
+        scene: 'Las hojas forman un camino seguro que continúa hacia la Isla Culpa.',
+        final: true,
+      },
+    ],
+  },
+  celos: {
+    emotionId: 'celos',
+    title: 'El catalejo de las comparaciones',
+    emotionName: 'Celos',
+    color: '#10ac84',
+    pages: [
+      {
+        id: 1,
+        title: 'El catalejo compara',
+        illustration: '\u{1F52D}',
+        text:
+          'Vega y Omar habían dibujado dos rutas diferentes para las islas. La maestra invitó a Omar a enseñar la suya primero. Cuando Vega miró por el catalejo, el mapa de Omar pareció enorme y el suyo, de pronto, muy pequeño.',
+        scene: 'Vega mira el mapa de Omar ampliado por el catalejo mientras espera su turno.',
+      },
+      {
+        id: 2,
+        title: 'Una señal por dentro',
+        illustration: '\u{1F49A}',
+        text:
+          'Vega notó el pecho inquieto y pensó: "Quizá mi mapa no le importa a nadie". La maestra explicó que los celos pueden aparecer cuando nos comparamos o tememos perder atención. La emoción era una señal, no una orden para actuar.',
+        scene: 'Vega hace una pausa y observa la comparación que ha aparecido en su interior.',
+      },
+      {
+        id: 3,
+        title: 'Hechos y suposiciones',
+        illustration: '\u{1F441}\uFE0F',
+        text:
+          'Juntas usaron dos tarjetas: un ojo para los hechos y una nube para las suposiciones. El hecho era que Omar mostraba su mapa primero. La idea de que nadie valoraba a Vega era una suposición que todavía no habían comprobado.',
+        scene: 'La maestra ayuda a Vega a separar lo observado de lo que su mente imagina.',
+      },
+      {
+        id: 4,
+        title: 'Pedir mi turno',
+        illustration: '\u{1F4AC}',
+        text:
+          'Vega respiró y dijo: "Yo también quiero compartir mi mapa. ¿Cuándo será mi turno?". La maestra le mostró el orden: Omar terminaba y después seguía Vega. Pedir atención con claridad ayudó más que quedarse atrapada en la comparación.',
+        scene: 'Vega expresa su necesidad y recibe una respuesta clara sobre su turno.',
+      },
+      {
+        id: 5,
+        title: 'Dos caminos valiosos',
+        illustration: '\u{1F6E4}\uFE0F',
+        text:
+          'Mientras Omar terminaba, Vega volvió a su propio mapa y añadió un puente de coral. Pudo reconocer una idea interesante en el camino de Omar sin borrar la suya. Dos trabajos distintos podían tener valor al mismo tiempo.',
+        scene: 'Vega y Omar cuidan sus mapas diferentes sin competir por cuál vale más.',
+      },
+      {
+        id: 6,
+        title: 'Cuento completado',
+        illustration: '\u{1F3C6}',
+        text:
+          'Ahora conoces mejor los celos. Puedes notar la comparación, separar hechos de suposiciones, nombrar lo que necesitas y volver a mirar tu propio camino. El valor de otra persona no reduce el tuyo.',
+        scene: 'Vega mira el paisaje completo y el camino continúa hacia la Isla Culpa.',
+        final: true,
+      },
+    ],
+  },
 };
 
 export const getStoryByEmotionId = (emotionId) => storySets[emotionId];

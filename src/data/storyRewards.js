@@ -251,6 +251,42 @@ export const storyRewards = {
         'La gran hoja protectora aparece en el mapa como la próxima fase futura.',
     },
   },
+  asco: {
+    title: '¡Asco completado!',
+    subtitle: 'Has aprendido a escuchar una señal protectora, comprobar el riesgo y expresarte con respeto.',
+    replaySubtitle: 'Ya tienes la insignia de Asco. Puedes volver a leer el cuento.',
+    points: 25,
+    nextAction: 'Jugar retos de Asco',
+    badge: {
+      icon: '\u{1F343}',
+      title: 'Insignia Hoja Protectora',
+      description: 'Escuchas tu cuerpo, pides ayuda y cuidas tus límites sin despreciar.',
+    },
+    unlock: {
+      icon: '\u{1F441}\uFE0F',
+      title: 'Isla Celos desbloqueada',
+      description:
+        'El catalejo de las comparaciones aparece en el mapa como la próxima fase de la aventura.',
+    },
+  },
+  celos: {
+    title: '¡Celos completada!',
+    subtitle: 'Has aprendido a reconocer la comparación, revisar tus suposiciones y pedir lo que necesitas.',
+    replaySubtitle: 'Ya tienes la insignia de Celos. Puedes volver a leer el cuento.',
+    points: 25,
+    nextAction: 'Jugar retos de Celos',
+    badge: {
+      icon: '\u{1F52D}',
+      title: 'Insignia Catalejo Claro',
+      description: 'Distingues hechos y suposiciones sin perder de vista tu propio camino.',
+    },
+    unlock: {
+      icon: '\u{1F4AC}',
+      title: 'Culpa desbloqueada',
+      description:
+        'La carta para reparar aparece en el mapa como la próxima fase de la aventura.',
+    },
+  },
 };
 
 export function getStoryRewardByEmotionId(emotionId) {

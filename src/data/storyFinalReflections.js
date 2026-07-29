@@ -27,6 +27,10 @@ export const storyFinalReflections = {
     'Recuerda un cambio inesperado. ¿Qué notaste en tu cuerpo y qué pregunta o pausa te habría ayudado a comprender mejor lo que ocurría?',
   afectividad:
     'Piensa en una forma de cariño o cuidado que te guste y otra que prefieras evitar. ¿Cómo podrías explicarlo con una frase amable?',
+  asco:
+    'Recuerda algo que te produjo rechazo. ¿Qué señal notaste en tu cuerpo y cómo podrías comprobar si existe un riesgo o expresar un límite sin hacer daño a nadie?',
+  celos:
+    'Piensa en una situación en la que te comparaste o temiste perder atención. ¿Qué era un hecho, qué era una suposición y qué necesidad podrías expresar con respeto?',
 };
 
 export const getStoryFinalReflection = (emotionId) => storyFinalReflections[emotionId] || '';

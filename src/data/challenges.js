@@ -1379,6 +1379,200 @@ export const challengeSets = {
       },
     ],
   },
+  asco: {
+    emotionId: 'asco',
+    title: 'Retos de Asco',
+    subtitle: 'Practica escuchar tu cuerpo, comprobar riesgos y expresar límites con respeto.',
+    mission: 'Misión Hoja Protectora',
+    color: '#6ab04c',
+    challenges: [
+      {
+        id: 'asco-vf-1',
+        type: 'trueFalse',
+        icon: '\u{1F443}',
+        question: '¿El asco puede avisarte de que conviene parar o tomar distancia?',
+        answer: true,
+        points: 10,
+        penalty: 5,
+        explanation:
+          'La nariz, la barriga o las ganas de apartarte pueden funcionar como señales protectoras que invitan a observar antes de actuar.',
+      },
+      {
+        id: 'asco-vf-2',
+        type: 'trueFalse',
+        icon: '\u{1F4AC}',
+        question: '¿Sentir asco te da permiso para insultar o burlarte de otra persona?',
+        answer: false,
+        points: 10,
+        penalty: 5,
+        explanation:
+          'La emoción es válida, pero podemos expresarla sin despreciar cuerpos, comidas, costumbres ni personas.',
+      },
+      {
+        id: 'asco-vf-3',
+        type: 'trueFalse',
+        icon: '\u{1F9D1}\u200D\u{1F3EB}',
+        question: '¿Si algo podría estar estropeado es mejor no tocarlo ni probarlo y avisar a una persona adulta?',
+        answer: true,
+        points: 10,
+        penalty: 5,
+        explanation:
+          'Mantener distancia y pedir ayuda permite comprobar el riesgo de una forma segura.',
+      },
+      {
+        id: 'asco-vf-4',
+        type: 'trueFalse',
+        icon: '\u{1F33F}',
+        question: '¿Si no te gusta un olor limpio significa siempre que es peligroso?',
+        answer: false,
+        points: 10,
+        penalty: 5,
+        explanation:
+          'A veces se trata de una preferencia personal. Podemos decir "no, gracias" sin afirmar que algo seguro es malo.',
+      },
+      {
+        id: 'asco-vf-5',
+        type: 'trueFalse',
+        icon: '\u{1F9FC}',
+        question: '¿Lavarse las manos y pedir que una persona adulta compruebe la situación puede ayudarte a cuidarte?',
+        answer: true,
+        points: 10,
+        penalty: 5,
+        explanation:
+          'La higiene y el apoyo adulto son respuestas útiles cuando puede haber suciedad, comida en mal estado u otro riesgo.',
+      },
+      {
+        id: 'asco-reflexion-1',
+        type: 'reflection',
+        icon: '\u{1F4AD}',
+        question:
+          'Piensa en una señal de asco que puede aparecer en tu cuerpo. ¿Qué acción segura podrías hacer después?',
+        placeholder:
+          'Puedes notar la nariz, la barriga o ganas de alejarte, y después parar, tomar distancia o pedir ayuda.',
+        points: 15,
+        minLength: 18,
+      },
+      {
+        id: 'asco-reflexion-2',
+        type: 'reflection',
+        icon: '\u{1F590}\uFE0F',
+        question:
+          'Escribe una frase amable para rechazar un olor, sabor o contacto que no quieres.',
+        placeholder:
+          'Por ejemplo: no, gracias; prefiero no probarlo, o necesito apartarme un momento.',
+        points: 15,
+        minLength: 18,
+      },
+      {
+        id: 'asco-reflexion-3',
+        type: 'reflection',
+        icon: '\u{1F50D}',
+        question:
+          '¿Cómo podrías distinguir entre un posible riesgo y algo seguro que simplemente no te gusta?',
+        placeholder:
+          'Piensa en observar sin tocar, preguntar a una persona adulta y recordar que los gustos son diferentes.',
+        points: 15,
+        minLength: 18,
+      },
+    ],
+  },
+  celos: {
+    emotionId: 'celos',
+    title: 'Retos de Celos',
+    subtitle: 'Practica reconocer comparaciones, revisar suposiciones y pedir lo que necesitas.',
+    mission: 'Misión Catalejo Claro',
+    color: '#10ac84',
+    challenges: [
+      {
+        id: 'celos-vf-1',
+        type: 'trueFalse',
+        icon: '\u{1F49A}',
+        question: '¿Los celos pueden aparecer cuando temes perder atención, pertenencia o un turno importante?',
+        answer: true,
+        points: 10,
+        penalty: 5,
+        explanation:
+          'Los celos pueden señalar una necesidad de seguridad, reconocimiento o cercanía. Notarlos ayuda a elegir cómo expresarla.',
+      },
+      {
+        id: 'celos-vf-2',
+        type: 'trueFalse',
+        icon: '\u{2601}\uFE0F',
+        question: '¿Pensar que valoran más a otra persona demuestra siempre que sea verdad?',
+        answer: false,
+        points: 10,
+        penalty: 5,
+        explanation:
+          'Una comparación puede crear suposiciones. Conviene buscar hechos y preguntar antes de tratarlas como certezas.',
+      },
+      {
+        id: 'celos-vf-3',
+        type: 'trueFalse',
+        icon: '\u{1F441}\uFE0F',
+        question: '¿Separar lo que observaste de lo que imaginaste puede ayudarte a responder con calma?',
+        answer: true,
+        points: 10,
+        penalty: 5,
+        explanation:
+          'Distinguir hechos de suposiciones permite comprender mejor la situación y decidir qué necesitas pedir.',
+      },
+      {
+        id: 'celos-vf-4',
+        type: 'trueFalse',
+        icon: '\u{1F6AB}',
+        question: '¿Excluir a alguien o esconder su trabajo hace que los celos desaparezcan de una forma cuidadosa?',
+        answer: false,
+        points: 10,
+        penalty: 5,
+        explanation:
+          'Hacer daño no resuelve la necesidad que hay debajo. Podemos parar, pedir apoyo y reparar si hemos actuado injustamente.',
+      },
+      {
+        id: 'celos-vf-5',
+        type: 'trueFalse',
+        icon: '\u{1F4AC}',
+        question: '¿Pedir tu turno o explicar que necesitas atención puede ser una respuesta respetuosa?',
+        answer: true,
+        points: 10,
+        penalty: 5,
+        explanation:
+          'Una petición clara ayuda a que otras personas comprendan qué necesitas sin controlar ni desvalorizar a nadie.',
+      },
+      {
+        id: 'celos-reflexion-1',
+        type: 'reflection',
+        icon: '\u{1F4AD}',
+        question:
+          'Piensa en una comparación que hayas sentido. ¿Qué señal apareció en tu cuerpo o en tus pensamientos?',
+        placeholder:
+          'Puede ser inquietud, calor, ganas de apartarte o la idea de que otra persona recibe más atención.',
+        points: 15,
+        minLength: 18,
+      },
+      {
+        id: 'celos-reflexion-2',
+        type: 'reflection',
+        icon: '\u{1F441}\uFE0F',
+        question:
+          'Describe un hecho de una situación y una suposición que tu mente podría añadir.',
+        placeholder:
+          'Por ejemplo: el hecho es que habló primero; la suposición es que nadie quiere escucharme.',
+        points: 15,
+        minLength: 18,
+      },
+      {
+        id: 'celos-reflexion-3',
+        type: 'reflection',
+        icon: '\u{1F4AC}',
+        question:
+          'Escribe una petición respetuosa para expresar que necesitas atención, seguridad o un turno.',
+        placeholder:
+          'Por ejemplo: yo también quiero participar, ¿cuándo será mi turno?, o necesito saber que cuento con el grupo.',
+        points: 15,
+        minLength: 18,
+      },
+    ],
+  },
 };
 
 export const getChallengeSetByEmotionId = (emotionId) => challengeSets[emotionId];

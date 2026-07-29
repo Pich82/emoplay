@@ -1064,3 +1064,34 @@ No simplificar ni sustituir la app por una versión básica. Mantener siempre la
 - Se añadieron retos, reflexión final, insignias y recompensas propias de Afectividad.
 - Verificación realizada: datos y rutas correctos, prueba de transferencia superada y compilación correcta.
 - Amor continúa reservada como la isla final especial del recorrido.
+
+## Avance del 29 de julio de 2026: Isla Asco
+
+- Se creó la especificación ligera `specs/013-asco-island/`.
+- Asco continúa la ruta después de Afectividad y prepara Culpa como siguiente fase.
+- El cuento `La hoja que protegía el camino` enseña a escuchar señales corporales, tomar distancia, comprobar posibles riesgos con ayuda adulta y expresar preferencias sin despreciar.
+- Se creó una referencia visual para Teo y seis ilustraciones narrativas con el jardín de hojas como elemento común.
+- Se añadieron retos, reflexión final, insignias y recompensas propias de Asco.
+- Verificación realizada: datos y rutas correctos, siete recursos visuales presentes, prueba de transferencia superada y compilación correcta.
+- Amor continúa reservada como la isla final especial del recorrido.
+
+## Avance del 29 de julio de 2026: Isla Celos
+
+- Se creó la especificación ligera `specs/014-celos-island/`.
+- Celos continúa la ruta después de Asco y prepara Culpa como siguiente fase.
+- El cuento `El catalejo de las comparaciones` enseña a reconocer comparaciones, separar hechos de suposiciones, pedir atención con claridad y valorar el propio camino.
+- Se creó una referencia visual para Vega, Omar y la docente, junto con seis ilustraciones narrativas ambientadas en el mirador de los dos caminos.
+- Se añadieron retos, reflexión final, insignias y recompensas propias de Celos.
+- Verificación realizada: datos y rutas correctos, siete recursos visuales presentes, prueba de transferencia superada y compilación correcta.
+- Amor continúa reservada como la isla final especial del recorrido.
+
+## Perfilado del 29 de julio de 2026: Isla final Amor
+
+- Se amplió `specs/010-amor-final-island/` con el concepto creativo, la especificación técnica y el plan de tareas.
+- El título de trabajo continúa siendo `El Faro de los Vínculos Seguros`.
+- Amor no seguirá el formato ordinario de cuento y retos: tendrá seis capítulos interactivos, decisiones revisables, caja de herramientas, mensaje opcional al yo futuro y un refugio final.
+- El nombre y avatar guardados serán protagonistas de la experiencia; las ilustraciones mostrarán el entorno sin imponer un personaje fijo.
+- La experiencia integrará amor propio, vínculos seguros, límites, ayuda, comparación, responsabilidad y reparación, sin contenido romántico.
+- La ruta prevista se mantiene como `Asco -> Celos -> Culpa -> Amor`; Culpa es el requisito previo antes de implementar el final.
+- Se definieron recompensas, privacidad, persistencia, transferencia entre dispositivos, accesibilidad y verificaciones necesarias.
+- No se implementó todavía código ni contenido jugable de Amor.

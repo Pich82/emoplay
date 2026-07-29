@@ -531,6 +531,82 @@ export const storyIllustrations = {
       imageSrc: '/images/stories/afectividad/pagina-6-camino-de-cintas.jpg',
     },
   },
+  asco: {
+    1: {
+      theme: 'disgust-strange-smell',
+      mainIcon: '\u{1F343}',
+      supportingIcons: ['\u{1F34E}', '\u{1F9FA}', '\u{1F50D}'],
+      imageSrc: '/images/stories/asco/pagina-1-olor-extrano.jpg',
+    },
+    2: {
+      theme: 'disgust-body-signal',
+      mainIcon: '\u{1F443}',
+      supportingIcons: ['\u{1F6B6}', '\u{1F6E1}\uFE0F', '\u{1F343}'],
+      imageSrc: '/images/stories/asco/pagina-2-cuerpo-avisa.jpg',
+    },
+    3: {
+      theme: 'disgust-ask-adult',
+      mainIcon: '\u{1F4AC}',
+      supportingIcons: ['\u{1F9D1}\u200D\u{1F3EB}', '\u{1F590}\uFE0F', '\u{1F50D}'],
+      imageSrc: '/images/stories/asco/pagina-3-avisar-adulto.jpg',
+    },
+    4: {
+      theme: 'disgust-check-clean',
+      mainIcon: '\u{1F9E4}',
+      supportingIcons: ['\u{1F9FC}', '\u{1F6B0}', '\u{2705}'],
+      imageSrc: '/images/stories/asco/pagina-4-comprobar-y-limpiar.jpg',
+    },
+    5: {
+      theme: 'disgust-respectful-no',
+      mainIcon: '\u{1F590}\uFE0F',
+      supportingIcons: ['\u{1F33F}', '\u{1F4AC}', '\u{1F642}'],
+      imageSrc: '/images/stories/asco/pagina-5-no-gracias.jpg',
+    },
+    6: {
+      theme: 'disgust-leaf-path',
+      mainIcon: '\u{1F3C6}',
+      supportingIcons: ['\u{1F343}', '\u{1F6E1}\uFE0F', '\u{1F6E4}\uFE0F'],
+      imageSrc: '/images/stories/asco/pagina-6-camino-de-hojas.jpg',
+    },
+  },
+  celos: {
+    1: {
+      theme: 'jealousy-telescope-compare',
+      mainIcon: '\u{1F52D}',
+      supportingIcons: ['\u{1F5FA}\uFE0F', '\u{1F6A9}', '\u{1F440}'],
+      imageSrc: '/images/stories/celos/pagina-1-catalejo-compara.jpg',
+    },
+    2: {
+      theme: 'jealousy-body-signal',
+      mainIcon: '\u{1F49A}',
+      supportingIcons: ['\u{1F4AD}', '\u{23F8}\uFE0F', '\u{1F52D}'],
+      imageSrc: '/images/stories/celos/pagina-2-cuerpo-avisa.jpg',
+    },
+    3: {
+      theme: 'jealousy-facts-guesses',
+      mainIcon: '\u{1F441}\uFE0F',
+      supportingIcons: ['\u{2601}\uFE0F', '\u{1F4CB}', '\u{1F9D1}\u200D\u{1F3EB}'],
+      imageSrc: '/images/stories/celos/pagina-3-hechos-suposiciones.jpg',
+    },
+    4: {
+      theme: 'jealousy-ask-turn',
+      mainIcon: '\u{1F4AC}',
+      supportingIcons: ['\u{1F64B}', '\u{1F504}', '\u{1F5FA}\uFE0F'],
+      imageSrc: '/images/stories/celos/pagina-4-pedir-turno.jpg',
+    },
+    5: {
+      theme: 'jealousy-two-paths',
+      mainIcon: '\u{1F6E4}\uFE0F',
+      supportingIcons: ['\u{1F58D}\uFE0F', '\u{1F6A9}', '\u{2696}\uFE0F'],
+      imageSrc: '/images/stories/celos/pagina-5-dos-caminos.jpg',
+    },
+    6: {
+      theme: 'jealousy-wide-view',
+      mainIcon: '\u{1F3C6}',
+      supportingIcons: ['\u{1F52D}', '\u{1F4CC}', '\u{2709}\uFE0F'],
+      imageSrc: '/images/stories/celos/pagina-6-mirar-sin-perderse.jpg',
+    },
+  },
 };
 
 export const getStoryIllustration = (emotionId, pageId) =>
