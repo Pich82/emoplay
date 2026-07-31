@@ -1,0 +1,899 @@
+.love-finale,
+.lighthouse-refuge {
+  display: grid;
+  gap: 22px;
+  width: 100%;
+  padding-bottom: 28px;
+}
+
+.love-finale__header,
+.lighthouse-refuge__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.love-finale__header h1,
+.lighthouse-refuge__header h1 {
+  max-width: 760px;
+  margin: 4px 0 0;
+  font-size: clamp(2rem, 3.2rem, 3.2rem);
+  letter-spacing: 0;
+}
+
+.love-finale__progress {
+  display: grid;
+  min-width: 184px;
+  gap: 8px;
+  padding: 12px 14px;
+  border: 2px solid #b9dfe4;
+  border-radius: 8px;
+  background: #f8feff;
+  color: #204b57;
+}
+
+.love-finale__progress strong {
+  font-size: 1.15rem;
+}
+
+.love-finale__progress > span {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 5px;
+}
+
+.love-finale__progress i {
+  height: 7px;
+  border-radius: 4px;
+  background: #dce8e9;
+}
+
+.love-finale__progress i.is-complete {
+  background: #10a9a0;
+}
+
+.love-finale__visual {
+  position: relative;
+  min-height: 480px;
+  overflow: hidden;
+  border: 4px solid #ffffff;
+  border-radius: 8px;
+  background: #cceef4;
+  box-shadow: 0 14px 32px rgba(31, 65, 78, 0.18);
+}
+
+.love-finale__visual > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 480px;
+  object-fit: cover;
+}
+
+.love-finale__avatar {
+  position: absolute;
+  left: 28px;
+  bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: calc(100% - 56px);
+  padding: 10px 16px 10px 10px;
+  border: 3px solid rgba(255, 255, 255, 0.92);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 10px 24px rgba(17, 58, 68, 0.2);
+}
+
+.love-finale__avatar .avatar-preview {
+  flex: 0 0 auto;
+  width: 76px;
+  height: 76px;
+}
+
+.love-finale__avatar > span {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+
+.love-finale__avatar small {
+  color: #41616a;
+  font-weight: 700;
+}
+
+.love-finale__avatar strong {
+  overflow-wrap: anywhere;
+  color: #173b45;
+  font-size: 1.15rem;
+}
+
+.love-finale__chapter {
+  display: grid;
+  gap: 22px;
+  padding: 26px;
+  border: 2px solid #c8e4e7;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.love-finale__chapter-copy {
+  display: grid;
+  gap: 8px;
+  max-width: 820px;
+}
+
+.love-finale__chapter-copy h2 {
+  margin: 0;
+  color: #183e48;
+  font-size: clamp(1.65rem, 2.4rem, 2.4rem);
+  letter-spacing: 0;
+}
+
+.love-finale__chapter-copy > p:last-child {
+  margin: 0;
+  color: #49636a;
+  font-size: 1.08rem;
+  line-height: 1.65;
+}
+
+.love-finale__actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 22px;
+}
+
+.love-finale__actions button {
+  min-height: 48px;
+}
+
+.love-arrival {
+  display: grid;
+  gap: 18px;
+}
+
+.love-arrival > p {
+  max-width: 760px;
+  margin: 0;
+  color: #31575f;
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+.love-arrival__symbols,
+.lighthouse-refuge__islands {
+  display: grid;
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.love-arrival__symbols > span,
+.lighthouse-refuge__islands > span {
+  display: grid;
+  min-width: 0;
+  min-height: 72px;
+  place-items: center;
+  gap: 4px;
+  padding: 8px 4px;
+  border: 1px solid #d5e7e8;
+  border-radius: 8px;
+  background: #f7fbfa;
+  color: #284e57;
+  text-align: center;
+}
+
+.love-arrival__symbols > span > span,
+.lighthouse-refuge__islands > span > span {
+  font-size: 1.45rem;
+}
+
+.love-arrival__symbols small,
+.lighthouse-refuge__islands small {
+  overflow-wrap: anywhere;
+  font-size: 0.68rem;
+  font-weight: 800;
+}
+
+.love-compass {
+  display: grid;
+  gap: 16px;
+}
+
+.love-compass__counter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  color: #31575f;
+  font-weight: 800;
+}
+
+.love-compass__counter > div {
+  display: flex;
+  gap: 7px;
+}
+
+.love-compass__counter button {
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  min-height: 40px;
+  padding: 0;
+  border: 2px solid #bedbdd;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #31575f;
+}
+
+.love-compass__counter button.is-complete {
+  border-color: #10a9a0;
+  background: #dcf7ef;
+}
+
+.love-compass__counter button.is-current {
+  outline: 3px solid rgba(247, 185, 49, 0.42);
+  outline-offset: 2px;
+}
+
+.love-scenario {
+  display: grid;
+  min-width: 0;
+  gap: 16px;
+  margin: 0;
+  padding: 20px;
+  border: 2px solid #bcdde0;
+  border-radius: 8px;
+  background: #f8fdfc;
+}
+
+.love-scenario legend {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  max-width: 100%;
+  padding: 0 8px;
+  color: #183e48;
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+
+.love-scenario__prompt {
+  max-width: 780px;
+  margin: 0;
+  color: #284e57;
+  font-size: 1.08rem;
+  line-height: 1.6;
+}
+
+.love-choice-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.love-choice {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  align-items: center;
+  min-height: 100px;
+  gap: 10px;
+  padding: 14px;
+  border: 2px solid #c9dfe1;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #244a53;
+  text-align: left;
+}
+
+.love-choice:hover:not(:disabled),
+.love-choice:focus-visible {
+  border-color: #199b96;
+  transform: translateY(-2px);
+}
+
+.love-choice--selected {
+  border-color: #158f88;
+  background: #e4f8f2;
+  box-shadow: inset 0 0 0 1px #158f88;
+}
+
+.love-choice > span {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.love-choice strong {
+  line-height: 1.4;
+}
+
+.love-choice-feedback,
+.love-care-principle {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-left: 5px solid #f0b429;
+  border-radius: 0 8px 8px 0;
+  background: #fff8df;
+  color: #5e4b18;
+}
+
+.love-choice-feedback > span,
+.love-care-principle > span {
+  font-size: 1.65rem;
+  text-align: center;
+}
+
+.love-choice-feedback p,
+.love-care-principle p {
+  margin: 0;
+  line-height: 1.55;
+}
+
+.love-toolbox {
+  display: grid;
+  gap: 16px;
+}
+
+.love-toolbox__counter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #31575f;
+}
+
+.love-toolbox__counter strong {
+  min-width: 58px;
+  padding: 7px 10px;
+  border-radius: 8px;
+  background: #174d59;
+  color: #ffffff;
+  text-align: center;
+}
+
+.love-tool-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.love-tool {
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr);
+  align-items: center;
+  min-height: 116px;
+  gap: 12px;
+  padding: 14px;
+  border: 2px solid #c9dfe1;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #244a53;
+  text-align: left;
+}
+
+.love-tool:disabled {
+  opacity: 0.48;
+}
+
+.love-tool--selected {
+  border-color: #158f88;
+  background: #e4f8f2;
+  box-shadow: inset 0 0 0 1px #158f88;
+}
+
+.love-tool__icon {
+  display: grid;
+  width: 54px;
+  height: 54px;
+  place-items: center;
+  border-radius: 50%;
+  background: #eaf4f3;
+  font-size: 1.75rem;
+}
+
+.love-tool > span:last-child {
+  display: grid;
+  gap: 3px;
+}
+
+.love-tool small {
+  color: #28756f;
+  font-weight: 800;
+}
+
+.love-tool > span:last-child > span {
+  color: #5a7076;
+  line-height: 1.4;
+}
+
+.love-message {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(300px, 0.88fr);
+  gap: 18px;
+}
+
+.love-message__field,
+.love-commitments {
+  display: grid;
+  align-content: start;
+  min-width: 0;
+  gap: 12px;
+  margin: 0;
+  padding: 18px;
+  border: 2px solid #c9dfe1;
+  border-radius: 8px;
+  background: #f8fdfc;
+}
+
+.love-message__field h3 {
+  margin: 3px 0;
+  color: #183e48;
+}
+
+.love-message__field label {
+  color: #244a53;
+  font-weight: 900;
+}
+
+.love-message__field textarea {
+  width: 100%;
+  min-height: 128px;
+  resize: vertical;
+  padding: 13px;
+  border: 2px solid #b9d7da;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #183e48;
+  font: inherit;
+  line-height: 1.55;
+}
+
+.love-message__starters {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.love-message__starters button,
+.love-commitments button {
+  min-height: 50px;
+  border: 2px solid #c9dfe1;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #244a53;
+}
+
+.love-message__starters button.is-selected,
+.love-commitments button.is-selected {
+  border-color: #158f88;
+  background: #e4f8f2;
+}
+
+.love-message__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.love-message__footer > span {
+  color: #5a7076;
+  font-weight: 800;
+}
+
+.love-message__footer button {
+  min-height: 40px;
+  padding-block: 7px;
+}
+
+.love-commitments legend {
+  padding: 0 7px;
+  color: #183e48;
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+
+.love-commitments button {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr);
+  align-items: center;
+  gap: 8px;
+  padding: 11px;
+  text-align: left;
+}
+
+.love-commitments button > span {
+  font-size: 1.45rem;
+  text-align: center;
+}
+
+.love-message > .love-finale__actions {
+  grid-column: 1 / -1;
+}
+
+.love-beacon {
+  display: grid;
+  gap: 18px;
+}
+
+.love-beacon__summary {
+  display: grid;
+  grid-template-columns: 82px minmax(0, 1fr);
+  align-items: center;
+  gap: 16px;
+  padding: 18px;
+  border: 2px solid #e4c369;
+  border-radius: 8px;
+  background: #fff9e8;
+}
+
+.love-beacon__summary > span {
+  display: grid;
+  width: 76px;
+  height: 76px;
+  place-items: center;
+  border-radius: 50%;
+  background: #f7c94c;
+  font-size: 2.25rem;
+}
+
+.love-beacon__summary h3 {
+  margin: 4px 0 6px;
+  color: #60480c;
+  font-size: 1.35rem;
+}
+
+.love-beacon__summary p:last-child {
+  margin: 0;
+  color: #6a5a2f;
+  line-height: 1.55;
+}
+
+.love-beacon__principle {
+  max-width: 820px;
+  margin: 0;
+  color: #274f58;
+  font-size: 1.1rem;
+  font-weight: 750;
+  line-height: 1.65;
+}
+
+.love-finale-locked {
+  display: grid;
+  max-width: 720px;
+  min-height: 480px;
+  place-content: center;
+  justify-items: center;
+  gap: 12px;
+  margin: 30px auto;
+  padding: 32px;
+  border: 2px solid #c9dfe1;
+  border-radius: 8px;
+  background: #f8fdfc;
+  color: #31575f;
+  text-align: center;
+}
+
+.love-finale-locked > span {
+  font-size: 4rem;
+}
+
+.love-finale-locked h1 {
+  margin: 0;
+  color: #183e48;
+  letter-spacing: 0;
+}
+
+.love-finale-entry {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.75fr);
+  overflow: hidden;
+  border: 2px solid #c9dfe1;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.love-finale-entry > img {
+  width: 100%;
+  height: 100%;
+  min-height: 410px;
+  object-fit: cover;
+}
+
+.love-finale-entry > div {
+  display: grid;
+  align-content: center;
+  gap: 12px;
+  padding: 26px;
+}
+
+.love-finale-entry h2 {
+  margin: 0;
+  color: #183e48;
+  font-size: 1.8rem;
+  letter-spacing: 0;
+}
+
+.love-finale-entry p {
+  margin: 0;
+  color: #49636a;
+  line-height: 1.6;
+}
+
+.love-finale-entry ul {
+  display: grid;
+  gap: 7px;
+  margin: 0;
+  padding-left: 20px;
+  color: #31575f;
+}
+
+.love-finale-entry button {
+  width: 100%;
+  margin-top: 6px;
+}
+
+.love-finale__visual--refuge {
+  min-height: 570px;
+}
+
+.love-finale__visual--refuge > img {
+  min-height: 570px;
+}
+
+.love-finale__avatar--refuge {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.lighthouse-refuge__header {
+  align-items: stretch;
+  padding: 8px 0;
+}
+
+.lighthouse-refuge__header > div:first-child {
+  max-width: 800px;
+}
+
+.lighthouse-refuge__header p:last-child {
+  color: #49636a;
+  line-height: 1.65;
+}
+
+.lighthouse-refuge__badge {
+  display: grid;
+  min-width: 210px;
+  place-content: center;
+  justify-items: center;
+  gap: 4px;
+  padding: 16px;
+  border: 2px solid #e1bd54;
+  border-radius: 8px;
+  background: #fff8db;
+  color: #60480c;
+  text-align: center;
+}
+
+.lighthouse-refuge__badge > span {
+  font-size: 2.4rem;
+}
+
+.lighthouse-refuge__summary {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 16px;
+}
+
+.lighthouse-refuge__tools,
+.lighthouse-refuge__commitment,
+.lighthouse-refuge__message {
+  padding: 20px;
+  border: 2px solid #c9dfe1;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.lighthouse-refuge__tools h2,
+.lighthouse-refuge__commitment h2 {
+  margin: 5px 0 14px;
+  color: #183e48;
+  font-size: 1.3rem;
+}
+
+.lighthouse-refuge__tools > div {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.lighthouse-refuge__tools > div > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: #e7f7f2;
+  color: #245a57;
+  font-weight: 800;
+}
+
+.lighthouse-refuge__commitment {
+  border-color: #ead68e;
+  background: #fffaf0;
+}
+
+.lighthouse-refuge__message blockquote {
+  margin: 8px 0 10px;
+  color: #274f58;
+  font-size: 1.15rem;
+  font-weight: 750;
+  line-height: 1.65;
+}
+
+.lighthouse-refuge__message small {
+  color: #5f747a;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .love-choice,
+  .love-tool {
+    transition: none;
+  }
+
+  .love-choice:hover:not(:disabled),
+  .love-choice:focus-visible {
+    transform: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .love-finale__header,
+  .lighthouse-refuge__header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .love-finale__progress,
+  .lighthouse-refuge__badge {
+    width: 100%;
+  }
+
+  .love-choice-grid,
+  .love-message,
+  .love-finale-entry,
+  .lighthouse-refuge__summary {
+    grid-template-columns: 1fr;
+  }
+
+  .love-finale-entry > img {
+    min-height: 360px;
+  }
+
+  .love-message > .love-finale__actions {
+    grid-column: 1;
+  }
+
+  .love-arrival__symbols,
+  .lighthouse-refuge__islands {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .love-finale,
+  .lighthouse-refuge {
+    gap: 14px;
+  }
+
+  .love-finale__header h1,
+  .lighthouse-refuge__header h1 {
+    font-size: 1.85rem;
+    line-height: 1.12;
+  }
+
+  .love-finale__visual,
+  .love-finale__visual > img,
+  .love-finale__visual--refuge,
+  .love-finale__visual--refuge > img {
+    min-height: 400px;
+  }
+
+  .love-finale__visual > img {
+    object-position: center;
+  }
+
+  .love-finale__avatar,
+  .love-finale__avatar--refuge {
+    right: 12px;
+    bottom: 12px;
+    left: 12px;
+    max-width: none;
+    transform: none;
+  }
+
+  .love-finale__avatar .avatar-preview {
+    width: 58px;
+    height: 58px;
+  }
+
+  .love-finale__chapter {
+    gap: 18px;
+    padding: 16px;
+  }
+
+  .love-finale__chapter-copy h2 {
+    font-size: 1.55rem;
+  }
+
+  .love-arrival__symbols,
+  .lighthouse-refuge__islands {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .love-compass__counter {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .love-compass__counter > div {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .love-compass__counter button {
+    width: 44px;
+    min-width: 44px;
+    height: 44px;
+  }
+
+  .love-scenario {
+    padding: 14px;
+  }
+
+  .love-scenario legend {
+    align-items: flex-start;
+    font-size: 1.05rem;
+  }
+
+  .love-choice-grid,
+  .love-tool-grid,
+  .love-message__starters {
+    grid-template-columns: 1fr;
+  }
+
+  .love-choice,
+  .love-tool {
+    min-height: 88px;
+  }
+
+  .love-finale__actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .love-finale__actions button {
+    width: 100%;
+  }
+
+  .love-message__footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .love-message__footer button {
+    width: 100%;
+  }
+
+  .love-beacon__summary {
+    grid-template-columns: 1fr;
+  }
+
+  .love-beacon__summary > span {
+    width: 64px;
+    height: 64px;
+  }
+}

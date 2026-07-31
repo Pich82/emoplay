@@ -4,8 +4,6 @@ import { islandUnlockOrder } from './islandProgression.js';
 import { getMiniGameByEmotionId } from './miniGames.js';
 import { getStoryByEmotionId } from './stories.js';
 
-const nextFutureIslandId = 'culpa';
-
 function includesValue(values = [], value) {
   return Array.isArray(values) && values.includes(value);
 }
@@ -30,6 +28,22 @@ export function getAdventureNextStep(player) {
     const challenges = getChallengesByEmotionId(islandId);
     const miniGame = getMiniGameByEmotionId(islandId);
     const story = getStoryByEmotionId(islandId);
+
+    if (islandId === 'amor' && isUnlocked && !storyCompleted) {
+      return {
+        type: 'finale',
+        tone: 'complete',
+        icon: '\u{1F5FC}',
+        eyebrow: 'Destino final desbloqueado',
+        title: 'Encender el Faro de los Vínculos Seguros',
+        description:
+          'Reúne las herramientas de todo el archipiélago en una experiencia final personalizada.',
+        actionLabel: 'Entrar en Isla Amor',
+        helper: 'No hay respuestas castigadas: podrás explorar, reconsiderar y elegir tus recursos.',
+        islandId,
+        emotion,
+      };
+    }
 
     if (isUnlocked && story && !storyCompleted) {
       return {
@@ -77,20 +91,19 @@ export function getAdventureNextStep(player) {
     }
   }
 
-  const futureEmotion = getEmotionById(nextFutureIslandId);
+  const finalEmotion = getEmotionById('amor');
 
   return {
     type: 'complete',
     tone: 'complete',
-    icon: '\u{1F31F}',
-    eyebrow: 'Ruta inicial completada',
-    title: 'Has completado las islas jugables actuales',
-    description: futureEmotion
-      ? `La siguiente ampliacion recomendada es ${futureEmotion.name}, para distinguir responsabilidad de castigo y aprender a reparar con cuidado.`
-      : 'La aventura esta preparada para nuevas islas emocionales.',
-    actionLabel: 'Ver mapa',
-    helper: 'Puedes revisar recompensas, diario e informes mientras se prepara la siguiente isla.',
-    islandId: '',
-    emotion: futureEmotion,
+    icon: '\u{1F5FC}',
+    eyebrow: 'Archipiélago completado',
+    title: 'Tu Faro de los Vínculos Seguros está encendido',
+    description:
+      'El Refugio del Faro permanece abierto para recordar tus herramientas, tu compromiso y todo el recorrido.',
+    actionLabel: 'Volver al refugio',
+    helper: 'Puedes revisar tus elecciones sin perder el progreso ni repetir recompensas.',
+    islandId: 'amor',
+    emotion: finalEmotion,
   };
 }

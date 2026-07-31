@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import AvatarPreview from '../components/AvatarPreview.jsx';
 import { getAchievementCards } from '../data/achievements.js';
 import { emotions } from '../data/emotions.js';
@@ -25,6 +25,11 @@ function ProfileScreen({
   const levelProgress = getLevelProgress(player.points);
   const unlockedAchievements = getAchievementCards(player).filter((achievement) => achievement.unlocked);
   const pendingSummary = pendingProgressImport?.summary;
+
+  useEffect(() => {
+    setStudentName(player.studentName || '');
+    setClassName(player.className || '');
+  }, [player.studentName, player.className]);
 
   const saveProfile = (event) => {
     event.preventDefault();
@@ -182,6 +187,10 @@ function ProfileScreen({
               Exporta una copia JSON o importa una copia creada en otro navegador.
               Antes de importar, EMOPLAY guarda una copia local del progreso actual.
             </p>
+            <p>
+              La copia incluye el Refugio del Faro y, si lo escribiste, tu mensaje privado para
+              el futuro. Ese mensaje no aparece en el panel docente.
+            </p>
           </div>
           <div className="profile-transfer-panel__actions">
             <button type="button" onClick={onExportProgress}>
@@ -248,6 +257,14 @@ function ProfileScreen({
               <div>
                 <dt>Diario</dt>
                 <dd>{pendingSummary.diaryEntries}</dd>
+              </div>
+              <div>
+                <dt>Faro final</dt>
+                <dd>{pendingSummary.loveFinaleCompleted ? 'Completado' : 'Pendiente'}</dd>
+              </div>
+              <div>
+                <dt>Mensaje privado del faro</dt>
+                <dd>{pendingSummary.includesPrivateLoveMessage ? 'Incluido' : 'No incluido'}</dd>
               </div>
             </dl>
             <div className="profile-import-review__actions">

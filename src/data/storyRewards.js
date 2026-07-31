@@ -287,6 +287,24 @@ export const storyRewards = {
         'La carta para reparar aparece en el mapa como la próxima fase de la aventura.',
     },
   },
+  culpa: {
+    title: '¡Culpa completada!',
+    subtitle: 'Has aprendido a reconocer el impacto, ofrecer una reparación y seguir creciendo sin convertir un error en tu identidad.',
+    replaySubtitle: 'Ya tienes la insignia de Culpa. Puedes volver a leer el cuento.',
+    points: 25,
+    nextAction: 'Jugar retos de Culpa',
+    badge: {
+      icon: '\u{2709}\uFE0F',
+      title: 'Insignia Carta de Reparación',
+      description: 'Reconoces una acción, escuchas su impacto y reparas con respeto y límites.',
+    },
+    unlock: {
+      icon: '\u{1F5FC}',
+      title: 'Isla Amor desbloqueada',
+      description:
+        'El Faro de los Vínculos Seguros aparece como la experiencia final del archipiélago.',
+    },
+  },
 };
 
 export function getStoryRewardByEmotionId(emotionId) {

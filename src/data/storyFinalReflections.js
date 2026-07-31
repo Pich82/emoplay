@@ -31,6 +31,8 @@ export const storyFinalReflections = {
     'Recuerda algo que te produjo rechazo. ¿Qué señal notaste en tu cuerpo y cómo podrías comprobar si existe un riesgo o expresar un límite sin hacer daño a nadie?',
   celos:
     'Piensa en una situación en la que te comparaste o temiste perder atención. ¿Qué era un hecho, qué era una suposición y qué necesidad podrías expresar con respeto?',
+  culpa:
+    'Piensa en una acción pequeña que quieras corregir. ¿Cómo podrías reconocerla, preguntar qué ayudaría y ofrecer una reparación sin exigir que la otra persona te perdone?',
 };
 
 export const getStoryFinalReflection = (emotionId) => storyFinalReflections[emotionId] || '';

@@ -1573,6 +1573,103 @@ export const challengeSets = {
       },
     ],
   },
+  culpa: {
+    emotionId: 'culpa',
+    title: 'Retos de Culpa',
+    subtitle: 'Practica reconocer acciones, escuchar su impacto y reparar sin vergüenza ni presión.',
+    mission: 'Misión Carta de Reparación',
+    color: '#786fa6',
+    challenges: [
+      {
+        id: 'culpa-vf-1',
+        type: 'trueFalse',
+        icon: '\u{1F4AD}',
+        question: '¿La culpa puede avisarte de que una acción necesita atención o reparación?',
+        answer: true,
+        points: 10,
+        penalty: 5,
+        explanation:
+          'La culpa puede ayudar a revisar una acción y elegir un siguiente paso responsable.',
+      },
+      {
+        id: 'culpa-vf-2',
+        type: 'trueFalse',
+        icon: '\u{1F9E9}',
+        question: '¿Cometer un error significa que toda tu persona es mala?',
+        answer: false,
+        points: 10,
+        penalty: 5,
+        explanation:
+          'Una acción puede haber causado daño y necesitar reparación, pero no define todo lo que eres.',
+      },
+      {
+        id: 'culpa-vf-3',
+        type: 'trueFalse',
+        icon: '\u{1F4AC}',
+        question: '¿Una disculpa útil reconoce lo que ocurrió y escucha el impacto sin esconderse detrás de excusas?',
+        answer: true,
+        points: 10,
+        penalty: 5,
+        explanation:
+          'Nombrar la acción y su impacto muestra responsabilidad. Después se puede preguntar qué reparación sería posible.',
+      },
+      {
+        id: 'culpa-vf-4',
+        type: 'trueFalse',
+        icon: '\u{23F3}',
+        question: '¿La otra persona tiene que perdonarte o acercarse inmediatamente porque te hayas disculpado?',
+        answer: false,
+        points: 10,
+        penalty: 5,
+        explanation:
+          'La disculpa no obliga a perdonar, hablar, abrazar ni recuperar la relación de inmediato. Sus límites también importan.',
+      },
+      {
+        id: 'culpa-vf-5',
+        type: 'trueFalse',
+        icon: '\u{1F9D1}\u200D\u{1F3EB}',
+        question: '¿Un niño debe arreglar por sí solo las emociones o los problemas de una persona adulta?',
+        answer: false,
+        points: 10,
+        penalty: 5,
+        explanation:
+          'Los problemas complejos o desiguales necesitan apoyo de una persona adulta segura. Un niño no debe cargar solo con esa responsabilidad.',
+      },
+      {
+        id: 'culpa-reflexion-1',
+        type: 'reflection',
+        icon: '\u{1F4AD}',
+        question:
+          'Transforma una frase de vergüenza sobre ti en una frase que nombre una acción concreta y un posible aprendizaje.',
+        placeholder:
+          'Por ejemplo: en vez de "soy un desastre", puedo decir "hice algo con prisa y la próxima vez pediré turno".',
+        points: 15,
+        minLength: 18,
+      },
+      {
+        id: 'culpa-reflexion-2',
+        type: 'reflection',
+        icon: '\u{1F4AC}',
+        question:
+          'Escribe una disculpa que reconozca una acción y ofrezca reparar sin pedir perdón inmediato.',
+        placeholder:
+          'Por ejemplo: rompí tu material al cogerlo sin preguntar, lo siento; ¿quieres que traiga otro o prefieres espacio?',
+        points: 15,
+        minLength: 18,
+      },
+      {
+        id: 'culpa-reflexion-3',
+        type: 'reflection',
+        icon: '\u{1F6E0}\uFE0F',
+        question:
+          'Describe una reparación pequeña y segura. ¿Qué límite respetarías y cuándo pedirías ayuda adulta?',
+        placeholder:
+          'Puedes devolver algo, reponer un material, dar espacio, cumplir un acuerdo o pedir apoyo si la situación es difícil.',
+        points: 15,
+        minLength: 18,
+      },
+    ],
+  },
 };
 
 export const getChallengeSetByEmotionId = (emotionId) => challengeSets[emotionId];

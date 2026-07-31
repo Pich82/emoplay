@@ -49,7 +49,7 @@ function ChallengesHubScreen({ player, onStartChallenges, onStartStory, onStartM
 
           {status.canReadStory && (
             <button type="button" onClick={() => onStartStory(emotion.id)}>
-              Leer cuento
+              {emotion.id === 'amor' ? 'Abrir experiencia final' : 'Leer cuento'}
             </button>
           )}
 

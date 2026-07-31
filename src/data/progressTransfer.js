@@ -1,6 +1,11 @@
 import { defaultAvatarConfig, normalizeAvatarConfig } from './avatar.js';
 import { diaryStorageKey, normalizeDiaryEntries } from './diary.js';
 import { islandUnlockOrder } from './islandProgression.js';
+import {
+  loveFinaleAchievementId,
+  loveFinaleRewardId,
+  normalizeLoveFinaleState,
+} from './loveFinale.js';
 import { initialPlayerState } from './player.js';
 
 export const progressTransferVersion = 1;
@@ -22,22 +27,8 @@ const maxArrayItems = 160;
 const maxStringLength = 120;
 const maxReportCount = 80;
 const reportStoragePrefix = 'informe_';
-const knownStoryIds = [
-  'ternura',
-  'admiracion',
-  'afectividad',
-  'alegria',
-  'calma',
-  'miedo',
-  'enfado',
-  'tristeza',
-  'frustracion',
-  'verguenza',
-  'empatia',
-  'asco',
-  'celos',
-];
-const knownChallengeIds = knownStoryIds;
+const knownStoryIds = [...islandUnlockOrder];
+const knownChallengeIds = knownStoryIds.filter((islandId) => islandId !== 'amor');
 const knownMiniGameIds = ['calma', 'empatia'];
 
 function isPlainObject(value) {
@@ -91,10 +82,31 @@ function getLocalStorageKeys() {
 
 function normalizeImportedPlayer(player) {
   const source = isPlainObject(player) ? player : {};
-  const completedStories = cleanStringArray(source.completedStories);
-  const completedChallengeIds = cleanStringArray(source.completedChallengeIds);
-  const completedMiniGameIds = cleanStringArray(source.completedMiniGameIds);
-  const explicitUnlockedIslands = cleanStringArray(source.unlockedIslands);
+  const hasSourceLoveFinale = isPlainObject(source.loveFinale);
+  const sourceLoveFinale = normalizeLoveFinaleState(source.loveFinale);
+  const completedStories = cleanStringArray([
+    ...(Array.isArray(source.completedStories) ? source.completedStories : []),
+    ...(sourceLoveFinale.completed ? ['amor'] : []),
+  ]).filter((storyId) => knownStoryIds.includes(storyId));
+  const completedChallengeIds = cleanStringArray(source.completedChallengeIds).filter(
+    (challengeId) => knownChallengeIds.includes(challengeId),
+  );
+  const completedMiniGameIds = cleanStringArray(source.completedMiniGameIds).filter(
+    (miniGameId) => knownMiniGameIds.includes(miniGameId),
+  );
+  const explicitUnlockedIslands = cleanStringArray(source.unlockedIslands).filter((islandId) =>
+    islandUnlockOrder.includes(islandId),
+  );
+  const loveCompleted = sourceLoveFinale.completed || completedStories.includes('amor');
+  const loveFinale = {
+    ...sourceLoveFinale,
+    started: sourceLoveFinale.started || loveCompleted,
+    completed: loveCompleted,
+    chapterId:
+      loveCompleted && !hasSourceLoveFinale
+        ? 'refuge'
+        : sourceLoveFinale.chapterId,
+  };
   const storyUnlockedIslands = islandUnlockOrder
     .slice(0, -1)
     .map((storyId, index) =>
@@ -116,6 +128,7 @@ function normalizeImportedPlayer(player) {
         unlockedIslands.includes(islandId) ? `desbloqueo_${islandId}` : null,
       )
       .filter(Boolean),
+    loveCompleted ? loveFinaleAchievementId : null,
   ]);
 
   return {
@@ -132,9 +145,13 @@ function normalizeImportedPlayer(player) {
     completedMiniGameIds,
     completedStories,
     achievements: cleanStringArray([...(source.achievements || []), ...derivedAchievements]),
-    ownedRewardIds: cleanStringArray(source.ownedRewardIds),
+    ownedRewardIds: cleanStringArray([
+      ...(Array.isArray(source.ownedRewardIds) ? source.ownedRewardIds : []),
+      ...(loveCompleted ? [loveFinaleRewardId] : []),
+    ]),
     equippedRewardId: cleanString(source.equippedRewardId, 80),
     unlockedIslands,
+    loveFinale,
     avatar: {
       ...initialPlayerState.avatar,
       ...(isPlainObject(source.avatar) ? source.avatar : {}),
@@ -255,6 +272,8 @@ export function getProgressBackupSummary(backup) {
       : 0,
     diaryEntries: Array.isArray(data.diaryEntries) ? data.diaryEntries.length : 0,
     challengeReports: Array.isArray(data.challengeReports) ? data.challengeReports.length : 0,
+    loveFinaleCompleted: Boolean(player.loveFinale?.completed),
+    includesPrivateLoveMessage: Boolean(player.loveFinale?.futureMessage),
     exportedAt: backup?.exportedAt || '',
   };
 }

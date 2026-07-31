@@ -911,6 +911,63 @@ export const storySets = {
       },
     ],
   },
+  culpa: {
+    emotionId: 'culpa',
+    title: 'La carta para reparar',
+    emotionName: 'Culpa',
+    color: '#786fa6',
+    pages: [
+      {
+        id: 1,
+        title: 'La vela rasgada',
+        illustration: '\u{2709}\uFE0F',
+        text:
+          'Noa y Gael construían pequeños barcos en el muelle de reparación. Noa quiso alcanzar una cinta sin esperar y, al cruzar el brazo sobre la mesa, rasgó la vela de papel de Gael. Los dos se quedaron quietos al ver lo ocurrido.',
+        scene: 'Noa rasga por accidente la vela de papel de Gael al alcanzar un material con prisa.',
+      },
+      {
+        id: 2,
+        title: 'No soy mi error',
+        illustration: '\u{1F4AD}',
+        text:
+          'A Noa le pesó la barriga y pensó: "Soy un desastre". El maestro la ayudó a cambiar la frase: "Hice algo que dañó el trabajo de Gael y puedo responder por ello". Una acción necesitaba atención, pero no definía toda su persona.',
+        scene: 'Noa observa la culpa con apoyo y separa lo que hizo de quién es.',
+      },
+      {
+        id: 3,
+        title: 'Acción e impacto',
+        illustration: '\u{1F50D}',
+        text:
+          'Con tres dibujos revisaron los hechos: Noa alcanzó la cinta sin esperar, la vela se rompió y Gael perdió parte de su trabajo. Comprender el impacto no era castigarse; era mirar con honestidad para elegir un siguiente paso.',
+        scene: 'Noa y el maestro ordenan pictogramas sobre la acción, el impacto y una posible reparación.',
+      },
+      {
+        id: 4,
+        title: 'Una disculpa completa',
+        illustration: '\u{1F4AC}',
+        text:
+          'Noa se acercó dejando espacio y dijo: "Rompí tu vela al coger la cinta sin esperar. Lo siento. ¿Quieres que traiga papel nuevo o prefieres estar tranquilo?". No añadió excusas ni pidió que Gael la perdonara enseguida.',
+        scene: 'Noa reconoce su acción y ofrece opciones sin exigir una respuesta afectuosa.',
+      },
+      {
+        id: 5,
+        title: 'Reparar y dar espacio',
+        illustration: '\u{1F6E0}\uFE0F',
+        text:
+          'Gael eligió papel nuevo y un rato de espacio. Noa dejó los materiales en la estantería compartida y dio un paso atrás. El maestro permaneció cerca. Reparar también podía significar respetar el tiempo y los límites de la otra persona.',
+        scene: 'Noa aporta materiales y respeta el espacio elegido por Gael mientras el maestro acompaña.',
+      },
+      {
+        id: 6,
+        title: 'Cuento completado',
+        illustration: '\u{1F3C6}',
+        text:
+          'Ahora conoces mejor la culpa. Puedes reconocer una acción, escuchar su impacto, disculparte, ofrecer una reparación y aprender para la próxima vez. Después de responsabilizarte, también puedes tratarte con respeto y seguir creciendo.',
+        scene: 'La carta de reparación queda completa y el puente se ilumina hacia la Isla Amor.',
+        final: true,
+      },
+    ],
+  },
 };
 
 export const getStoryByEmotionId = (emotionId) => storySets[emotionId];

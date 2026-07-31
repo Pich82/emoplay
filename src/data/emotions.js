@@ -187,10 +187,11 @@ export const emotions = [
     accent: '#ffd1df',
     icon: '\u{1F49E}',
     mapPosition: { top: '91%', left: '66%' },
-    storyTitle: 'El faro de los abrazos seguros',
-    unlockHint: 'Isla final especial. Se abrirá al completar el recorrido emocional.',
-    intro: 'Reconoce el amor como cuidado, respeto, confianza y alegría compartida.',
-    story: 'Un faro rosa ilumina la costa. Su luz marcará caminos de afecto seguro en otra fase.',
+    storyTitle: 'El Faro de los Vínculos Seguros',
+    unlockHint: 'Se desbloquea al completar el cuento de Culpa.',
+    intro: 'Integra cuidado, respeto, confianza, límites, reparación y amor propio.',
+    story:
+      'El faro final reúne los símbolos y herramientas de todo el archipiélago en una experiencia especial y personalizada.',
   },
   {
     id: 'sorpresa',
@@ -245,7 +246,7 @@ export const emotions = [
     name: 'Culpa',
     shortName: 'Isla Culpa',
     category: 'social',
-    status: 'comingSoon',
+    status: 'locked',
     color: '#786fa6',
     accent: '#d8d1f0',
     icon: '\u{1F4AC}',
@@ -253,7 +254,8 @@ export const emotions = [
     storyTitle: 'La carta para reparar',
     unlockHint: 'Se desbloquea al completar el cuento de Celos.',
     intro: 'Diferencia culpa de responsabilidad y practica formas cuidadosas de reparar.',
-    story: 'Una carta flota cerca del muelle. En otra fase enseñará a pedir perdón con calma.',
+    story:
+      'En el muelle de reparación, una vela de papel rasgada ayuda a Noa a distinguir una acción de su identidad, disculparse sin exigir perdón y ofrecer una reparación respetuosa.',
   },
   {
     id: 'celos',

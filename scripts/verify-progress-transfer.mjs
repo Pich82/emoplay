@@ -1,5 +1,11 @@
 import assert from 'node:assert/strict';
 import { defaultAvatarConfig } from '../src/data/avatar.js';
+import {
+  loveCareScenario,
+  loveCommitmentCatalog,
+  loveScenarioCatalog,
+  loveToolCatalog,
+} from '../src/data/loveFinale.js';
 import { initialPlayerState } from '../src/data/player.js';
 import {
   buildProgressBackup,
@@ -48,6 +54,21 @@ const player = {
   completedChallengeIds: ['ternura'],
   completedMiniGameIds: ['calma'],
   unlockedIslands: ['ternura', 'admiracion', 'alegria', 'calma', 'miedo'],
+  loveFinale: {
+    version: 1,
+    started: true,
+    completed: true,
+    completedAt: '2026-07-29T12:00:00.000Z',
+    chapterId: 'refuge',
+    scenarioChoices: Object.fromEntries(
+      loveScenarioCatalog.map((scenario) => [scenario.id, scenario.choices[0].id]),
+    ),
+    selectedToolIds: loveToolCatalog.slice(0, 3).map((tool) => tool.id),
+    careChoiceId: loveCareScenario.choices[0].id,
+    messageStarterId: '',
+    futureMessage: 'Puedo pedir ayuda y cuidar mis limites.',
+    careCommitmentId: loveCommitmentCatalog[0].id,
+  },
 };
 
 window.localStorage.setItem(
@@ -75,6 +96,9 @@ const parsed = parseProgressBackupText(JSON.stringify(backup));
 assert.equal(parsed.ok, true);
 assert.equal(parsed.summary.studentName, 'Oscar');
 assert.equal(parsed.summary.diaryEntries, 1);
+assert.equal(parsed.summary.loveFinaleCompleted, true);
+assert.equal(parsed.summary.includesPrivateLoveMessage, true);
+assert.equal(parsed.backup.data.player.loveFinale.futureMessage, player.loveFinale.futureMessage);
 
 assert.equal(parseProgressBackupText('{broken').ok, false);
 assert.equal(
@@ -101,5 +125,24 @@ assert.equal(window.localStorage.getItem('minijuego_empatia_completado'), null);
 assert.equal(window.localStorage.getItem('informe_viejo_999'), null);
 assert.equal(window.localStorage.getItem('informe_calma_123') !== null, true);
 assert.equal(restored.player.points, 225);
+assert.equal(restored.player.loveFinale.completed, true);
+assert.equal(restored.player.loveFinale.chapterId, 'refuge');
+assert.equal(restored.player.loveFinale.futureMessage, player.loveFinale.futureMessage);
+
+const corruptFinaleBackup = structuredClone(backup);
+corruptFinaleBackup.data.player.loveFinale = {
+  chapterId: 'outside',
+  scenarioChoices: { space: 'invalid' },
+  selectedToolIds: ['invalid'],
+  careChoiceId: 'invalid',
+  futureMessage: 'x'.repeat(500),
+  careCommitmentId: 'invalid',
+};
+const parsedCorruptFinale = parseProgressBackupText(JSON.stringify(corruptFinaleBackup));
+assert.equal(parsedCorruptFinale.ok, true);
+assert.equal(parsedCorruptFinale.backup.data.player.loveFinale.chapterId, 'arrival');
+assert.deepEqual(parsedCorruptFinale.backup.data.player.loveFinale.scenarioChoices, {});
+assert.deepEqual(parsedCorruptFinale.backup.data.player.loveFinale.selectedToolIds, []);
+assert.equal(parsedCorruptFinale.backup.data.player.loveFinale.futureMessage.length, 280);
 
 console.log('progress transfer checks passed');

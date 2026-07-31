@@ -16,12 +16,10 @@ export const islandUnlockOrder = [
   'asco',
   'celos',
   'culpa',
-];
-
-export const islandMapOrder = [
-  ...islandUnlockOrder,
   'amor',
 ];
+
+export const islandMapOrder = [...islandUnlockOrder];
 
 export function getIslandMapOrder(emotionList = []) {
   const orderedIslandIds = new Set(islandMapOrder);

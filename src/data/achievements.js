@@ -451,6 +451,43 @@ export const achievementCatalog = [
     description: 'Desbloqueaste la Isla Culpa como próxima fase del mapa emocional.',
     color: '#786fa6',
   },
+  {
+    id: 'cuento_culpa',
+    emotionId: 'culpa',
+    type: 'cuento',
+    icon: '\u{2709}\uFE0F',
+    title: 'Carta de Reparación',
+    description: 'Completaste el cuento de Culpa y aprendiste a responsabilizarte sin avergonzarte.',
+    color: '#786fa6',
+  },
+  {
+    id: 'reto_culpa',
+    emotionId: 'culpa',
+    type: 'reto',
+    icon: '\u{1F6E0}\uFE0F',
+    title: 'Reparar con Respeto',
+    description: 'Completaste los retos de Culpa y practicaste disculpas, reparación y límites.',
+    color: '#786fa6',
+  },
+  {
+    id: 'desbloqueo_amor',
+    emotionId: 'amor',
+    type: 'mapa',
+    icon: '\u{1F5FC}',
+    title: 'Ruta del Faro Final',
+    description: 'Desbloqueaste la Isla Amor como destino final del mapa emocional.',
+    color: '#ff5c8a',
+  },
+  {
+    id: 'final_amor',
+    emotionId: 'amor',
+    type: 'final',
+    icon: '\u{1F5FC}',
+    title: 'Faro de los Vínculos Seguros',
+    description:
+      'Completaste el archipiélago y reuniste herramientas para cuidarte, escuchar, poner límites y reparar.',
+    color: '#f0b429',
+  },
 ];
 
 export function getUnlockedAchievementIds(player) {

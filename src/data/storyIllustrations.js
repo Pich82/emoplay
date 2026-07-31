@@ -607,6 +607,44 @@ export const storyIllustrations = {
       imageSrc: '/images/stories/celos/pagina-6-mirar-sin-perderse.jpg',
     },
   },
+  culpa: {
+    1: {
+      theme: 'guilt-torn-sail',
+      mainIcon: '\u{2709}\uFE0F',
+      supportingIcons: ['\u{26F5}', '\u{1F9F5}', '\u{23F8}\uFE0F'],
+      imageSrc: '/images/stories/culpa/pagina-1-vela-rasgada.jpg',
+    },
+    2: {
+      theme: 'guilt-action-not-identity',
+      mainIcon: '\u{1F4AD}',
+      supportingIcons: ['\u{1F9F6}', '\u{1F6E0}\uFE0F', '\u{1F9D1}\u200D\u{1F3EB}'],
+      imageSrc: '/images/stories/culpa/pagina-2-culpa-no-identidad.jpg',
+    },
+    3: {
+      theme: 'guilt-action-impact',
+      mainIcon: '\u{1F50D}',
+      supportingIcons: ['\u{1F590}\uFE0F', '\u{26F5}', '\u{1F6E0}\uFE0F'],
+      imageSrc: '/images/stories/culpa/pagina-3-accion-impacto.jpg',
+    },
+    4: {
+      theme: 'guilt-complete-apology',
+      mainIcon: '\u{1F4AC}',
+      supportingIcons: ['\u{1F4DD}', '\u{1F6B6}', '\u{1F442}'],
+      imageSrc: '/images/stories/culpa/pagina-4-disculpa-completa.jpg',
+    },
+    5: {
+      theme: 'guilt-repair-space',
+      mainIcon: '\u{1F6E0}\uFE0F',
+      supportingIcons: ['\u{1F4C4}', '\u{1F9F5}', '\u{2194}\uFE0F'],
+      imageSrc: '/images/stories/culpa/pagina-5-reparar-dar-espacio.jpg',
+    },
+    6: {
+      theme: 'guilt-repair-letter',
+      mainIcon: '\u{1F3C6}',
+      supportingIcons: ['\u{2709}\uFE0F', '\u{1F6E0}\uFE0F', '\u{1F5FC}'],
+      imageSrc: '/images/stories/culpa/pagina-6-carta-reparar.jpg',
+    },
+  },
 };
 
 export const getStoryIllustration = (emotionId, pageId) =>

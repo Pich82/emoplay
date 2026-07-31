@@ -10,35 +10,36 @@
 
 ## Prerequisite
 
-- [ ] Implement and verify Isla Culpa.
-- [ ] Connect Culpa completion to the Amor unlock.
+- [x] Verify the completed Isla Culpa implementation.
+- [x] Connect Culpa completion to the Amor unlock.
 
 ## Content
 
-- [ ] Write the four relationship scenarios and all non-punitive feedback.
-- [ ] Select the final emotional-tool catalog from previous islands.
-- [ ] Write message starters and care commitments.
-- [ ] Review all content for child safety and privacy.
+- [x] Write the four relationship scenarios and all non-punitive feedback.
+- [x] Select the final emotional-tool catalog from previous islands.
+- [x] Write message starters and care commitments.
+- [x] Review all content for child safety and privacy.
 
 ## Visuals
 
-- [ ] Generate the lighthouse environment reference.
-- [ ] Generate six chapter illustrations and the final panorama.
-- [ ] Optimize and integrate the final assets.
+- [x] Generate the lighthouse environment reference.
+- [x] Generate six chapter illustrations and the final panorama.
+- [x] Optimize and integrate the final assets.
 
 ## Implementation
 
-- [ ] Align the existing Amor map metadata with the final title and description.
-- [ ] Add final-island data and validation.
-- [ ] Build the dedicated responsive finale screen and reusable components.
-- [ ] Integrate live player name and avatar.
-- [ ] Persist finale progress and prevent duplicate rewards.
-- [ ] Add the permanent lighthouse refuge.
-- [ ] Extend export/import with clear private-message disclosure.
+- [x] Align the existing Amor map metadata with the final title and description.
+- [x] Add final-island data and validation.
+- [x] Build the dedicated responsive finale screen and reusable components.
+- [x] Integrate live player name and avatar.
+- [x] Persist finale progress and prevent duplicate rewards.
+- [x] Add the permanent lighthouse refuge.
+- [x] Extend export/import with clear private-message disclosure.
 
 ## Verification
 
-- [ ] Add data and completion checks.
-- [ ] Extend progress-transfer tests.
-- [ ] Verify build and responsive behavior.
-- [ ] Complete a manual mobile and cross-device walkthrough.
+- [x] Add data and completion checks.
+- [x] Extend progress-transfer tests.
+- [x] Verify build and responsive behavior.
+- [x] Complete the six-chapter walkthrough at a 390 x 844 mobile viewport.
+- [ ] Repeat the final export/import between two physical devices.

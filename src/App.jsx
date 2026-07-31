@@ -31,6 +31,11 @@ import TeacherPanelScreen from './screens/TeacherPanelScreen.jsx';
 import WelcomeScreen from './screens/WelcomeScreen.jsx';
 import { getEmotionById } from './data/emotions.js';
 import { islandUnlockOrder } from './data/islandProgression.js';
+import {
+  applyLoveFinaleCompletion,
+  normalizeLoveFinaleState,
+} from './data/loveFinale.js';
+import LoveFinaleScreen from './screens/LoveFinaleScreen.jsx';
 
 const screens = {
   welcome: 'welcome',
@@ -48,6 +53,7 @@ const screens = {
   class: 'class',
   profile: 'profile',
   empathyGame: 'empathyGame',
+  loveFinale: 'loveFinale',
 };
 
 function App() {
@@ -257,6 +263,37 @@ function App() {
     });
   };
 
+  const updateLoveFinaleProgress = (nextFinale) => {
+    setPlayer((currentPlayer) => {
+      const normalizedPlayer = normalizePlayerState(currentPlayer);
+
+      return {
+        ...normalizedPlayer,
+        loveFinale: normalizeLoveFinaleState(nextFinale),
+      };
+    });
+  };
+
+  const completeLoveFinale = (nextFinale) => {
+    setPlayer((currentPlayer) => {
+      const normalizedPlayer = normalizePlayerState(currentPlayer);
+      const result = applyLoveFinaleCompletion(normalizedPlayer, nextFinale);
+
+      if (!result.completed) {
+        return normalizedPlayer;
+      }
+
+      window.localStorage.setItem('cuento_amor_completado', 'true');
+      window.localStorage.setItem('emoplay_puntos', JSON.stringify(result.player.points));
+      window.localStorage.setItem(
+        'islasCompletadas',
+        JSON.stringify(result.player.unlockedIslands),
+      );
+
+      return result.player;
+    });
+  };
+
   const openIsland = (islandId) => {
     setSelectedIslandId(islandId);
     setCurrentScreen(screens.island);
@@ -264,7 +301,12 @@ function App() {
 
   const openStory = (islandId) => {
     setSelectedIslandId(islandId);
-    setCurrentScreen(screens.story);
+    setCurrentScreen(islandId === 'amor' ? screens.loveFinale : screens.story);
+  };
+
+  const openLoveFinale = () => {
+    setSelectedIslandId('amor');
+    setCurrentScreen(screens.loveFinale);
   };
 
   const openChallenges = (islandId) => {
@@ -473,7 +515,9 @@ function App() {
           isUnlocked={player.unlockedIslands.includes(selectedIsland?.id)}
           storyCompleted={player.completedStories.includes(selectedIsland?.id)}
           miniGameCompleted={player.completedMiniGameIds.includes(selectedIsland?.id)}
+          finaleCompleted={player.loveFinale?.completed}
           onStartStory={openStory}
+          onStartFinale={openLoveFinale}
           onStartMiniGame={openMiniGame}
           onStartChallenges={openChallenges}
           onGoMap={() => setCurrentScreen(screens.map)}
@@ -501,6 +545,20 @@ function App() {
           onCompleteMiniGame={completeMiniGame}
           onGoIsland={() => setCurrentScreen(screens.island)}
           onStartChallenges={openChallenges}
+        />
+      );
+    }
+
+    if (currentScreen === screens.loveFinale) {
+      return (
+        <LoveFinaleScreen
+          player={player}
+          avatarConfig={avatarConfig}
+          isUnlocked={player.unlockedIslands.includes('amor')}
+          onUpdateProgress={updateLoveFinaleProgress}
+          onComplete={completeLoveFinale}
+          onGoIsland={() => setCurrentScreen(screens.island)}
+          onGoMap={() => setCurrentScreen(screens.map)}
         />
       );
     }
@@ -556,7 +614,11 @@ function App() {
       onGoHome={goHome}
       onOpenProfile={() => setCurrentScreen(screens.profile)}
       onOpenTeacherPanel={() => setCurrentScreen(screens.class)}
-      showHomeButton={currentScreen !== screens.home}
+      showHomeButton={
+        currentScreen !== screens.home &&
+        currentScreen !== screens.loveFinale &&
+        !(currentScreen === screens.island && selectedIslandId === 'amor')
+      }
     >
       {renderScreen()}
     </AppShell>

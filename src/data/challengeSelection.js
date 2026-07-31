@@ -15,6 +15,20 @@ function getChallengeStatus({ emotion, challengeSet, player }) {
   const hasMiniGame = Boolean(miniGame);
   const miniGameCompleted = includesValue(player?.completedMiniGameIds, emotion.id);
 
+  if (emotion.id === 'amor') {
+    return {
+      id: storyCompleted ? 'finale-completed' : 'finale',
+      label: storyCompleted ? 'Final completado' : 'Experiencia final',
+      helper: storyCompleted
+        ? 'El Refugio del Faro sigue disponible desde el mapa.'
+        : isUnlocked
+          ? 'Abre una experiencia de cierre distinta a los retos habituales.'
+          : emotion.unlockHint,
+      canPlay: false,
+      canReadStory: isUnlocked,
+    };
+  }
+
   if (!challengeSet) {
     return {
       id: 'soon',

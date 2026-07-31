@@ -1095,3 +1095,28 @@ No simplificar ni sustituir la app por una versión básica. Mantener siempre la
 - La ruta prevista se mantiene como `Asco -> Celos -> Culpa -> Amor`; Culpa es el requisito previo antes de implementar el final.
 - Se definieron recompensas, privacidad, persistencia, transferencia entre dispositivos, accesibilidad y verificaciones necesarias.
 - No se implementó todavía código ni contenido jugable de Amor.
+
+## Avance del 29 de julio de 2026: Isla Culpa
+
+- Se creó la especificación ligera `specs/015-culpa-island/`.
+- Culpa continúa la ruta después de Celos y desbloquea Amor como destino final especial.
+- El cuento `La carta para reparar` distingue una acción de la identidad y practica reconocer el impacto, disculparse sin excusas, ofrecer reparación y respetar el espacio de la otra persona.
+- Se creó una referencia visual para Noa, Gael y el docente, junto con seis ilustraciones narrativas ambientadas en el muelle de reparación.
+- Se añadieron retos, reflexión final, insignias y recompensas propias de Culpa.
+- La ruta queda preparada como `Asco -> Celos -> Culpa -> Amor`, sin implementar todavía la experiencia jugable de Amor.
+- Verificación realizada: datos y rutas correctos, siete recursos visuales presentes, prueba de transferencia superada y compilación correcta.
+
+## Avance del 29 de julio de 2026: Isla final Amor
+
+- Se completó `El Faro de los Vínculos Seguros` como experiencia final distinta a los cuentos y retos ordinarios.
+- Amor se abre únicamente después de Culpa y no desbloquea otra isla.
+- Se añadieron seis capítulos interactivos: recorrido emocional, cuatro situaciones de vínculos seguros, caja de herramientas, cuidado y límites, mensaje futuro opcional y encendido del faro.
+- El nombre y el avatar guardados protagonizan la experiencia.
+- Se generaron, optimizaron e integraron una referencia del faro, seis ilustraciones de capítulo y el panorama del refugio permanente.
+- Las decisiones ofrecen orientación no punitiva, pueden reconsiderarse y no tienen estado de derrota.
+- El final entrega 50 puntos una sola vez, la insignia `Faro de los Vínculos Seguros`, el `Marco del Archipiélago` y acceso permanente al refugio.
+- La selección de herramientas, el compromiso y el mensaje opcional se guardan en el progreso local.
+- La exportación e importación valida este estado y avisa cuando la copia contiene el mensaje privado; el panel docente no lo muestra.
+- Se corrigió la sincronización visual de los campos de perfil después de importar una copia.
+- Verificación realizada: prueba específica de Amor, transferencia de progreso, compilación, carga de las ocho imágenes y recorrido completo en un viewport móvil de `390 x 844`.
+- Queda pendiente únicamente repetir la exportación e importación del final entre dos dispositivos físicos.

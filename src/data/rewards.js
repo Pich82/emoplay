@@ -310,6 +310,20 @@ export const rewardCatalog = [
     canEquip: false,
   },
   {
+    id: 'plan_reparacion_tranquila',
+    title: 'Plan de Reparación Tranquila',
+    description:
+      'Propón una secuencia breve para reconocer una acción, escuchar su impacto y pensar una reparación posible.',
+    icon: '\u{2709}\uFE0F',
+    category: 'Convivencia',
+    rewardType: 'benefit',
+    color: '#786fa6',
+    requirement: { type: 'achievement', achievementId: 'cuento_culpa' },
+    requirementLabel: 'Completa el cuento de Culpa',
+    practicalNote: 'Rutina guiada por el docente, sin confesiones públicas ni presión para perdonar.',
+    canEquip: false,
+  },
+  {
     id: 'corona_explorador',
     title: 'Corona de Explorador Emocional',
     description:
@@ -596,6 +610,22 @@ export const rewardCatalog = [
     canEquip: true,
     avatarSlot: 'frame',
     avatarValue: 'marco_catalejo_claro',
+  },
+  {
+    id: 'marco_carta_reparacion',
+    title: 'Marco Carta de Reparación',
+    description:
+      'Marco lavanda y dorado para el avatar al completar los retos de Culpa.',
+    icon: '\u{2709}\uFE0F',
+    category: 'Distintivo avatar',
+    rewardType: 'avatar',
+    color: '#786fa6',
+    requirement: { type: 'achievement', achievementId: 'reto_culpa' },
+    requirementLabel: 'Completa los retos de Culpa',
+    practicalNote: 'Marco visual integrado en la foto del avatar.',
+    canEquip: true,
+    avatarSlot: 'frame',
+    avatarValue: 'marco_carta_reparacion',
   },
   {
     id: 'medalla_respiracion_serena',
@@ -900,6 +930,22 @@ export const rewardCatalog = [
     canEquip: true,
     avatarSlot: 'badge',
     avatarValue: 'medalla_puente_empatico',
+  },
+  {
+    id: 'marco_archipielago',
+    title: 'Marco del Archipiélago',
+    description:
+      'Marco final que reúne los colores del recorrido emocional alrededor de tu avatar.',
+    icon: '\u{1F5FC}',
+    category: 'Marco final',
+    rewardType: 'avatar',
+    color: '#f0b429',
+    requirement: { type: 'achievement', achievementId: 'final_amor' },
+    requirementLabel: 'Enciende el Faro de los Vínculos Seguros',
+    practicalNote: 'Recompensa permanente de la Isla Amor.',
+    canEquip: true,
+    avatarSlot: 'frame',
+    avatarValue: 'f0b429',
   },
 ];
 

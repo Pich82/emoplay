@@ -1,4 +1,10 @@
 import { islandUnlockOrder } from './islandProgression.js';
+import {
+  initialLoveFinaleState,
+  loveFinaleAchievementId,
+  loveFinaleRewardId,
+  normalizeLoveFinaleState,
+} from './loveFinale.js';
 
 export const initialPlayerState = {
   hasStarted: false,
@@ -13,6 +19,7 @@ export const initialPlayerState = {
   equippedRewardId: '',
   unlockedIslands: ['ternura'],
   className: '',
+  loveFinale: initialLoveFinaleState,
   avatar: {
     face: 'sonrisa',
     color: 'coral',
@@ -30,49 +37,13 @@ function readLegacyValue(key, fallbackValue) {
 }
 
 function readLegacyStories() {
-  const stories = [
-    'ternura',
-    'admiracion',
-    'afectividad',
-    'alegria',
-    'calma',
-    'miedo',
-    'enfado',
-    'tristeza',
-    'frustracion',
-    'verguenza',
-    'empatia',
-    'gratitud',
-    'confianza',
-    'sorpresa',
-    'afectividad',
-    'asco',
-    'celos',
-  ];
+  const stories = islandUnlockOrder;
 
   return stories.filter((storyId) => window.localStorage.getItem(`cuento_${storyId}_completado`) === 'true');
 }
 
 function readLegacyChallengeIds() {
-  const challengeIds = [
-    'ternura',
-    'admiracion',
-    'afectividad',
-    'alegria',
-    'calma',
-    'miedo',
-    'enfado',
-    'tristeza',
-    'frustracion',
-    'verguenza',
-    'empatia',
-    'gratitud',
-    'confianza',
-    'sorpresa',
-    'afectividad',
-    'asco',
-    'celos',
-  ];
+  const challengeIds = islandUnlockOrder.filter((islandId) => islandId !== 'amor');
 
   return challengeIds.filter(
     (challengeId) =>
@@ -99,6 +70,12 @@ export function normalizePlayerState(player) {
   const legacyCompletedIslands = readLegacyValue('islasCompletadas', []);
   const legacyStories = readLegacyStories();
   const storedStories = player?.completedStories || [];
+  const hasStoredLoveFinale = Boolean(
+    player?.loveFinale &&
+      typeof player.loveFinale === 'object' &&
+      !Array.isArray(player.loveFinale),
+  );
+  const storedLoveFinale = normalizeLoveFinaleState(player?.loveFinale);
   const completedChallengeIds = mergeUnique([
     ...(player?.completedChallengeIds || []),
     ...readLegacyChallengeIds(),
@@ -107,7 +84,23 @@ export function normalizePlayerState(player) {
     ...(player?.completedMiniGameIds || []),
     ...readLegacyMiniGameIds(),
   ]);
-  const allCompletedStories = mergeUnique([...storedStories, ...legacyStories]);
+  const allCompletedStories = mergeUnique([
+    ...storedStories,
+    ...legacyStories,
+    ...(storedLoveFinale.completed ? ['amor'] : []),
+  ]);
+  const loveFinale = {
+    ...storedLoveFinale,
+    completed: storedLoveFinale.completed || allCompletedStories.includes('amor'),
+    started:
+      storedLoveFinale.started ||
+      storedLoveFinale.completed ||
+      allCompletedStories.includes('amor'),
+    chapterId:
+      !hasStoredLoveFinale && allCompletedStories.includes('amor')
+        ? 'refuge'
+        : storedLoveFinale.chapterId,
+  };
   const storyUnlockedIslands = islandUnlockOrder
     .slice(0, -1)
     .map((storyId, index) =>
@@ -129,6 +122,7 @@ export function normalizePlayerState(player) {
       .map((islandId) =>
         unlockedIslands.includes(islandId) ? `desbloqueo_${islandId}` : null,
       ),
+    loveFinale.completed ? loveFinaleAchievementId : null,
   ]);
 
   return {
@@ -147,9 +141,13 @@ export function normalizePlayerState(player) {
       ...(player?.avatar || {}),
     },
     achievements: mergeUnique([...(player?.achievements || []), ...derivedAchievements]),
-    ownedRewardIds: mergeUnique(player?.ownedRewardIds || []),
+    ownedRewardIds: mergeUnique([
+      ...(player?.ownedRewardIds || []),
+      loveFinale.completed ? loveFinaleRewardId : null,
+    ]),
     equippedRewardId: player?.equippedRewardId || '',
     completedStories,
     unlockedIslands,
+    loveFinale,
   };
 }

@@ -7,7 +7,9 @@ function IslandDetailScreen({
   isUnlocked,
   storyCompleted,
   miniGameCompleted,
+  finaleCompleted,
   onStartStory,
+  onStartFinale,
   onStartMiniGame,
   onStartChallenges,
   onGoMap,
@@ -32,6 +34,7 @@ function IslandDetailScreen({
   const canPlayMiniGame = isUnlocked && storyCompleted && hasMiniGame;
   const canPlayChallenge =
     isUnlocked && storyCompleted && hasChallenges && (!hasMiniGame || miniGameCompleted);
+  const isLoveFinale = island.id === 'amor';
   const storyStatus = !hasStory
     ? 'En preparación'
     : !isUnlocked
@@ -53,6 +56,71 @@ function IslandDetailScreen({
       : hasMiniGame && storyCompleted && !miniGameCompleted
         ? 'Minijuego pendiente'
         : 'Bloqueado por ahora';
+
+  if (isLoveFinale) {
+    return (
+      <div className="island-detail island-detail--love-finale">
+        <section className="island-detail__hero" style={{ '--island-color': island.color }}>
+          <div>
+            <p className="eyebrow">
+              {isUnlocked
+                ? finaleCompleted
+                  ? 'Destino final completado'
+                  : 'Destino final desbloqueado'
+                : 'Destino final bloqueado'}
+            </p>
+            <h1>{island.shortName}</h1>
+            <p>{island.intro}</p>
+            <div className={isUnlocked ? 'status-note status-note--open' : 'status-note'}>
+              {isUnlocked
+                ? finaleCompleted
+                  ? 'El Refugio del Faro permanece abierto y puedes volver cuando quieras.'
+                  : 'Una experiencia interactiva reúne las herramientas de todo tu recorrido.'
+                : island.unlockHint}
+            </div>
+          </div>
+          <div className={`detail-island ${isUnlocked ? '' : 'detail-island--locked'}`}>
+            <span>{island.icon}</span>
+          </div>
+        </section>
+
+        <section className="love-finale-entry">
+          <img
+            src="/images/stories/amor/referencia-faro.jpg"
+            alt="Faro de los Vínculos Seguros rodeado por el archipiélago emocional."
+          />
+          <div>
+            <p className="eyebrow">Experiencia final · Seis capítulos</p>
+            <h2>{island.storyTitle}</h2>
+            <p>
+              Explora vínculos seguros, elige tus herramientas, guarda un compromiso personal y
+              enciende el faro que reúne todas las islas.
+            </p>
+            <ul>
+              <li>Decisiones sin castigos ni respuestas humillantes.</li>
+              <li>Tu nombre y tu avatar forman parte del viaje.</li>
+              <li>Un refugio permanente al completar la experiencia.</li>
+            </ul>
+            <button
+              type="button"
+              disabled={!isUnlocked}
+              onClick={() => onStartFinale?.()}
+            >
+              {!isUnlocked
+                ? 'Completa primero Culpa'
+                : finaleCompleted
+                  ? 'Entrar al Refugio del Faro'
+                  : 'Comenzar la experiencia final'}
+            </button>
+          </div>
+        </section>
+
+        <button className="button-secondary" type="button" onClick={onGoMap}>
+          Volver al mapa
+        </button>
+      </div>
+    );
+  }
 
   return (
     <div className="island-detail">
