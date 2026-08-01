@@ -115,6 +115,7 @@ function ChallengeRunnerScreen({
   storyCompleted,
   miniGameCompleted,
   challengeCompleted,
+  scoredChallengeIds,
   onAwardPoints,
   onCompleteChallengeSet,
   onGoIsland,
@@ -133,6 +134,7 @@ function ChallengeRunnerScreen({
   const [report, setReport] = useState(null);
 
   const currentChallenge = challenges[currentIndex];
+  const currentChallengeScored = scoredChallengeIds.includes(currentChallenge?.id);
   const progress = useMemo(() => {
     if (challenges.length === 0) {
       return 0;
@@ -220,6 +222,7 @@ function ChallengeRunnerScreen({
   };
 
   const registerAnswer = ({ correct, userAnswer, correctAnswer, pointsDelta }) => {
+    const pointsAwarded = !scoredChallengeIds.includes(currentChallenge.id);
     const nextAnswer = {
       id: currentChallenge.id,
       number: currentIndex + 1,
@@ -228,7 +231,7 @@ function ChallengeRunnerScreen({
       userAnswer,
       correctAnswer,
       correct,
-      pointsDelta,
+      pointsDelta: pointsAwarded ? pointsDelta : 0,
       timestamp: new Date().toISOString(),
     };
 
@@ -238,10 +241,13 @@ function ChallengeRunnerScreen({
       pointsDelta,
       explanation: currentChallenge.explanation,
       isReflection: currentChallenge.type === 'reflection',
+      pointsAwarded,
     });
 
-    onAwardPoints(pointsDelta);
-    setSessionPoints((currentPoints) => Math.max(0, currentPoints + pointsDelta));
+    onAwardPoints(currentChallenge.id, pointsDelta);
+    if (pointsAwarded) {
+      setSessionPoints((currentPoints) => Math.max(0, currentPoints + pointsDelta));
+    }
 
     if (correct) {
       setCorrectCount((currentCount) => currentCount + 1);
@@ -458,7 +464,11 @@ function ChallengeRunnerScreen({
         <div className="challenge-card__icon">{currentChallenge.icon}</div>
         <div className="challenge-card__meta">
           <span>{currentChallenge.type === 'trueFalse' ? 'Reto rápido' : 'Reto de reflexión'}</span>
-          <strong>+{currentChallenge.points} puntos</strong>
+          <strong>
+            {currentChallengeScored
+              ? 'Sin puntos adicionales'
+              : `+${currentChallenge.points} puntos`}
+          </strong>
         </div>
         <p className="eyebrow">
           {currentChallenge.type === 'trueFalse' ? 'Pregunta' : 'Escribe y piensa'}
@@ -506,11 +516,17 @@ function ChallengeRunnerScreen({
             </span>
             <div>
               <strong>
-                {feedback.isReflection
-                  ? `Reflexión completada. +${currentChallenge.points} puntos`
-                  : feedback.correct
-                    ? `Correcto. +${currentChallenge.points} puntos`
-                    : `A revisar. -${currentChallenge.penalty} puntos`}
+                {!feedback.pointsAwarded
+                  ? feedback.isReflection
+                    ? 'Reflexión completada. Sin puntos adicionales.'
+                    : feedback.correct
+                      ? 'Correcto. Este reto ya estaba puntuado.'
+                      : 'A revisar. Sin cambios en tus puntos.'
+                  : feedback.isReflection
+                    ? `Reflexión completada. +${currentChallenge.points} puntos`
+                    : feedback.correct
+                      ? `Correcto. +${currentChallenge.points} puntos`
+                      : `A revisar. -${currentChallenge.penalty} puntos`}
               </strong>
               {feedback.explanation && <p>{feedback.explanation}</p>}
               {!feedback.correct && (

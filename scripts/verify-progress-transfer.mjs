@@ -11,6 +11,7 @@ import {
   buildProgressBackup,
   parseProgressBackupText,
   progressStorageKeys,
+  progressTransferVersion,
   saveLocalProgressBackup,
   writeProgressBackupToStorage,
 } from '../src/data/progressTransfer.js';
@@ -88,7 +89,10 @@ window.localStorage.setItem('informe_calma_123', JSON.stringify({ id: 'informe_c
 const backup = buildProgressBackup(player, defaultAvatarConfig);
 assert.equal(backup.app, 'emoplay');
 assert.equal(backup.type, 'progress-backup');
+assert.equal(backup.version, 2);
+assert.equal(progressTransferVersion, 2);
 assert.equal(backup.data.player.points, 225);
+assert.equal(backup.data.player.scoredChallengeIds.length > 0, true);
 assert.equal(backup.data.diaryEntries.length, 1);
 assert.equal(backup.data.challengeReports.length, 1);
 
@@ -99,12 +103,30 @@ assert.equal(parsed.summary.diaryEntries, 1);
 assert.equal(parsed.summary.loveFinaleCompleted, true);
 assert.equal(parsed.summary.includesPrivateLoveMessage, true);
 assert.equal(parsed.backup.data.player.loveFinale.futureMessage, player.loveFinale.futureMessage);
+assert.deepEqual(
+  parsed.backup.data.player.scoredChallengeIds,
+  backup.data.player.scoredChallengeIds,
+);
 
 assert.equal(parseProgressBackupText('{broken').ok, false);
 assert.equal(
   parseProgressBackupText(JSON.stringify({ app: 'otra', type: 'progress-backup', version: 1 })).ok,
   false,
 );
+assert.equal(
+  parseProgressBackupText(
+    JSON.stringify({ app: 'emoplay', type: 'progress-backup', version: 3, data: {} }),
+  ).ok,
+  false,
+);
+
+const versionOneBackup = structuredClone(backup);
+versionOneBackup.version = 1;
+delete versionOneBackup.data.player.scoredChallengeIds;
+const parsedVersionOne = parseProgressBackupText(JSON.stringify(versionOneBackup));
+assert.equal(parsedVersionOne.ok, true);
+assert.equal(parsedVersionOne.backup.version, 2);
+assert.equal(parsedVersionOne.backup.data.player.scoredChallengeIds.length > 0, true);
 
 window.localStorage.setItem('cuento_empatia_completado', 'true');
 window.localStorage.setItem('reto_empatia_completado', 'true');
@@ -125,6 +147,7 @@ assert.equal(window.localStorage.getItem('minijuego_empatia_completado'), null);
 assert.equal(window.localStorage.getItem('informe_viejo_999'), null);
 assert.equal(window.localStorage.getItem('informe_calma_123') !== null, true);
 assert.equal(restored.player.points, 225);
+assert.deepEqual(restored.player.scoredChallengeIds, backup.data.player.scoredChallengeIds);
 assert.equal(restored.player.loveFinale.completed, true);
 assert.equal(restored.player.loveFinale.chapterId, 'refuge');
 assert.equal(restored.player.loveFinale.futureMessage, player.loveFinale.futureMessage);

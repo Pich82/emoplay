@@ -22,6 +22,7 @@ Permitir que una persona mueva el progreso de EMOPLAY entre ordenadores, tablets
 - `emoplay_avatarDiceBearConfig`
 - `emoplay:diaryEntries`
 - Informes locales de retos con prefijo `informe_`
+- Registro idempotente de retos puntuados en `scoredChallengeIds`
 - Compatibilidad legacy: cuentos, retos, minijuegos, puntos e islas completadas
 
 ## Criterios de aceptacion
@@ -32,6 +33,8 @@ Permitir que una persona mueva el progreso de EMOPLAY entre ordenadores, tablets
 4. Al confirmar la importacion se guarda una copia local previa bajo `emoplay:progressImportBackup:last`.
 5. La restauracion actualiza jugador, avatar, diario, informes y claves legacy coherentes.
 6. La app compila correctamente y existe una comprobacion automatizada proporcional del modulo.
+7. Las copias se exportan como version 2 y las copias version 1 siguen importandose mediante una
+   migracion que conserva los puntos y evita volver a puntuar retos ya registrados o completados.
 
 ## Limites
 

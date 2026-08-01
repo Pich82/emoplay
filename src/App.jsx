@@ -29,6 +29,7 @@ import StoryReaderScreen from './screens/StoryReaderScreen.jsx';
 import TeacherAccessScreen from './screens/TeacherAccessScreen.jsx';
 import TeacherPanelScreen from './screens/TeacherPanelScreen.jsx';
 import WelcomeScreen from './screens/WelcomeScreen.jsx';
+import { applyChallengeScore } from './data/challengeScoring.js';
 import { getEmotionById } from './data/emotions.js';
 import { islandUnlockOrder } from './data/islandProgression.js';
 import {
@@ -352,16 +353,15 @@ function App() {
     });
   };
 
-  const awardChallengePoints = (pointsDelta) => {
+  const awardChallengePoints = (challengeId, pointsDelta) => {
     setPlayer((currentPlayer) => {
       const normalizedPlayer = normalizePlayerState(currentPlayer);
-      const nextPoints = Math.max(0, normalizedPlayer.points + pointsDelta);
-      const nextPlayer = {
-        ...normalizedPlayer,
-        points: nextPoints,
-      };
+      const result = applyChallengeScore(normalizedPlayer, challengeId, pointsDelta);
+      const nextPlayer = result.player;
 
-      window.localStorage.setItem('emoplay_puntos', JSON.stringify(nextPlayer.points));
+      if (result.awarded) {
+        window.localStorage.setItem('emoplay_puntos', JSON.stringify(nextPlayer.points));
+      }
 
       return nextPlayer;
     });
@@ -587,6 +587,7 @@ function App() {
           storyCompleted={player.completedStories.includes(selectedIsland?.id)}
           miniGameCompleted={player.completedMiniGameIds.includes(selectedIsland?.id)}
           challengeCompleted={player.completedChallengeIds.includes(selectedIsland?.id)}
+          scoredChallengeIds={player.scoredChallengeIds}
           onAwardPoints={awardChallengePoints}
           onCompleteChallengeSet={completeChallengeSet}
           onGoIsland={() => setCurrentScreen(screens.island)}

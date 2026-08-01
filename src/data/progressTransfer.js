@@ -1,4 +1,5 @@
 import { defaultAvatarConfig, normalizeAvatarConfig } from './avatar.js';
+import { migrateScoredChallengeIds } from './challengeScoring.js';
 import { diaryStorageKey, normalizeDiaryEntries } from './diary.js';
 import { islandUnlockOrder } from './islandProgression.js';
 import {
@@ -8,7 +9,8 @@ import {
 } from './loveFinale.js';
 import { initialPlayerState } from './player.js';
 
-export const progressTransferVersion = 1;
+export const progressTransferVersion = 2;
+const supportedProgressTransferVersions = new Set([1, progressTransferVersion]);
 
 export const progressStorageKeys = {
   player: 'emoplay:player',
@@ -80,7 +82,7 @@ function getLocalStorageKeys() {
   }
 }
 
-function normalizeImportedPlayer(player) {
+function normalizeImportedPlayer(player, challengeReports = [], legacyProgress = {}) {
   const source = isPlainObject(player) ? player : {};
   const hasSourceLoveFinale = isPlainObject(source.loveFinale);
   const sourceLoveFinale = normalizeLoveFinaleState(source.loveFinale);
@@ -88,9 +90,17 @@ function normalizeImportedPlayer(player) {
     ...(Array.isArray(source.completedStories) ? source.completedStories : []),
     ...(sourceLoveFinale.completed ? ['amor'] : []),
   ]).filter((storyId) => knownStoryIds.includes(storyId));
-  const completedChallengeIds = cleanStringArray(source.completedChallengeIds).filter(
-    (challengeId) => knownChallengeIds.includes(challengeId),
-  );
+  const completedChallengeIds = cleanStringArray([
+    ...(Array.isArray(source.completedChallengeIds) ? source.completedChallengeIds : []),
+    ...(Array.isArray(legacyProgress?.completedChallengeIds)
+      ? legacyProgress.completedChallengeIds
+      : []),
+  ]).filter((challengeId) => knownChallengeIds.includes(challengeId));
+  const scoredChallengeIds = migrateScoredChallengeIds({
+    scoredChallengeIds: source.scoredChallengeIds,
+    completedChallengeIds,
+    challengeReports,
+  });
   const completedMiniGameIds = cleanStringArray(source.completedMiniGameIds).filter(
     (miniGameId) => knownMiniGameIds.includes(miniGameId),
   );
@@ -142,6 +152,7 @@ function normalizeImportedPlayer(player) {
       completedChallengeIds.length,
     ),
     completedChallengeIds,
+    scoredChallengeIds,
     completedMiniGameIds,
     completedStories,
     achievements: cleanStringArray([...(source.achievements || []), ...derivedAchievements]),
@@ -235,10 +246,11 @@ function readChallengeReports() {
 }
 
 export function buildProgressBackup(player, avatarConfig) {
-  const normalizedPlayer = normalizeImportedPlayer(player);
+  const challengeReports = normalizeChallengeReports(readChallengeReports());
+  const legacyProgress = readLegacyProgress();
+  const normalizedPlayer = normalizeImportedPlayer(player, challengeReports, legacyProgress);
   const normalizedAvatarConfig = normalizeAvatarConfig(avatarConfig || defaultAvatarConfig);
   const diaryEntries = normalizeDiaryEntries(readStorageValue(diaryStorageKey, []));
-  const challengeReports = normalizeChallengeReports(readChallengeReports());
 
   return {
     ...backupEnvelope,
@@ -249,7 +261,7 @@ export function buildProgressBackup(player, avatarConfig) {
       avatarConfig: normalizedAvatarConfig,
       diaryEntries,
       challengeReports,
-      legacy: readLegacyProgress(),
+      legacy: legacyProgress,
     },
   };
 }
@@ -303,7 +315,9 @@ export function parseProgressBackupText(rawText) {
     return { ok: false, error: 'La copia no pertenece a EMOPLAY o no es de progreso.' };
   }
 
-  if (Number(parsed.version) !== progressTransferVersion) {
+  const sourceVersion = Number(parsed.version);
+
+  if (!supportedProgressTransferVersions.has(sourceVersion)) {
     return { ok: false, error: 'La version de la copia no es compatible con esta app.' };
   }
 
@@ -311,16 +325,18 @@ export function parseProgressBackupText(rawText) {
     return { ok: false, error: 'La copia no contiene datos de progreso.' };
   }
 
+  const challengeReports = normalizeChallengeReports(parsed.data.challengeReports);
+  const legacyProgress = isPlainObject(parsed.data.legacy) ? parsed.data.legacy : {};
   const backup = {
     ...backupEnvelope,
     version: progressTransferVersion,
     exportedAt: cleanString(parsed.exportedAt, 40) || new Date().toISOString(),
     data: {
-      player: normalizeImportedPlayer(parsed.data.player),
+      player: normalizeImportedPlayer(parsed.data.player, challengeReports, legacyProgress),
       avatarConfig: normalizeAvatarConfig(parsed.data.avatarConfig || defaultAvatarConfig),
       diaryEntries: normalizeDiaryEntries(parsed.data.diaryEntries),
-      challengeReports: normalizeChallengeReports(parsed.data.challengeReports),
-      legacy: isPlainObject(parsed.data.legacy) ? parsed.data.legacy : {},
+      challengeReports,
+      legacy: legacyProgress,
     },
   };
 
@@ -406,10 +422,10 @@ function replaceChallengeReports(challengeReports) {
 
 export function writeProgressBackupToStorage(backup) {
   const data = backup?.data || {};
-  const player = normalizeImportedPlayer(data.player);
+  const challengeReports = normalizeChallengeReports(data.challengeReports);
+  const player = normalizeImportedPlayer(data.player, challengeReports, data.legacy);
   const avatarConfig = normalizeAvatarConfig(data.avatarConfig || defaultAvatarConfig);
   const diaryEntries = normalizeDiaryEntries(data.diaryEntries);
-  const challengeReports = normalizeChallengeReports(data.challengeReports);
 
   safeSetStorage(progressStorageKeys.player, player);
   safeSetStorage(progressStorageKeys.avatarConfig, avatarConfig);

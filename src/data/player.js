@@ -1,3 +1,4 @@
+import { migrateScoredChallengeIds } from './challengeScoring.js';
 import { islandUnlockOrder } from './islandProgression.js';
 import {
   initialLoveFinaleState,
@@ -12,6 +13,7 @@ export const initialPlayerState = {
   points: 0,
   completedChallenges: 0,
   completedChallengeIds: [],
+  scoredChallengeIds: [],
   completedMiniGameIds: [],
   completedStories: [],
   achievements: [],
@@ -64,6 +66,22 @@ function mergeUnique(values) {
   return [...new Set(values.filter(Boolean))];
 }
 
+function readStoredChallengeReports() {
+  try {
+    const storageKeys = Array.from(
+      { length: window.localStorage.length },
+      (_, index) => window.localStorage.key(index),
+    ).filter(Boolean);
+
+    return storageKeys
+      .filter((key) => key.startsWith('informe_'))
+      .map((key) => readLegacyValue(key, null))
+      .filter(Boolean);
+  } catch {
+    return [];
+  }
+}
+
 export function normalizePlayerState(player) {
   const legacyPoints = readLegacyValue('emoplay_puntos', 0);
   const legacyChallenges = readLegacyValue('emoplay_retosCompletados', 0);
@@ -80,6 +98,11 @@ export function normalizePlayerState(player) {
     ...(player?.completedChallengeIds || []),
     ...readLegacyChallengeIds(),
   ]);
+  const scoredChallengeIds = migrateScoredChallengeIds({
+    scoredChallengeIds: player?.scoredChallengeIds,
+    completedChallengeIds,
+    challengeReports: readStoredChallengeReports(),
+  });
   const completedMiniGameIds = mergeUnique([
     ...(player?.completedMiniGameIds || []),
     ...readLegacyMiniGameIds(),
@@ -130,6 +153,7 @@ export function normalizePlayerState(player) {
     ...player,
     points: Math.max(player?.points || 0, legacyPoints),
     completedChallengeIds,
+    scoredChallengeIds,
     completedMiniGameIds,
     completedChallenges: Math.max(
       player?.completedChallenges || 0,
